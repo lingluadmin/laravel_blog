@@ -29,13 +29,15 @@ class HomeController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{
-		return view('home');
+    {
+        echo "Home-----";
+		# return view('home');
 	}
 
     // TODO: 个人风采
     public function llphoto(){
-        echo __METHOD__.' : '.__LINE__;
+       # echo __METHOD__.' : '.__LINE__;
+        return view('web.llphoto');
     }
 
     // TODO: 详情信息

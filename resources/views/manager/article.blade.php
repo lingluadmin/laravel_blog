@@ -1,0 +1,22 @@
+
+<link rel="stylesheet" href="/bower_dl/css/editormd.css" />
+<script src="/bower_dl/examples/js/jquery.min.js"></script>
+<script src="/bower_dl/editormd.js"></script>
+<script type="text/javascript">
+$(function() {
+    var testEditor = editormd("test-editormd", {
+        path : '/bower_dl/lib/'
+    });
+});
+</script>
+
+<div class="container">
+	<form action='articleAddDo' method="post">
+    <div id="test-editormd">
+        <textarea id="content" name="content" class="form-control" rows="14">{{ $content }} </textarea>
+    </div>
+
+    <input type="submit" value="Save" >
+
+    </form>
+</div>
