@@ -1,4 +1,7 @@
-<?php namespace App\Http\Controllers;
+<?php
+
+namespace App\Http\Controllers;
+use App\Tools\ToolArray;
 
 class HomeController extends Controller {
 
@@ -37,6 +40,13 @@ class HomeController extends Controller {
     // TODO: 个人风采
     public function llphoto(){
        # echo __METHOD__.' : '.__LINE__;
+        echo "<pre>";
+        $sql    = "select * from blog_user";
+        $res    = \DB::select($sql);
+        $res    = ToolArray::objectToArray($res);
+
+        var_dump($res);
+        exit;
         return view('web.llphoto');
     }
 
@@ -54,4 +64,6 @@ class HomeController extends Controller {
     public function lltime(){
         echo __METHOD__.' : '.__LINE__;
     }
+
+
 }
