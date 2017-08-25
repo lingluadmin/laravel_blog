@@ -9,6 +9,15 @@ use Illuminate\Http\Request;
 
 class BasketballController extends Controller {
 
+    /**
+     * @desc    PAPA篮球首页
+     **/
+    public function index(){
+
+
+        echo __METHOD__.' : '.__LINE__;
+
+    }
 
 	/**
 	 * @desc    夏季赛
@@ -44,6 +53,13 @@ class BasketballController extends Controller {
     public function xjls2017List(){
         echo __METHOD__.' : '.__LINE__;
     }
+
+
+    //TODO: 夏季联赛-详情
+    public function xjls2017Detail(){
+        echo __METHOD__.' : '.__LINE__;
+    }
+
 
     /**
      * @desc    个人风采照

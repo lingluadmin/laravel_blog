@@ -19,9 +19,22 @@ Route::get('llphoto',   'HomeController@llphoto');
 Route::get('lltime',    'HomeController@lltime');
 Route::get('llactricle','HomeController@llactricle');
 
+//TODO: 个人博客
+Route::get('llblogL',        'BlogController@blogList');                //博客-列表
+Route::get('llblogD',        'BlogController@blogDetail');              //博客-详情
+
+//TODO: PAPA篮球
+Route::get('llbasketball',  'BasketballController@index');              //PAPA篮球
+Route::get('xjs2017L',      'BasketballController@xjs2017List');        //夏季赛-列表
+Route::get('xjs2017D',      'BasketballController@xjs2017Detail');      //夏季赛-详情
+Route::get('xjls2017L',     'BasketballController@xjls2017List');       //夏季联赛-列表
+Route::get('xjls2017D',     'BasketballController@xjls2017Detail');     //夏季联赛-详情
+Route::get('basketPerson',  'BasketballController@basketPerson');       //个人风采照
+Route::get('basketPhoto',   'BasketballController@basketPhoto');        //照片墙
+
 # TODO: 管理
-Route::get('articleAdd',    'ManagerController@articleAdd');
-Route::post('articleAddDo', 'ManagerController@articleAddDo');
+Route::get('articleAdd',    'ManagerController@articleAdd');            //添加
+Route::post('articleAddDo', 'ManagerController@articleAddDo');          //执行添加
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
