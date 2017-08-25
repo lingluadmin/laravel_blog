@@ -62,7 +62,11 @@ class HomeController extends Controller {
 
     // TODO: 时光轴
     public function lltime(){
+
         echo __METHOD__.' : '.__LINE__;
+
+        return view('web.timeline');
+
     }
 
 
