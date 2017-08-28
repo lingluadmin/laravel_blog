@@ -26,8 +26,16 @@ class BasketballController extends Controller {
 	 */
 	public function xjs2017List( Request $request )
     {
-        echo __METHOD__.' : '.__LINE__;
-		#return view('basketball.xjs2017list');
+        
+        echo __METHOD__.' : '.__LINE__;        
+        $sql    = "select * from blog_basketball where tagid = 1";
+        $res    = \DB::select($sql);
+        $res    = ToolArray::objectToArray($res);
+
+        $assign["bList"]    = $res;
+        
+        return view('basketball.xjs2017list', $assign);
+
     }
 
 
@@ -38,7 +46,7 @@ class BasketballController extends Controller {
     public function xjs2017Detail( Request $request ){
        # echo __METHOD__.' : '.__LINE__;
         echo "<pre>";
-        $sql    = "select * from blog_basketball where ";
+        $sql    = "select * from blog_basketball where id = {$id} ";
         $res    = \DB::select($sql);
         $res    = ToolArray::objectToArray($res);
 
