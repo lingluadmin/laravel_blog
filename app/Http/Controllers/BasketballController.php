@@ -9,6 +9,14 @@ use Illuminate\Http\Request;
 
 class BasketballController extends Controller {
 
+    const 
+        BASKET_RANKS_1  = 1,    // 2017夏季赛一队
+        BASKET_RANKS_2  = 2,    // 2017夏季赛二队
+        BASKET_RANKS_3  = 3,    // 2017秋季赛白队
+        BASKET_RANKS_4  = 4,    // 2017秋季赛蓝队
+
+        END     = true;
+
     /**
      * @desc    PAPA篮球首页
      **/
@@ -23,36 +31,60 @@ class BasketballController extends Controller {
 	 * @desc    夏季赛
      * @return  Response
      *
+        id
+        title
+        publish_at  
+        author
+        keyword
+        intro
+        description
+        pictures    图片集合
+        type        类型-XJS2017、XJLS2017、QJS2017
 	 */
 	public function xjs2017List( Request $request )
     {
         
-        echo __METHOD__.' : '.__LINE__;        
+        echo __METHOD__.' : '.__LINE__;   
+        $tagid  = $request->input('tagid',"ALL");     
         $sql    = "select * from blog_basketball where tagid = 1";
         $res    = \DB::select($sql);
         $res    = ToolArray::objectToArray($res);
 
         $assign["bList"]    = $res;
-        
-        return view('basketball.xjs2017list', $assign);
+
+        return view('basketball.blist', $assign);
+        #return view('basketball.xjs2017list', $assign);
 
     }
 
 
     /**
      * @desc    夏季赛详情
+        id
+        title
+        publish_at  
+        author
+        keyword
+        intro
+        description
+        pictures    图片集合
+        type        类型-XJS2017、XJLS2017、QJS2017
+
+        参与球员
      *
      **/
     public function xjs2017Detail( Request $request ){
-       # echo __METHOD__.' : '.__LINE__;
-        echo "<pre>";
+        #echo __METHOD__.' : '.__LINE__;
+        #echo "<pre>";
+        $id     = $request->input('id',"1"); 
         $sql    = "select * from blog_basketball where id = {$id} ";
         $res    = \DB::select($sql);
         $res    = ToolArray::objectToArray($res);
 
-        var_dump($res);
-        exit;
-        return view('basketball.xjs2017detail');
+        #var_dump($res);
+        #exit;
+        $assign['bDetail']  = $res[0];
+        return view('basketball.bdetail',$assign);
     }
 
     /**
@@ -84,6 +116,31 @@ class BasketballController extends Controller {
      *
      **/
     public function basketPhoto(){
+
+    }
+
+    /**
+     * @desc
+     * 
+     */
+    public function xjs2017Config(){
+        $userList   = [
+            ""
+        ];
+
+    }
+
+    /**
+     * @desc    队伍名称
+     *     
+     **/
+    public static function getRanksName(){
+        return [
+            self::BASKET_RANKS_1    => "PAPA篮球一队-啪啪无敌",
+            self::BASKET_RANKS_2    => "PAPA篮球一队-所向披靡",
+            self::BASKET_RANKS_3    => "PAPA篮球一队-白队",
+            self::BASKET_RANKS_4    => "PAPA篮球一队-蓝队",
+        ];
 
     }
 

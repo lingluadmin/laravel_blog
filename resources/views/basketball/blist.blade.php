@@ -51,7 +51,7 @@
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
                     <img src="assets/img/f10.jpg" alt="" class="am-u-sm-12">
                 </div>
-                <a href="llblogD?id={{$vo['id']}}" >
+                <a href="xjs2017D?id={{$vo['id']}}" >
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                     <span class="blog-color">{{ $vo["title"] or '个人博客' }}</span>
                     <span>{{ $vo['author'] or 'FIGHT_ZERO' }}&nbsp;</span>
