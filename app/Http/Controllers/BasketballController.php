@@ -20,10 +20,36 @@ class BasketballController extends Controller {
     /**
      * @desc    PAPA篮球首页
      **/
-    public function index(){
+    public function llbasketList( Request $request ){
 
+        $tagid  = $request->input('tags', "ALL");     
+        $sql    = "select * from blog_basketball where tags = 'XJS2017' ";
+        $res    = \DB::select($sql);
+        $res    = ToolArray::objectToArray($res);
 
-        echo __METHOD__.' : '.__LINE__;
+        $assign["bList"]    = $res;
+
+        return view('basketball.blist', $assign);
+
+    }
+
+    /**
+     *
+     **/
+    public function llbasketDetail( Request $request ){
+        #echo __METHOD__.' : '.__LINE__;
+        #echo "<pre>";
+        $id     = $request->input('id',"1"); 
+        $sql    = "select * from blog_basketball where id = {$id} ";
+        $res    = \DB::select($sql);
+        $res    = ToolArray::objectToArray($res);
+
+        $bUser  = self::getBasketUser( $id );
+
+        #var_dump($res);
+        #exit;
+        $assign['bDetail']  = $res[0];
+        return view('basketball.bdetail',$assign);
 
     }
 
@@ -45,8 +71,8 @@ class BasketballController extends Controller {
     {
         
         echo __METHOD__.' : '.__LINE__;   
-        $tagid  = $request->input('tagid',"ALL");     
-        $sql    = "select * from blog_basketball where tagid = 1";
+        $tagid  = $request->input('tags', "ALL");     
+        $sql    = "select * from blog_basketball where tags = 'XJS2017' ";
         $res    = \DB::select($sql);
         $res    = ToolArray::objectToArray($res);
 
@@ -142,6 +168,17 @@ class BasketballController extends Controller {
             self::BASKET_RANKS_4    => "PAPA篮球一队-蓝队",
         ];
 
+    }
+    /**
+     * @desc    获取比赛球员
+     **/
+    public static function getBasketUser( $bid = ""){
+        $sql    = " select u.*,bu.ranks,bu.remark from blog_basketuser bu left join blog_user u on bu.uid = u.id  where basketid = {$id} ";
+        $res    = \DB::select($sql);
+        $res    = ToolArray::objectToArray($res);
+
+        var_dump($res);
+        exit;
     }
 
 

@@ -24,7 +24,8 @@ Route::get('llblogL',      	'BlogController@blogList');                	//博客
 Route::get('llblogD',      	'BlogController@blogDetail');              	//博客-详情
 
 //TODO: PAPA篮球
-Route::get('llbasketball',  'BasketballController@index');              //PAPA篮球
+Route::get('llbasketL',  	'BasketballController@llbasketList');      	//PAPA篮球-列表
+Route::get('llbasketD',  	'BasketballController@llbasketDetail');    	//PAPA篮球-详情
 Route::get('xjs2017L',      'BasketballController@xjs2017List');        //2017夏季赛-列表
 Route::get('xjs2017D',      'BasketballController@xjs2017Detail');      //2017夏季赛-详情
 Route::get('xjls2017L',     'BasketballController@xjls2017List');       //2017夏季联赛-列表
@@ -36,6 +37,9 @@ Route::get('basketGirl',  	'BasketballController@basketGirl');        	//篮球�
 # TODO: 管理
 Route::get('articleAdd',    'ManagerController@articleAdd');            //添加
 Route::post('articleAddDo', 'ManagerController@articleAddDo');          //执行添加
+
+Route::get('imgAdd',    	'ManagerController@imgAdd');            	//添加
+Route::post('imgAddDo',    	'ManagerController@imgAddDo');            	//执行添加
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

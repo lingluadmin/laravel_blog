@@ -21,15 +21,17 @@
         <li><a href="lw-index.html" >首页</a></li>
         <li><a href="llblog">FIGHT博客</a></li>
         <li class="am-dropdown am-active" data-am-dropdown> 
-            <a class="am-dropdown-toggle" data-am-dropdown-toggle href="llbasketbal">
+            <a class="am-dropdown-toggle " data-am-dropdown-toggle href="llbasketL">
                 PAPA篮球<span class="am-icon-caret-down"></span>
             </a>
+            
             <ul class="am-dropdown-content">
                 <li><a href="xjs2017L"      >夏季赛</a></li>
                 <li><a href="xjls2017L"     >夏季联赛</a></li>
                 <li><a href="basketPerson"  >风采照</a></li>
                 <li><a href="basketPhoto"   >照片墙</a></li>
             </ul>
+            
         </li>
         <li><a href="personCollect"         >个人收藏</a></li>
         <li><a href="lw-timeline.html"      >时光轴</a></li>
@@ -148,52 +150,6 @@
 	           	</li>
 	         	<li><a href="#"><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</a></li>
 	        </ul>
-	        
-	        {{--
-	        <h1>有序列表:</h1>
-	        <ol>
-	        	<li>List item one
-		        	<ol>
-		        		<li>List item one
-				        	<ol>
-				        		<li>List item one</li>
-				        		<li>List item two</li>
-				        		<li>List item three</li>
-				        		<li>List item four</li>
-				        	</ol>
-		        		</li>
-		        		<li>List item two</li>
-		        		<li>List item three</li>
-		        		<li>List item four</li>
-		        	</ol>
-		        </li>
-	        	<li>List item two</li>
-	        	<li>List item three</li>
-	        	<li>List item four</li>
-	        </ol>
-	        
-	        <h1>无序列表:</h1>
-	        <ul>
-	        	<li>List item one
-	        		<ul>
-	        			<li>List item one
-	        				<ul>
-	        				<li>List item one</li>
-	        				<li>List item two</li>
-	        				<li>List item three</li>
-	        				<li>List item four</li>
-	        				</ul>
-	        			</li>
-	        			<li>List item two</li>
-	        			<li>List item three</li>
-	        			<li>List item four</li>
-	        		</ul>
-	        	</li>
-	        	<li>List item two</li>
-	        	<li>List item three</li><
-	        	li>List item four</li>
-	        </ul>
-	        --}}
     	</div>
     </article>
 
@@ -222,7 +178,7 @@
                 <a href=""><span class="am-icon-weixin  am-icon-fw blog-icon"></span></a>
             </p>
         </div>
-        --}}
+        
         <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
             <h2 class="blog-title"><span>标签集</span></h2>
             <div class="am-u-sm-12 blog-clear-padding">
@@ -235,13 +191,14 @@
                 <a href="basketGirl"    class="blog-tag">篮球宝贝</a>
             </div>
         </div>
+        --}}
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-title"><span>PAPA篮球</span></h2>
             <ul class="am-list">
-                <li><a href="xjs2017L"  >2017-PAPA篮球夏季赛</a></li>
-                <li><a href="xjls2017L" >2017-PAPA篮球夏季联赛</a></li>
-                <li><a href="basketPerson">2017-PAPA篮球风采照</a></li>
-                <li><a href="qjs2017L"  >2017-PAPA篮球秋季赛</a></li>
+                <li><a href="llbasketL" >2017夏季赛</a></li>
+                <li><a href="llbasketL"	>2017夏季联赛</a></li>
+                <li><a href="basketPerson"	>2017风采照</a></li>
+                <li><a href="basketPhoto"  	>2017照片墙</a></li>
             </ul>
         </div>
     </div>

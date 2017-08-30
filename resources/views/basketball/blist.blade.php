@@ -51,7 +51,7 @@
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
                     <img src="assets/img/f10.jpg" alt="" class="am-u-sm-12">
                 </div>
-                <a href="xjs2017D?id={{$vo['id']}}" >
+                <a href="llbasketD?id={{$vo['id']}}" >
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                     <span class="blog-color">{{ $vo["title"] or '个人博客' }}</span>
                     <span>{{ $vo['author'] or 'FIGHT_ZERO' }}&nbsp;</span>
@@ -65,12 +65,6 @@
                 </a>
             </article>
         @endforeach
-
-        <!-- 分页  -->
-        <ul class="am-pagination">
-            <li class="am-pagination-prev"><a href="llblogL?tagid={{$tagid}}&page={{$page-1}}">&laquo; 上一页</a></li>
-            <li class="am-pagination-next"><a href="llblogL?tagid={{$tagid}}&page={{$page+1}}">下一页 &raquo;</a></li>
-        </ul>
     </div>
 
     <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
