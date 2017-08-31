@@ -83,7 +83,7 @@ class ManagerController extends Controller {
         //     var_dump($bool);
 
         // }
-        $filename0  = date('YmdHis') . '-' . uniqid();
+        $filename   = date('YmdHis') . '-' . uniqid().".jpg";
         $images     = $_FILES;
         $ossUp      = new OssUpload();
 
@@ -93,7 +93,7 @@ class ManagerController extends Controller {
                 continue;
             }
 
-            $result     = $ossUp->putFile($image, $filename0);
+            $result     = $ossUp->putFile($image, $filename);
 
             if($result == "FAIL" ){
                 return redirect()->back()->with('fail', "上传失败");

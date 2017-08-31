@@ -2,12 +2,7 @@
 
 namespace App\Tools;
 
-#require_once __DIR__.'/Alioss/oss-sdk-php/autoload.php';
-require_once "./Alioss/oss-sdk-php/autoload.php";
-#echo __DIR__.'/Alioss/oss-sdk-php/autoload.php';exit;
-#require_once __DIR__.'/../../../../vendor/Alioss/oss-sdk-php/autoload.php';
-#echo __DIR__.'/../../../../vendor/Alioss/oss-sdk-php/autoload.php'; exit;
-
+require_once __DIR__."/../Helpers/Alioss/autoload.php";
 use OSS\OssClient;
 use OSS\Core\OssException;
 
@@ -64,7 +59,7 @@ class OssUpload
             $this->ossClient = new OssClient($accessKeyId, $accessKeySecret, $endpoint);
         } catch (OssException $e) {
             \Log::error(__METHOD__.'Error',[$e->getMessage()]);
-            throw new Exception($e->getMessage());
+            throw new \Exception($e->getMessage());
         }
     }
 
@@ -98,9 +93,8 @@ class OssUpload
         try{
 
             $OssClient 	= $this->ossClient;
-            $exist 		= $ossClient->doesObjectExist($this->bucket, $object);
-
-            $ossClient->uploadFile($this->bucket,$object,$file['tmp_name']);
+            $exist 		= $OssClient->doesObjectExist($this->bucket, $object);
+            $OssClient->uploadFile($this->bucket,$object,$file['tmp_name']);
 
             $fileInfo 	= [
                 'path' 	=> substr($object, 0, strrpos($object,'/')),
