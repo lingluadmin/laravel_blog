@@ -19,9 +19,11 @@
 
 <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
-        <li><a href="home"	>首页</a></li>
-        <li><a href="llblogL">FIGHT博客</a></li>
-        <li class="am-dropdown am-active" data-am-dropdown> 
+
+        <li><a href="llblogL"	>FIGHT博客</a></li>
+        <li><a href="llbasketL" >PAPA篮球</a></li>
+        {{--
+		<li class="am-dropdown am-active" data-am-dropdown>
             <a class="am-dropdown-toggle " data-am-dropdown-toggle href="llbasketL">
                 PAPA篮球<span class="am-icon-caret-down"></span>
             </a>
@@ -32,6 +34,7 @@
 				<li><a href="basketPhoto"   >照片墙</a></li>
 			</ul>
         </li>
+		--}}
         <li><a href="personCollect"	>个人收藏</a></li>
         <li><a href="lltime"		>时光轴</a></li>
     </ul>
@@ -58,15 +61,7 @@
         </div>        
         <div class="am-article-bd">
         	<img src="assets/img/f10.jpg" alt="" class="blog-entry-img blog-article-margin">          
-        	<p class="am-article-lead">
-        		美文展示：
-        	</p>
-    		<blockquote>
-    			<p>{{ $bDetail["content"] or "--"}}</p>
-    			<footer>
-    				<cite>{{ $bDetail["source"] or "--*--" }}</cite>
-    			</footer>
-    		</blockquote>
+
 			<p class="am-article-lead">
 				参赛球员：
 			</p>
@@ -165,23 +160,29 @@
 	           		</a>
 	           	</li>
 	        </ul>
+
+			<p class="am-article-lead">
+				美文展示：
+			</p>
+			<blockquote>
+				<p>{{ $article["content"] }}</p>
+				<footer>
+					<cite>{{ $article["author"] or "FIGHTZERO" }}</cite>
+				</footer>
+			</blockquote>
+
     	</div>
     </article>
 
     </div>
 
     <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
-        {{--
+
         <div class="blog-sidebar-widget blog-bor">
-            <h2 class="blog-text-center blog-title"><span>~FIGHTING~</span></h2>
-            <img src="assets/img/f14.jpg" alt="about me" class="blog-entry-img" >
-            <p>PAPA篮球宝贝</p>
-            <p>
-                我是PAPA篮球宝贝，爱你们哟
-            </p>
-            <p> 
-                我不想成为一个庸俗的人。十年百年后，当我们死去，质疑我们的人同样死去，后人看到的是裹足不前、原地打转的你，还是一直奔跑、走到远方的我？
-            </p>
+            <h2 class="blog-text-center blog-title"><span>FIGHTING</span></h2>
+            <img src="{{ $bGril['url'] }}" alt="about me" class="blog-entry-img" >
+            <p>{{ $bGril["title"] }}</p>
+            <p>{{ $bGril["intro"] }}</p>
         </div>
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-text-center blog-title"><span>联系我哟</span></h2>
@@ -193,20 +194,20 @@
                 <a href=""><span class="am-icon-weixin  am-icon-fw blog-icon"></span></a>
             </p>
         </div>
-        
-        <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
-            <h2 class="blog-title"><span>标签集</span></h2>
-            <div class="am-u-sm-12 blog-clear-padding">
-                <a href="llblogL"       class="blog-tag">FIGHTING</a>
-                <a href="llblogL"       class="blog-tag">个人博客</a>
-                <a href="xjs2017L"      class="blog-tag">夏季赛 </a>
-                <a href="xjls2017L"     class="blog-tag">夏季联赛</a>
-                <a href="basketPerson"  class="blog-tag">风采照 </a>
-                <a href="basketPhoto"   class="blog-tag">照片墙 </a>
-                <a href="basketGirl"    class="blog-tag">篮球宝贝</a>
-            </div>
-        </div>
-        --}}
+		{{--
+         <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+             <h2 class="blog-title"><span>标签集</span></h2>
+             <div class="am-u-sm-12 blog-clear-padding">
+                 <a href="llblogL"       class="blog-tag">FIGHTING</a>
+                 <a href="llblogL"       class="blog-tag">个人博客</a>
+                 <a href="xjs2017L"      class="blog-tag">夏季赛 </a>
+                 <a href="xjls2017L"     class="blog-tag">夏季联赛</a>
+                 <a href="basketPerson"  class="blog-tag">风采照 </a>
+                 <a href="basketPhoto"   class="blog-tag">照片墙 </a>
+                 <a href="basketGirl"    class="blog-tag">篮球宝贝</a>
+             </div>
+         </div>
+         --}}
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-title"><span>PAPA篮球</span></h2>
             <ul class="am-list">
