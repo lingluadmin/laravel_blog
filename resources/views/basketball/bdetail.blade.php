@@ -20,8 +20,8 @@
 <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
 
-        <li><a href="llblogL"	>FIGHT博客</a></li>
-        <li><a href="llbasketL" >PAPA篮球</a></li>
+        <li><a href="llbasketL"	>FIGHT博客</a></li>
+        <li class="am-active"	><a href="llbasketL" >PAPA篮球</a></li>
         {{--
 		<li class="am-dropdown am-active" data-am-dropdown>
             <a class="am-dropdown-toggle " data-am-dropdown-toggle href="llbasketL">
