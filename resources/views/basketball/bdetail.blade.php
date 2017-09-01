@@ -34,8 +34,9 @@
 				<li><a href="basketPhoto"   >照片墙</a></li>
 			</ul>
         </li>
-		--}}
+
         <li><a href="personCollect"	>个人收藏</a></li>
+        --}}
         <li><a href="lltime"		>时光轴</a></li>
     </ul>
     <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
@@ -60,7 +61,7 @@
           </p>
         </div>        
         <div class="am-article-bd">
-        	<img src="assets/img/f10.jpg" alt="" class="blog-entry-img blog-article-margin">          
+        	<img src="assets/basket/2017XJS-YRS.jpg" alt="" class="blog-entry-img blog-article-margin">
 
 			<p class="am-article-lead">
 				参赛球员：

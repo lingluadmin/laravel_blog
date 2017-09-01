@@ -26,7 +26,12 @@ class BasketballController extends Controller {
 
         $res    = BasketModel::getBasketList($tags);
 
+        $article= BasketModel::getArticleList();
+        $bGril  = BasketModel::getBasketGril();
+
         $assign["bList"]    = $res;
+        $assign["article"]  = $article;
+        $assign["bGril"]    = $bGril;
 
         return view('basketball.blist', $assign);
 
@@ -70,10 +75,7 @@ class BasketballController extends Controller {
      * @desc
      * 
      */
-    public function xjs2017Config(){
-        $userList   = [
-            ""
-        ];
+    public function personCollect(){
 
     }
 
