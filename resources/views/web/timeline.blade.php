@@ -18,22 +18,21 @@
 
 <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
-        <li><a href="lw-index.html">首页</a></li>
+        <li><a href="home" >首页</a></li>
+        <li class="am-active"><a href="llblog">FIGHT博客</a></li>
         <li class="am-dropdown" data-am-dropdown>
-            <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
-                首页布局 <span class="am-icon-caret-down"></span>
+            <a class="am-dropdown-toggle" data-am-dropdown-toggle href="llbasketbal">
+                PAPA篮球<span class="am-icon-caret-down"></span>
             </a>
             <ul class="am-dropdown-content">
-                <li><a href="lw-index.html"         />1. blog-index-standard</a></li>
-                <li><a href="lw-index-nosidebar.html">2. blog-index-nosidebar</a></li>
-                <li><a href="lw-index-center.html"  />3. blog-index-layout</a></li>
-                <li><a href="lw-index-noslider.html"/>4. blog-index-noslider</a></li>
+                <li><a href="xjs2017L"      >夏季赛</a></li>
+                <li><a href="xjls2017L"     >夏季联赛</a></li>
+                <li><a href="basketPerson"  >风采照</a></li>
+                <li><a href="basketPhoto"   >照片墙</a></li>
             </ul>
         </li>
-        <li><a href="llblog"        />FIGHT博客</a></li>
-        <li><a href="llbasketbal"   />PAPA篮球</a></li>
-        <li><a href="basketPhoto"   />照片墙</a></li>
-        <li class="am-active"><a href="lw-timeline.html"  />时光轴</a></li>
+        <li><a href="personCollect"         >个人收藏</a></li>
+        <li><a href="lltime"                >时光轴</a></li>
     </ul>
     <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
         <div class="am-form-group">

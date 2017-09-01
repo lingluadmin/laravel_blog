@@ -1,40 +1,39 @@
 @extends('common.layout')
-
 @section('title','时光轴')
 
 @section('content')
 
-
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div class="am-u-sm-8 am-u-sm-centered">
         <!--<img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/> -->
-        <h2 class="am-hide-sm-only">FIGHT_ZERO | PAPA-篮球 | @LU-BLOG</h2>
+        <h2 class="am-hide-sm-only">FIGHTZERO | PAPA篮球 | LLPER_BLOG</h2>
     </div>
 </header>
 <hr>
 <!-- nav start -->
 <nav class="am-g am-g-fixed blog-fixed blog-nav">
-<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" >
+	<span class="am-sr-only">导航切换</span>
+	<span class="am-icon-bars"></span>
+</button>
 
 <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
-        <li><a href="lw-index.html" >首页</a></li>
-        <li><a href="llblog">FIGHT博客</a></li>
+        <li><a href="home"	>首页</a></li>
+        <li><a href="llblogL">FIGHT博客</a></li>
         <li class="am-dropdown am-active" data-am-dropdown> 
             <a class="am-dropdown-toggle " data-am-dropdown-toggle href="llbasketL">
                 PAPA篮球<span class="am-icon-caret-down"></span>
             </a>
-            
-            <ul class="am-dropdown-content">
-                <li><a href="xjs2017L"      >夏季赛</a></li>
-                <li><a href="xjls2017L"     >夏季联赛</a></li>
-                <li><a href="basketPerson"  >风采照</a></li>
-                <li><a href="basketPhoto"   >照片墙</a></li>
-            </ul>
-            
+			<ul class="am-dropdown-content">
+				<li><a href="llbasketL?tags=XJS2017"    >夏季赛</a></li>
+				<li><a href="llbasketL?tags=XJLS2017"   >夏季联赛</a></li>
+				<li><a href="basketPerson"  >风采照</a></li>
+				<li><a href="basketPhoto"   >照片墙</a></li>
+			</ul>
         </li>
-        <li><a href="personCollect"         >个人收藏</a></li>
-        <li><a href="lw-timeline.html"      >时光轴</a></li>
+        <li><a href="personCollect"	>个人收藏</a></li>
+        <li><a href="lltime"		>时光轴</a></li>
     </ul>
     <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
         <div class="am-form-group">
@@ -59,20 +58,22 @@
         </div>        
         <div class="am-article-bd">
         	<img src="assets/img/f10.jpg" alt="" class="blog-entry-img blog-article-margin">          
-        	<p class="class="am-article-lead"">
+        	<p class="am-article-lead">
         		美文展示：
         	</p>
     		<blockquote>
-    			<p>{{ $bDetail["content"] or ""}}</p> 
+    			<p>{{ $bDetail["content"] or "--"}}</p>
     			<footer>
-    				<cite>{{ $bDetail["source"] or "@FIGHT_ZERO" }}</cite>
+    				<cite>{{ $bDetail["source"] or "--*--" }}</cite>
     			</footer>
     		</blockquote>
-             
+			<p class="am-article-lead">
+				参赛球员：
+			</p>
             <section data-am-widget="accordion" class="am-accordion am-accordion-default" data-am-accordion='{ "multiple": true }'>
       			<dl class="am-accordion-item am-active">
 			        <dt class="am-accordion-title">
-			          	PAPA篮球一队-啪啪无敌队
+						{{ $ranksOneName or "--*--"  }}
 			        </dt>
 	        		<dd class="am-accordion-bd am-collapse am-in">
 		          		<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
@@ -87,13 +88,13 @@
 							        </tr>
 							    </thead>
 							    <tbody>
-							    	@if (!empty($bUser))
-								    	@foreach($bUser as $user)
+							    	@if (!empty($ranksOneUser))
+								    	@foreach($ranksOneUser as $oneUser)
 								        <tr>
-								            <td>{{$user["nickname"] or "--"}}</td>
-								            <td>{{$user["jersey_no"]or "--"}}</td>
-								            <td>{{$user["position"]	or "--"}}</td>
-								            <td>{{$user["remark"] 	or "--"}}</td>
+								            <td>{{$oneUser["nickname"]  or "--"}}</td>
+								            <td>{{$oneUser["jersey_no"] or "--"}}</td>
+								            <td>{{$oneUser["position"]	or "--"}}</td>
+								            <td>{{$oneUser["remark"] 	or "--"}}</td>
 								        </tr>
 								        @endforeach
 							        @else
@@ -101,7 +102,7 @@
 								            <td>L.L</td>
 								            <td>0</td>
 								            <td>中锋</td>
-								            <td>球场-鬼王</td>
+								            <td>球场-搅屎棍</td>
 								        </tr>
 							        @endif
 							    </tbody>
@@ -111,44 +112,58 @@
 	        		</dd>
       			</dl>
 
-      			<dl class="am-accordion-item">
-			        <dt class="am-accordion-title">
-			          	让生命去等候，去等候，去等候，去等候
-			        </dt>
-			        <dd class="am-accordion-bd am-collapse ">
-			          	<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
-			          	<div class="am-accordion-content">
-			            	走在忠孝东路 <br/> 
-			            	徘徊在茫然中 <br/> 
-			            	在我的人生旅途 <br/> 
-			            	选择了多少错误 <br/> 
-			            	我在睡梦中惊醒 <br/> 
-			            	感叹悔言无尽 <br/> 
-			            	恨我不能说服自己 <br/> 
-			            	接受一切教训 <br/> 
-			            	让生命去等候 <br/> 
-			            	等候下一个漂流 <br/> 
-			            	让生命去等候 <br/>
-			            	等候下一个伤口
-			          	</div>
-			        </dd>
-		      	</dl>
+				<dl class="am-accordion-item am-active">
+					<dt class="am-accordion-title">
+						{{ $ranksTwoName or "--*--" }}
+					</dt>
+					<dd class="am-accordion-bd am-collapse am-in">
+						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+						<div class="am-accordion-content">
+							<table class="am-table am-table-bordered">
+								<thead>
+								<tr>
+									<th>名称</th>
+									<th>球衣</th>
+									<th>位置</th>
+									<th>简介</th>
+								</tr>
+								</thead>
+								<tbody>
+								@if (!empty($ranksTwoUser))
+									@foreach($ranksTwoUser as $twoUser)
+										<tr>
+											<td>{{$twoUser["nickname"] 	or "--"}}</td>
+											<td>{{$twoUser["jersey_no"]	or "--"}}</td>
+											<td>{{$twoUser["position"]	or "--"}}</td>
+											<td>{{$twoUser["remark"] 	or "--"}}</td>
+										</tr>
+									@endforeach
+								@else
+									<tr>
+										<td>L.L</td>
+										<td>0</td>
+										<td>中锋</td>
+										<td>球场-搅屎棍</td>
+									</tr>
+								@endif
+								</tbody>
+							</table>
+
+						</div>
+					</dd>
+				</dl>
+
   			</section>
 
         	<hr>
-	        <h1>比赛比分:</h1>
+	        <h3>比赛比分:</h3>
 	        <ul class="am-list am-list-border">
 	         	<li>
 	         		<a href="#">
 	         			<i class="am-icon-home am-icon-fw"></i>
-	           			每个人都有一个死角， 自己走不出来，别人也闯不进去。
+	           			{{ $bDetail["score"] or " - * - " }}
 	           		</a>
 	           	</li>
-	         	<li>
-	         		<a href="#"> <i class="am-icon-book am-icon-fw"></i>
-	           			我把最深沉的秘密放在那里。</a>
-	           	</li>
-	         	<li><a href="#"><i class="am-icon-pencil am-icon-fw"></i>你不懂我，我不怪你。</a></li>
 	        </ul>
     	</div>
     </article>
