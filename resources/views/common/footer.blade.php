@@ -2,7 +2,7 @@
 <footer class="blog-footer">
     <div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-footer-padding">
         <div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
-            <h3>@FIGHT_ZERO</h3>
+            <h3>FIGHT_ZERO</h3>
             <p class="am-text-sm">
                 FIGHT_ZERO 个人博客<br>
                 个人博客 / 资讯类 / NBA篮球<br>

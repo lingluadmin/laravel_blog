@@ -170,7 +170,9 @@
 					<cite>{{ $article["author"] or "FIGHTZERO" }}</cite>
 				</footer>
 			</blockquote>
+			<p class="am-article-lead">
 
+			</p>
     	</div>
     </article>
 

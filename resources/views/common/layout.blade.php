@@ -49,7 +49,7 @@
     @yield('content')
 
     @section('footer')
-       <!-- @include('common/footer') -->
+        @include('common/footer')
     @show
 
 </body>
