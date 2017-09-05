@@ -13,11 +13,11 @@
     <meta name="apple-mobile-web-app-capable"   content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-    <meta name="msapplication-TileImage"    content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileImage"    content="assets/img/app-icon72x72@2x.png">
     <meta name="msapplication-TileColor"    content="#0e90d2">
-    <link rel="icon" type="image/png"       href="assets/i/favicon.png">
-    <link rel="icon" sizes="192x192"        href="assets/i/app-icon72x72@2x.png">
-    <link rel="apple-touch-icon-precomposed"href="assets/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png"       href="assets/img/favicon.png">
+    <link rel="icon" sizes="192x192"        href="assets/img/app-icon72x72@2x.png">
+    <link rel="apple-touch-icon-precomposed"href="assets/img/app-icon72x72@2x.png">
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
 

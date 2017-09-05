@@ -1,11 +1,11 @@
+<link rel="stylesheet" href="assets/bower_dl/css/editormd.css" />
+<script src="assets/bower_dl/examples/js/jquery.min.js"></script>
+<script src="assets/bower_dl/editormd.js"></script>
 
-<link rel="stylesheet" href="/bower_dl/css/editormd.css" />
-<script src="/bower_dl/examples/js/jquery.min.js"></script>
-<script src="/bower_dl/editormd.js"></script>
 <script type="text/javascript">
 $(function() {
     var testEditor = editormd("test-editormd", {
-        path : '/bower_dl/lib/'
+        path : 'assets/bower_dl/lib/'
     });
 });
 </script>

@@ -5,6 +5,7 @@
  **/
 namespace App\Http\Controllers;
 
+use App\Http\Models\BlogModel;
 use Illuminate\Http\Request;
 use Storage;
 use App\Tools\OssUpload;
@@ -28,10 +29,11 @@ class ManagerController extends Controller {
         # echo "<pre>";
         # echo __METHOD__.' : '.__LINE__;
         $param  = $request->all();
-        $assign["content"] = !empty($param["content"]) ? $param["content"]  : "";
+        $paramData["content"] = !empty($param["content"]) ? $param["content"]  : "";
         # print_r($param);
-
-        return view('manager.article', $assign);
+        $res    = BlogModel::blogAddDo($paramData);
+        var_dump($res);
+        #return view('manager.article', $assign);
 
     }
 

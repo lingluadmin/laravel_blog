@@ -4,6 +4,7 @@
  *
  **/
 namespace App\Http\Controllers;
+use App\Http\Models\BlogModel;
 use App\Tools\ToolArray;
 use Illuminate\Http\Request;
 
@@ -32,47 +33,13 @@ class BlogController extends Controller {
         
         $page   = $request->input('page', 1);
         $size   = $request->input('size', 1);
-        $tagid  = $request->input('tagid',"ALL");
+        $tags   = $request->input('tags', "ALL");
 
-
-        
-
-        if( empty($tagid) || $tagid  == "ALL" ){
-            $csql   = "select COUNT(*) AS cnum from blog_article";
-            $cres   = \DB::select($csql);
-            $cres   = ToolArray::objectToArray($cres);
-            dd($cres);
-            $total  = !empty($cres[0]["cnum"]) ? $cres[0]["cnum"] : 0;
-            $tpage  = ceil($total / $size);
-            
-            $page   = $page >= $tpage ? $tpage : $page;
-            $offset = ($page - 1)* $size;
-
-            $sql    = "select * from blog_article order by publish_at desc limit {$offset},{$size}";
-        
-        }else{
-
-            $csql   = "select COUNT(*) AS cnum from blog_article where tagid = {$tagid}";
-            $cres   = \DB::select($csql);
-            $cres   = ToolArray::objectToArray($cres);
-
-            $total  = $cres["cnum"] ? $cres["cnum"] : 0;
-            $tpage  = ceil($total / $size);
-            
-            $page   = $page >= $tpage ? $tpage : $page;
-            $offset = ($page - 1)* $size;
-
-            $sql    = "select * from blog_article where tagid = {$tagid} order by publish_at desc limit {$offset},{$size}";
-        }
-        \Log::info(__METHOD__.' : '.__LINE__.$cres);
-        \Log::info(__METHOD__.' : '.__LINE__.$csql);
-        \Log::info(__METHOD__.' : '.__LINE__.$sql);
-        $res    = \DB::select($sql);
-        $res    = ToolArray::objectToArray($res);
+        $res    = BlogModel::getBlogList($tags, $page, $size);
 
         $assign["bList"]    = $res;
         $assign["page"]     = $page;
-        $assign["tagid"]    = $tagid;
+        $assign["tags"]     = $tags;
         #dd($assign);
 		return view('blog.list', $assign);
     }
@@ -80,30 +47,19 @@ class BlogController extends Controller {
 
     /**
      * @desc    博客详情
-     *
      **/
     public function blogDetail( Request $request ){
-       # echo __METHOD__.' : '.__LINE__;
+        # echo __METHOD__.' : '.__LINE__;
         echo "<pre>";
         $id     = $request->input('id', 1);
-        $sql    = "select * from blog_article where id = {$id}";
-        $res    = \DB::select($sql);
-        $res    = ToolArray::objectToArray($res);
+        $res     = BlogModel::getBlogDetail($id);
 
-        var_dump($res);
-        \Log::info(__METHOD__.' : '.__LINE__);
-        exit;
-
+        #var_dump($res);
+        #\Log::info(__METHOD__.' : '.__LINE__);
+        #exit;
+        #$res["content"]     = !empty($res["content"]) ? $res["content"] : "";
         $assign["bDetail"]  = $res;
         return view('blog.detail', $assign);
-    }
-
-    /**
-     * @desc    新增博文
-     **/
-    public function blogCreate(){
-        echo __METHOD__.' : '.__LINE__;
-        \Log::info(__METHOD__.' : '.__LINE__);
     }
 
 
