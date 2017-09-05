@@ -5,7 +5,6 @@
  **/
 namespace App\Http\Controllers;
 use App\Http\Models\BlogModel;
-use App\Tools\ToolArray;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller {
@@ -49,15 +48,9 @@ class BlogController extends Controller {
      * @desc    博客详情
      **/
     public function blogDetail( Request $request ){
-        # echo __METHOD__.' : '.__LINE__;
-        echo "<pre>";
+
         $id     = $request->input('id', 1);
         $res     = BlogModel::getBlogDetail($id);
-
-        #var_dump($res);
-        #\Log::info(__METHOD__.' : '.__LINE__);
-        #exit;
-        #$res["content"]     = !empty($res["content"]) ? $res["content"] : "";
         $assign["bDetail"]  = $res;
         return view('blog.detail', $assign);
     }

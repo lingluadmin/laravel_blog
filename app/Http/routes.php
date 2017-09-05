@@ -34,12 +34,21 @@ Route::get('basketPerson',  'BasketballController@basketPerson');       //个人
 Route::get('basketPhoto',   'BasketballController@basketPhoto');        //篮球照片墙
 Route::get('basketGirl',  	'BasketballController@basketGirl');        	//篮球宝贝
 
+
+
 # TODO: 管理
 Route::get('articleAdd',    'ManagerController@articleAdd');            //添加
 Route::post('articleAddDo', 'ManagerController@articleAddDo');          //执行添加
 
 Route::get('imgAdd',    	'ManagerController@imgAdd');            	//添加
 Route::post('imgAddDo',    	'ManagerController@imgAddDo');            	//执行添加
+Route::post('imgAddAjax',   'ManagerController@imgAddAjax');            //执行添加
+
+Route::get('basketAdd',    	'ManagerController@basketAdd');            	//添加
+Route::post('basketAddDo',  'ManagerController@basketAddDo');           //执行添加
+
+Route::get('basketAdd',    	'ManagerController@basketAdd');            	//添加
+Route::post('basketAddDo',  'ManagerController@basketAddDo');           //执行添加
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

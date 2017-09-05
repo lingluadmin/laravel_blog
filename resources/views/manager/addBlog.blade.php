@@ -35,40 +35,30 @@
             height:     300,
             minHeight:  null,
             maxHeight:  null,
-            focus:      true,
+            focus:  true,
             //调用图片上传
-            //callbacks: {
-                onImageUpload: function (files, editor, $editable) {
-                    sendFile(files[0] , editor, $editable);
+            callbacks: {
+                onImageUpload: function (files) {
+                    sendFile($summernote, files[0]);
                 }
-            //}
+            }
         });
 
         //ajax上传图片
-        function sendFile(file, editor, $editable) {
+        function sendFile($summernote, file) {
             var  formData = new FormData();
-            formData.append("imgs", file);
-
+            formData.append("file", file);
             $.ajax({
-                url: "imgAddAjax",    //路径是你控制器中上传图片的方法，下面controller里面我会写到
+                url: "{:U('Upload/upload_img')}",   //路径是你控制器中上传图片的方法，下面controller里面我会写到
                 data:   formData,
                 cache:  false,
                 contentType: false,
                 processData: false,
                 type: 'POST',
-                success: function ( resData) {
-                    if(data != "FAIL") {
-                        editor.insertImage($editable, resData);
-                    }else{
-                        alert("上传成功");
-                        return;
-                    }
-
-//                    $summernote.summernote('insertImage', data, function ($image) {
-//                        if(data != "FAIL"){
-//                            $image.attr('src', data);
-//                        }
-//                    });
+                success: function (data) {
+                    $summernote.summernote('insertImage', data, function ($image) {
+                        $image.attr('src', data);
+                    });
                 }
             });
         }

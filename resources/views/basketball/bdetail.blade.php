@@ -61,7 +61,14 @@
           </p>
         </div>        
         <div class="am-article-bd">
-        	<img src="assets/basket/2017XJS-YRS.jpg" alt="" class="blog-entry-img blog-article-margin">
+        	{{--<img src="assets/basket/2017XJS-YRS.jpg" alt="" class="blog-entry-img blog-article-margin"> --}}
+
+			<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+				<ul class="am-slides">
+					<li><img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
+					<li><img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
+				</ul>
+			</div>
 
 			<p class="am-article-lead">
 				参赛球员：
@@ -152,15 +159,12 @@
   			</section>
 
         	<hr>
-	        <h3>比赛比分:</h3>
-	        <ul class="am-list am-list-border">
-	         	<li>
-	         		<a href="#">
-	         			<i class="am-icon-home am-icon-fw"></i>
-	           			{{ $bDetail["score"] or " - * - " }}
-	           		</a>
-	           	</li>
-	        </ul>
+			<p class="am-article-lead">
+				比赛比分：   {{ $bDetail["score"] 	or " - * - " }}
+			</p>
+			<p class="am-article-lead">
+				比赛费用：   {{ $bDetail["fee_intro"]or " - * - " }}
+			</p>
 
 			<p class="am-article-lead">
 				美文展示：
@@ -171,8 +175,8 @@
 					<cite>{{ $article["author"] or "FIGHTZERO" }}</cite>
 				</footer>
 			</blockquote>
-			<p class="am-article-lead">
-
+			<p class="am-article-lead am-text-center">
+				 ——END——
 			</p>
     	</div>
     </article>
