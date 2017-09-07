@@ -1,5 +1,5 @@
 @extends('common.layout')
-@section('title','时光轴')
+@section('title','PAPA篮球费用')
 
 @section('content')
 {{--
@@ -23,22 +23,7 @@
 
         <li><a href="llbasketL"	>FIGHT博客</a></li>
         <li class="am-active"	><a href="llbasketL" >PAPA篮球</a></li>
-        {{--
-		<li class="am-dropdown am-active" data-am-dropdown>
-            <a class="am-dropdown-toggle " data-am-dropdown-toggle href="llbasketL">
-                PAPA篮球<span class="am-icon-caret-down"></span>
-            </a>
-			<ul class="am-dropdown-content">
-				<li><a href="llbasketL?tags=XJS2017"    >夏季赛</a></li>
-				<li><a href="llbasketL?tags=XJLS2017"   >夏季联赛</a></li>
-				<li><a href="basketPerson"  >风采照</a></li>
-				<li><a href="basketPhoto"   >照片墙</a></li>
-			</ul>
-        </li>
-
-        <li><a href="personCollect"	>个人收藏</a></li>
-        --}}
-        <li><a href="lltime"		>时光轴</a></li>
+        <li><a href="lltime"	>时光轴</a></li>
     </ul>
     <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
         <div class="am-form-group">
@@ -54,30 +39,30 @@
     <div class="am-u-md-8 am-u-sm-12">
        <article class="am-article blog-article-p">
         <div class="am-article-hd">
-          <h1 class="am-article-title blog-text-center">{{ $bDetail["title"] or "PAPA篮球" }}</h1>
+          <h1 class="am-article-title blog-text-center">PAPA篮球-篮球费用</h1>
           <p class="am-article-meta blog-text-center">
-              <span><a href="#" class="blog-color">{{ $bDetail["keywords"] or "BASKETBALL" }} &nbsp;</a></span>-
-              <span><a href="#">{{ $bDetail["author"] }} &nbsp;</a></span>-
-              <span><a href="#">{{ date('Y/m/d', strtotime($bDetail["publish_at"])) }}</a></span>
+              <span><a href="#" class="blog-color">BASKETBALL</a></span>-
+              <span><a href="#">FIGHTZERO</a></span>-
+              <span><a href="#">{{ date('Y/m/d', time()) }}</a></span>
           </p>
         </div>        
         <div class="am-article-bd">
         	{{--<img src="assets/basket/2017XJS-YRS.jpg" alt="" class="blog-entry-img blog-article-margin"> --}}
-
+			{{--
 			<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
 				<ul class="am-slides">
 					<li><img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
 					<li><img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
 				</ul>
 			</div>
-
+			--}}
 			<p class="am-article-lead">
-				参赛球员：
+				比赛费用：
 			</p>
             <section data-am-widget="accordion" class="am-accordion am-accordion-default" data-am-accordion='{ "multiple": true }'>
       			<dl class="am-accordion-item am-active">
 			        <dt class="am-accordion-title">
-						{{ $ranksOneName or "--*--"  }}
+						{{ $basketFeeOneDesc or "--*--" }}
 			        </dt>
 	        		<dd class="am-accordion-bd am-collapse am-in">
 		          		<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
@@ -85,28 +70,28 @@
 		            		<table class="am-table am-table-bordered">
 					    		<thead>
 							        <tr>
-							            <th>名称</th>
-							            <th>球衣</th>
-							            <th>位置</th>
-							            <th>简介</th>
+							            <th>场次</th>
+							            <th>水费</th>
+							            <th>水果</th>
+							            <th>备注</th>
 							        </tr>
 							    </thead>
 							    <tbody>
-							    	@if (!empty($ranksOneUser))
-								    	@foreach($ranksOneUser as $oneUser)
+							    	@if (!empty($basketFeeOne))
+								    	@foreach($basketFeeOne as $oneFee)
 								        <tr>
-								            <td>{{$oneUser["nickname"]  or "--"}}</td>
-								            <td>{{$oneUser["jersey_no"] or "--"}}</td>
-								            <td>{{$oneUser["position"]	or "--"}}</td>
-								            <td>{{$oneUser["remark"] 	or "--"}}</td>
+								            <td>{{$oneFee["name"]  	or "--"}}</td>
+								            <td>{{$oneFee["water"] 	or "--"}}</td>
+								            <td>{{$oneFee["fruit"]	or "--"}}</td>
+								            <td>{{$oneFee["remark"] or "--"}}</td>
 								        </tr>
 								        @endforeach
 							        @else
 								        <tr>
-								            <td>L.L</td>
-								            <td>0</td>
-								            <td>中锋</td>
-								            <td>球场-搅屎棍</td>
+								            <td>--</td>
+								            <td>--</td>
+								            <td>--</td>
+								            <td>--</td>
 								        </tr>
 							        @endif
 							    </tbody>
@@ -118,7 +103,7 @@
 
 				<dl class="am-accordion-item am-active">
 					<dt class="am-accordion-title">
-						{{ $ranksTwoName or "--*--" }}
+						{{ $basketFeeTwoDesc or "--*--" }}
 					</dt>
 					<dd class="am-accordion-bd am-collapse am-in">
 						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
@@ -126,28 +111,68 @@
 							<table class="am-table am-table-bordered">
 								<thead>
 								<tr>
-									<th>名称</th>
-									<th>球衣</th>
-									<th>位置</th>
-									<th>简介</th>
+									<th>场次</th>
+									<th>水费</th>
+									<th>水果</th>
+									<th>备注</th>
 								</tr>
 								</thead>
 								<tbody>
-								@if (!empty($ranksTwoUser))
-									@foreach($ranksTwoUser as $twoUser)
+								@if (!empty($basketFeeTwo))
+									@foreach($basketFeeTwo as $twoFee)
 										<tr>
-											<td>{{$twoUser["nickname"] 	or "--"}}</td>
-											<td>{{$twoUser["jersey_no"]	or "--"}}</td>
-											<td>{{$twoUser["position"]	or "--"}}</td>
-											<td>{{$twoUser["remark"] 	or "--"}}</td>
+											<td>{{$twoFee["name"]  	or "--"}}</td>
+											<td>{{$twoFee["water"] 	or "--"}}</td>
+											<td>{{$twoFee["fruit"]	or "--"}}</td>
+											<td>{{$twoFee["remark"] or "--"}}</td>
 										</tr>
 									@endforeach
 								@else
 									<tr>
-										<td>L.L</td>
-										<td>0</td>
-										<td>中锋</td>
-										<td>球场-搅屎棍</td>
+										<td>--</td>
+										<td>--</td>
+										<td>--</td>
+										<td>--</td>
+									</tr>
+								@endif
+								</tbody>
+							</table>
+
+						</div>
+					</dd>
+				</dl>
+				<dl class="am-accordion-item am-active">
+					<dt class="am-accordion-title">
+						{{ $basketFeeThreeDesc or "--*--" }}
+					</dt>
+					<dd class="am-accordion-bd am-collapse am-in">
+						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+						<div class="am-accordion-content">
+							<table class="am-table am-table-bordered">
+								<thead>
+								<tr>
+									<th>场次</th>
+									<th>水费</th>
+									<th>水果</th>
+									<th>备注</th>
+								</tr>
+								</thead>
+								<tbody>
+								@if (!empty($basketFeeThree))
+									@foreach($basketFeeThree as $threeFee)
+										<tr>
+											<td>{{$threeFee["name"]  	or "--"}}</td>
+											<td>{{$threeFee["water"] 	or "--"}}</td>
+											<td>{{$threeFee["fruit"]	or "--"}}</td>
+											<td>{{$threeFee["remark"] 	or "--"}}</td>
+										</tr>
+									@endforeach
+								@else
+									<tr>
+										<td>--</td>
+										<td>--</td>
+										<td>--</td>
+										<td>--</td>
 									</tr>
 								@endif
 								</tbody>
@@ -158,15 +183,13 @@
 				</dl>
 
   			</section>
-
-        	<hr>
+			<hr>
 			<p class="am-article-lead">
-				比赛比分：   {{ $bDetail["score"] 	or " - * - " }}
+				第一次聚餐：日期：2017年07月06日 参加人数：17人，总额：1160元，人均：68元
 			</p>
 			<p class="am-article-lead">
-				比赛费用：   {{ $bDetail["fee_intro"]or " - * - " }}
+				第二次聚餐：日期：2017年08月26日 参加人数：08人，总额：572元，	人均：80元
 			</p>
-
 			<p class="am-article-lead">
 				美文展示：
 			</p>
@@ -202,20 +225,6 @@
                 <a href=""><span class="am-icon-weixin  am-icon-fw blog-icon"></span></a>
             </p>
         </div>
-		{{--
-         <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
-             <h2 class="blog-title"><span>标签集</span></h2>
-             <div class="am-u-sm-12 blog-clear-padding">
-                 <a href="llblogL"       class="blog-tag">FIGHTING</a>
-                 <a href="llblogL"       class="blog-tag">个人博客</a>
-                 <a href="xjs2017L"      class="blog-tag">夏季赛 </a>
-                 <a href="xjls2017L"     class="blog-tag">夏季联赛</a>
-                 <a href="basketPerson"  class="blog-tag">风采照 </a>
-                 <a href="basketPhoto"   class="blog-tag">照片墙 </a>
-                 <a href="basketGirl"    class="blog-tag">篮球宝贝</a>
-             </div>
-         </div>
-         --}}
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-title"><span>PAPA篮球</span></h2>
             <ul class="am-list">

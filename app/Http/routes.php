@@ -33,6 +33,8 @@ Route::get('xjls2017D',     'BasketballController@xjls2017Detail');     //2017�
 Route::get('basketPerson',  'BasketballController@basketPerson');       //个人风采照
 Route::get('basketPhoto',   'BasketballController@basketPhoto');        //篮球照片墙
 Route::get('basketGirl',  	'BasketballController@basketGirl');        	//篮球宝贝
+Route::get('basketFee',  	'BasketballController@basketFee');        	//篮球费用
+Route::get('basketNotice',  'BasketballController@basketNotice');        	//篮球赛程
 
 
 

@@ -1,17 +1,17 @@
 @extends('common.layout')
-
-@section('title','时光轴')
+@section('title','PAPA篮球')
 
 @section('content')
 
-
+{{--
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div class="am-u-sm-8 am-u-sm-centered">
         <!--<img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/> -->
         <h2 class="am-hide-sm-only">FIGHT_ZERO | PAPA-篮球 | @LU-BLOG</h2>
     </div>
 </header>
-<hr>
+--}}
+<br>
 <!-- nav start -->
 <nav class="am-g am-g-fixed blog-fixed blog-nav">
 <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
@@ -19,7 +19,7 @@
 <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
 
-        <li><a href="llbasketL"	>FIGHT博客</a></li>
+        <li><a href="llblogL"	>FIGHT博客</a></li>
         <li><a href="llbasketL" >PAPA篮球</a></li>
         {{--
 		<li class="am-dropdown am-active" data-am-dropdown>
@@ -38,11 +38,6 @@
         --}}
         <li><a href="lltime"		>时光轴</a></li>
     </ul>
-    <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
-        <div class="am-form-group">
-            <input type="text" class="am-form-field am-input-sm" placeholder="哈哈哈哈~~~">
-        </div>
-    </form>
 </div>
 </nav>
 <hr>
@@ -53,14 +48,14 @@
         @foreach($bList as $vo)
             <article class="am-g blog-entry-article">
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                    <img src="assets/basket/2017XJS-YRS.jpg" alt="" class="am-u-sm-12">
+                    <a href="llbasketD?id={{$vo['id']}}" ><img src="{{$vo['images']}}" alt="" class="am-u-sm-12"></a>
                 </div>
 
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
                     <span class="blog-color">{{ $vo["title"] or '个人博客' }}</span>
                     <span>{{ $vo['author'] or 'FIGHT_ZERO' }}&nbsp;</span>
                     <span>{{ date("Y/m/d", strtotime($vo["publish_at"])) }}</span>
-                    <a href="llbasketD?id={{$vo['id']}}" ><h4>{{ $vo['intro'] or null }}</h4> </a>
+                    <h4>{{ $vo['intro'] or null }}</h4>
                     <p>
                         {{$vo["description"] or null }}
                     </p>
@@ -86,27 +81,18 @@
                 <a href=""><span class="am-icon-weixin  am-icon-fw blog-icon"></span></a>
             </p>
         </div>
-        {{--
-         <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
-             <h2 class="blog-title"><span>标签集</span></h2>
-             <div class="am-u-sm-12 blog-clear-padding">
-                 <a href="llblogL"       class="blog-tag">FIGHTING</a>
-                 <a href="llblogL"       class="blog-tag">个人博客</a>
-                 <a href="xjs2017L"      class="blog-tag">夏季赛 </a>
-                 <a href="xjls2017L"     class="blog-tag">夏季联赛</a>
-                 <a href="basketPerson"  class="blog-tag">风采照 </a>
-                 <a href="basketPhoto"   class="blog-tag">照片墙 </a>
-                 <a href="basketGirl"    class="blog-tag">篮球宝贝</a>
-             </div>
-         </div>
-         --}}
+
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-title"><span>PAPA篮球</span></h2>
             <ul class="am-list">
-                <li><a href="llbasketL" >2017夏季赛</a></li>
-                <li><a href="llbasketL"	>2017夏季联赛</a></li>
+                <li><a href="llbasketL"     >2017夏季赛</a></li>
+                <li><a href="llbasketL"	    >2017夏季联赛</a></li>
                 <li><a href="basketPerson"	>2017风采照</a></li>
                 <li><a href="basketPhoto"  	>2017照片墙</a></li>
+                <li><a href="basketFee"  	>PAPA篮球费用</a></li>
+                <li><a href="basketXJS2017" >2017夏季赛程</a></li>
+                <li><a href="basketXJLS2017">2017夏季联赛程</a></li>
+                <li><a href="basketQJS2017" >2017秋季赛程</a></li>
             </ul>
         </div>
     </div>

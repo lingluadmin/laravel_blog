@@ -8,6 +8,7 @@ namespace App\Http\Controllers;
 use App\Http\Models\BasketModel;
 use App\Http\Models\BlogModel;
 use App\Http\Models\ImgsModel;
+use App\Http\Models\UserModel;
 use Illuminate\Http\Request;
 
 class ManagerController extends Controller {
@@ -60,6 +61,35 @@ class ManagerController extends Controller {
     }
 
     //TODO: PAPA篮球---START
+
+    //TODO: PAPA篮球---START
+    public  function userAdd(){
+
+        $assign["tagsArr"]  = BasketModel::getTagsArr();
+
+        return view('manager.addUser', $assign);
+    }
+
+    /**
+     * @desc 执行添加
+     **/
+    public function userAddDo(Request $request ){
+
+        $param  = $request->all();
+        $res    = UserModel::userAddDo($param);
+        if($res){
+            return redirect('userAdd')->with('message', 'SUCCESS');
+        }else{
+            //TODO: FAIL
+            echo "<pre>";
+            print_r($param);
+            exit;
+        }
+    }
+
+    /**
+     * @desc    篮球集锦
+     **/
     public  function basketAdd(){
 
         $assign["tagsArr"]  = BasketModel::getTagsArr();
@@ -89,21 +119,26 @@ class ManagerController extends Controller {
     //TODO： 照片上传
     public function imgAdd(){
 
-        $assign['tags']  = "XJS2017";
+        $assign['tagsList'] = BasketModel::getTagsList();
         return view('manager.addImg', $assign); 
     }
 
     //TODO: IMG DO 
     public function imgAddDo(Request $request){
         #echo "<pre>";
-        $file  = $request->file('imgs');
-        $images= $_FILES;
-
+        $tags   = $request->input('tags', "BASKET");
+        $file   = $request->file('imgs');
+        $images = $_FILES;
+        $savePath   = "";
+        $tagsArr    = BasketModel::getTagsArr();
+        if($tags && in_array($tags, $tagsArr)){
+            $savePath= "baskets";
+        }
         #var_dump($file);
         #var_dump($images);
 
         // 文件是否上传成功
-        $filename   = ImgsModel::upLocal($file);
+        $filename   = ImgsModel::upLocal($file, $savePath);
         if($filename && $filename !="FAIL"){
             $res    = ImgsModel::upOss($images,$filename);
             if($res){

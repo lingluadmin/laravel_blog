@@ -2,23 +2,30 @@
 
 namespace App\Http\Models;
 
+use App\Tools\ToolArray;
+
 class BaseModel{
 
 
     const
-        BASKET_RANKS_1  = 1,    // 2017夏季赛一队
-        BASKET_RANKS_2  = 2,    // 2017夏季赛二队
-        BASKET_RANKS_3  = 3,    // 2017秋季赛白队
-        BASKET_RANKS_4  = 4,    // 2017秋季赛蓝队
+        BASKET_RANKS_1  = "XJS2017YD",    // 2017夏季赛一队
+        BASKET_RANKS_2  = "XJS2017ED",    // 2017夏季赛二队
+        BASKET_RANKS_3  = "QJS2017BD",    // 2017秋季赛白队
+        BASKET_RANKS_4  = "QJS2017LD",    // 2017秋季赛蓝队
 
-        END     = true;
-
-    const
         TAGS_XJS2017    = "XJS2017",    //夏季赛2017
         TAGS_XJLS2017   = "XJLS2017",   //夏季联赛2017
         TAGS_QJS2017    = "QJS2017",    //秋季赛2017
-        END1    = true;
 
+        STATUS_ALL      = "ALL",        //状态-全部
+        STATUS_ON       = 1,            //状态-开
+        STATUS_OFF      = 9,            //状态-关
+
+        GROUPS_ALL      = "ALL",        //标签分组-全部可用
+        GROUPS_BASKET   = "BASKET",     //标签分组-篮球
+        GROUPS_BLOG     = "BLOG",       //标签分组-博客
+
+        END     = true;
 
     /**
      * @desc    队伍名称
@@ -48,6 +55,44 @@ class BaseModel{
         ];
     }
 
+
+    /**
+     * @desc    获取标签列表
+     **/
+    public static function getTagsList( $status = self::STATUS_ALL ){
+
+        if($status == "ALL" || empty($status)){
+            $result = \DB::table("tags")
+                ->get();
+        }else{
+            $result = \DB::table("tags")
+                ->where("status", $status)
+                ->get();
+        }
+        $result = ToolArray::objectToArray($result);
+
+        return $result;
+    }
+
+
+    /**
+     * @desc    根据分组获取标签列表
+     **/
+    public static function getTagsByGroups( $groups = self::GROUPS_ALL, $status=self::STATUS_ON ){
+
+        if($groups == "ALL" || empty($groups)){
+            $result = \DB::table("tags")
+                ->get();
+        }else{
+            $result = \DB::table("tags")
+                ->where("groups", $groups)
+                ->where("status", $status)
+                ->get();
+        }
+        $result = ToolArray::objectToArray($result);
+
+        return $result;
+    }
 
 
     /**

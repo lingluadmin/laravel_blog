@@ -54,6 +54,30 @@ class BasketballController extends Controller {
 
 
     /**
+     * @desc    PAPA篮球费用
+     *
+     */
+    public function basketFee(){
+
+        $formatData  = BasketModel::getBasketFee();
+
+        return view('basketball.bfee',$formatData);
+
+    }
+
+    /**
+     * @desc    PAPA篮球费用
+     *
+     */
+    public function basketNotice(){
+
+        $formatData  = BasketModel::getBasketNotice();
+
+        return view('basketball.bnotice',$formatData);
+
+    }
+
+    /**
      * @desc    个人风采照
      *
      **/
