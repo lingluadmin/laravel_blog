@@ -164,7 +164,7 @@
 				比赛比分：   {{ $bDetail["score"] 	or " - * - " }}
 			</p>
 			<p class="am-article-lead">
-				比赛费用：   {{ $bDetail["fee_intro"]or " - * - " }}
+				比赛费用：   {{ $bDetail["fee_intro"] or " - * - " }}
 			</p>
 
 			<p class="am-article-lead">
