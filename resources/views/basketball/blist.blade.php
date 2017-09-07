@@ -48,7 +48,7 @@
         @foreach($bList as $vo)
             <article class="am-g blog-entry-article">
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                    <a href="llbasketD?id={{$vo['id']}}" ><img src="{{$vo['images']}}" alt="" class="am-u-sm-12"></a>
+                    <a href="llbasketD?id={{$vo['id']}}" ><img src="{{$vo['picture']}}" alt="" class="am-u-sm-12"></a>
                 </div>
 
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">

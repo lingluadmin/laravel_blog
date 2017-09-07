@@ -65,20 +65,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blist.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="blist.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/basketball/blist.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.931034" vertical-offset="990" max-vertical-offset="2442">
-              <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.18509616" vertical-offset="990" max-vertical-offset="2486">
+              <caret line="50" column="82" selection-start-line="50" selection-start-column="82" selection-end-line="50" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasketModel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BasketModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Models/BasketModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31730768" vertical-offset="0" max-vertical-offset="10450">
+            <state vertical-scroll-proportion="-9.103448" vertical-offset="0" max-vertical-offset="10450">
               <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding />
             </state>
@@ -156,10 +156,10 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BasketballController.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/bdetail.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/basketball/blist.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/bfee.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/bmeet.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/bnotice.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/basketball/blist.blade.php" />
       </list>
     </option>
   </component>
@@ -175,8 +175,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="353" />
-    <option name="y" value="295" />
+    <option name="x" value="444" />
+    <option name="y" value="119" />
     <option name="width" value="1517" />
     <option name="height" value="998" />
   </component>
@@ -390,7 +390,7 @@
     <option name="totallyTimeSpent" value="88376000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="353" y="295" width="1517" height="998" extended-state="1" />
+    <frame x="444" y="119" width="1517" height="998" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -796,14 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/basketball/blist.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.931034" vertical-offset="990" max-vertical-offset="2442">
-          <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BasketballController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.241379" vertical-offset="1364" max-vertical-offset="2728">
@@ -822,8 +814,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Models/BasketModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31730768" vertical-offset="0" max-vertical-offset="10450">
+        <state vertical-scroll-proportion="-9.103448" vertical-offset="0" max-vertical-offset="10450">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/basketball/blist.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18509616" vertical-offset="990" max-vertical-offset="2486">
+          <caret line="50" column="82" selection-start-line="50" selection-start-column="82" selection-end-line="50" selection-end-column="82" />
           <folding />
         </state>
       </provider>
