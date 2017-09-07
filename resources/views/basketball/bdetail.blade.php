@@ -1,5 +1,5 @@
 @extends('common.layout')
-@section('title','时光轴')
+@section('title','PAPA篮球-比赛详情')
 
 @section('content')
 {{--
@@ -202,29 +202,18 @@
                 <a href=""><span class="am-icon-weixin  am-icon-fw blog-icon"></span></a>
             </p>
         </div>
-		{{--
-         <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
-             <h2 class="blog-title"><span>标签集</span></h2>
-             <div class="am-u-sm-12 blog-clear-padding">
-                 <a href="llblogL"       class="blog-tag">FIGHTING</a>
-                 <a href="llblogL"       class="blog-tag">个人博客</a>
-                 <a href="xjs2017L"      class="blog-tag">夏季赛 </a>
-                 <a href="xjls2017L"     class="blog-tag">夏季联赛</a>
-                 <a href="basketPerson"  class="blog-tag">风采照 </a>
-                 <a href="basketPhoto"   class="blog-tag">照片墙 </a>
-                 <a href="basketGirl"    class="blog-tag">篮球宝贝</a>
-             </div>
-         </div>
-         --}}
-        <div class="blog-sidebar-widget blog-bor">
-            <h2 class="blog-title"><span>PAPA篮球</span></h2>
-            <ul class="am-list">
-                <li><a href="llbasketL" >2017夏季赛</a></li>
-                <li><a href="llbasketL"	>2017夏季联赛</a></li>
-                <li><a href="basketPerson"	>2017风采照</a></li>
-                <li><a href="basketPhoto"  	>2017照片墙</a></li>
-            </ul>
-        </div>
+		<div class="blog-sidebar-widget blog-bor">
+			<h2 class="blog-title"><span>PAPA篮球</span></h2>
+			<ul class="am-list">
+				<li><a href="llbasketL"     >2017夏季赛</a></li>
+				<li><a href="llbasketL"	    >2017夏季联赛</a></li>
+				<li><a href="llbasketL"	    >2017风采照</a></li>
+				<li><a href="llbasketL"  	>2017照片墙</a></li>
+				<li><a href="basketFee"  	>PAPA篮球费用</a></li>
+				<li><a href="basketNotice"  >PAPA篮球赛程</a></li>
+				<li><a href="basketMeet"    >PAPA篮球年会</a></li>
+			</ul>
+		</div>
     </div>
 </div>
 <!-- content end -->
