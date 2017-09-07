@@ -1,11 +1,11 @@
 
 
-# @desc   数据库文件SQL
-# @author FIGHTZERO
-# @date   2017-09-06
+-- @desc   数据库文件SQL
+-- @author FIGHTZERO
+-- @date   2017-09-06
 
 
-#TODO:博客表
+-- TODO:博客表
 DROP TABLE IF EXISTS `blog_blogs`;
 CREATE TABLE `blog_blogs` (
   `id`      int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '博客表',
@@ -32,7 +32,7 @@ CREATE TABLE `blog_blogs` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-##TODO: 文章表
+-- TODO: 文章表
 
 DROP TABLE IF EXISTS `blog_article`;
 CREATE TABLE `blog_article` (
@@ -60,7 +60,7 @@ CREATE TABLE `blog_article` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-## TODO:篮球赛
+-- TODO:篮球赛
 DROP TABLE IF EXISTS `blog_basketball`;
 CREATE TABLE `blog_basketball` (
   `id` 	    int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '篮球集锦表',
@@ -89,7 +89,7 @@ CREATE TABLE `blog_basketball` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-##TODO: 球员表
+-- TODO: 球员表
 DROP TABLE IF EXISTS `blog_basketuser`;
 CREATE TABLE `blog_basketuser` (
   `id`  int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '比赛用户表',
@@ -103,7 +103,7 @@ CREATE TABLE `blog_basketuser` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
-##TODO: 图片集
+-- TODO: 图片集
 DROP TABLE IF EXISTS `blog_imgs`;
 CREATE TABLE `blog_imgs` (
   `id`      int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -116,7 +116,7 @@ CREATE TABLE `blog_imgs` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-##TODO:标签-分类
+-- TODO:标签-分类
 DROP TABLE IF EXISTS `blog_tags`;
 CREATE TABLE `blog_tags` (
   `id`      int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '标签表',
@@ -133,7 +133,7 @@ CREATE TABLE `blog_tags` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-##TODO:用户表
+-- TODO:用户表
 DROP TABLE IF EXISTS `blog_user`;
 CREATE TABLE `blog_user` (
   `id`        int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户表',

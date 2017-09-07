@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3efb1165-e365-4378-a1e4-861cd746bc80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BasketballController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BasketballController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/ArticleModel.php" afterPath="$PROJECT_DIR$/app/Http/Models/ArticleModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/BaseModel.php" afterPath="$PROJECT_DIR$/app/Http/Models/BaseModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/BasketModel.php" afterPath="$PROJECT_DIR$/app/Http/Models/BasketModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/ImgsModel.php" afterPath="$PROJECT_DIR$/app/Http/Models/ImgsModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/filesystems.php" afterPath="$PROJECT_DIR$/config/filesystems.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/basketball/bdetail.blade.php" afterPath="$PROJECT_DIR$/resources/views/basketball/bdetail.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/basketball/blist.blade.php" afterPath="$PROJECT_DIR$/resources/views/basketball/blist.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/blogConfig.sql" afterPath="$PROJECT_DIR$/database/seeds/blogConfig.sql" />
     </list>
     <ignored path="laravel_blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,11 +64,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bnotice.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bnotice.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/basketball/bnotice.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="551">
               <caret line="105" column="62" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blogConfig.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/seeds/blogConfig.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2190">
+              <caret line="146" column="90" selection-start-line="146" selection-start-column="63" selection-end-line="146" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -143,7 +153,6 @@
         <option value="$PROJECT_DIR$/app/Http/Models/ImgsModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Models/ArticleModel.php" />
         <option value="$PROJECT_DIR$/database/seeds/BlogConfigSeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/blogConfig.sql" />
         <option value="$PROJECT_DIR$/app/Http/Models/BaseModel.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/blist.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/bfee.blade.php" />
@@ -151,6 +160,7 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Models/BasketModel.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/bnotice.blade.php" />
+        <option value="$PROJECT_DIR$/database/seeds/blogConfig.sql" />
       </list>
     </option>
   </component>
@@ -167,7 +177,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2154" />
+    <option name="x" value="1463" />
     <option name="y" value="23" />
     <option name="width" value="1534" />
     <option name="height" value="1382" />
@@ -198,7 +208,56 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
@@ -284,19 +343,19 @@
       <workItem from="1504505867951" duration="13879000" />
       <workItem from="1504591540683" duration="14014000" />
       <workItem from="1504663678071" duration="19556000" />
-      <workItem from="1504751418443" duration="7537000" />
+      <workItem from="1504751418443" duration="8342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77072000" />
+    <option name="totallyTimeSpent" value="77877000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2154" y="23" width="1534" height="1382" extended-state="0" />
+    <frame x="1463" y="23" width="1534" height="1382" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23190348" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23190348" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -353,13 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/web/timeline.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/bower_dl/tests/bootstrap-test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -622,13 +674,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/blogConfig.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="125" column="48" selection-start-line="125" selection-start-column="48" selection-end-line="125" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -636,6 +682,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="61" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -724,6 +773,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="105" column="62" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/blogConfig.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2190">
+          <caret line="146" column="90" selection-start-line="146" selection-start-column="63" selection-end-line="146" selection-end-column="63" />
           <folding />
         </state>
       </provider>
