@@ -97,9 +97,9 @@ class BasketModel  extends BaseModel
     /**
      * @desc    获取球员信息
      **/
-    public static function getUserList( $source = "BASKET" ){
+    public static function getUserList( $tags = "BASKET" ){
 
-        $result = \DB::table("user")->where("source", $source)->get();
+        $result = \DB::table("user")->where("tags", $tags)->get();
 
         $result = ToolArray::objectToArray($result);
 
