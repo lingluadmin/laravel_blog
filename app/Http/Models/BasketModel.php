@@ -13,15 +13,25 @@ class BasketModel  extends BaseModel
     public static function basketAddDo( $param=[] ){
 
         $paramData["title"]     = !empty($param["title"])   ? $param["title"]   : "";
-        $paramData["intro"]     = !empty($param["intro"])   ? $param["intro"]   : "";
-        $paramData["keywords"]  = !empty($param["keywords"])? $param["keywords"]: "";
+        $paramData["keywords"]  = !empty($param["keywords"])? $param["keywords"]: self::TAGS_BASKET;
+        $paramData["intro"]     = !empty($param["intro"])   ? $param["intro"]   : "谢谢支持PAPA篮球~~~";
+        $paramData["picture"]   = !empty($param["picture"]) ? $param["picture"] : "";
         $paramData["description"]=!empty($param["description"]) ? $param["description"] : "";
-        $paramData["images"]    = !empty($param["images"])  ? $param["images"]  : "";
+
+        $paramData["tags"]      = !empty($param["tags"])    ? $param["tags"]    : self::TAGS_BASKET;
         $paramData["status"]    = !empty($param["status"])  ? $param["status"]  : "";
-        $paramData["tags"]      = !empty($param["tags"])    ? $param["tags"]    : "";
+        $paramData["sort_num"]  = !empty($param["sort_num"])? $param["sort_num"]: "";
+        $paramData["is_top"]    = !empty($param["is_top"])  ? $param["is_top"]  : "";
+        $paramData["fee_intro"] = !empty($param["fee_intro"])?$param["fee_intro"]:"";
+        $paramData["score"]     = !empty($param["score"])   ? $param["score"]   : "";
+
+        #文章添加
         $paramData["content"]   = !empty($param["content"]) ? $param["content"] : "";
-        $paramData["author"]    = !empty($param["author"])  ? $param["author"]  : "";
-        $paramData["publish_at"]= !empty($param["publish_at"])  ? $param["publish_at"]  : "";
+        $paramData["source"]    = !empty($param["source"])  ? $param["source"]  : "";
+        $paramData["source_link"]=!empty($param["source_link"]) ? $param["source_link"] : "";
+        $paramData["author"]    = !empty($param["author"])      ? $param["author"]      : "FIGHTZERO";
+        $paramData["mypoint"]   = !empty($param["mypoint"])     ? $param["mypoint"]     : "奋斗吧，骚年~";
+        $paramData["publish_at"]= !empty($param["publish_at"])  ? $param["publish_at"]  : date("Y-m-d");
 
         $res    = \DB::table("basketball")->insert( $paramData );
 

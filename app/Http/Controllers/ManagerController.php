@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 
 class ManagerController extends Controller {
 
+    const
+        MANAGER = "LING",
+
+        END     = true;
+
 	/**
      * @desc 文章添加
      *
@@ -28,6 +33,11 @@ class ManagerController extends Controller {
      **/
     public function articleAddDo(Request $request ){
         $param  = $request->all();
+        $manager= $request->input('manager','');
+        if($manager != self::MANAGER){
+            echo "侬不可编辑哟";
+            exit;
+        }
         $paramData["content"] = !empty($param["content"]) ? $param["content"]  : "";
         $res    = BlogModel::blogAddDo($paramData);
         var_dump($res);
@@ -38,7 +48,7 @@ class ManagerController extends Controller {
     //TODO: FIGHT—BLOG
     public  function blogAdd(){
 
-        $assign["tagsArr"]  = BasketModel::getTagsArr();
+        $assign["tagsArr"]  = BasketModel::getBasketTagsArr();
 
         return view('manager.addBasket', $assign);
     }
@@ -49,6 +59,12 @@ class ManagerController extends Controller {
     public function blogAddDo(Request $request ){
 
         $param  = $request->all();
+        $manager= $request->input('manager','');
+        if($manager != self::MANAGER){
+            echo "侬不可编辑哟";
+            exit;
+        }
+
         $res    = BlogModel::blogAddDo($param);
         if($res){
             return redirect('blogAdd')->with('message', 'SUCCESS');
@@ -65,7 +81,7 @@ class ManagerController extends Controller {
     //TODO: PAPA篮球---START
     public  function userAdd(){
 
-        $assign["tagsArr"]  = BasketModel::getTagsArr();
+        $assign["tagsArr"]  = BasketModel::getBasketTagsArr();
 
         return view('manager.addUser', $assign);
     }
@@ -76,6 +92,13 @@ class ManagerController extends Controller {
     public function userAddDo(Request $request ){
 
         $param  = $request->all();
+        $manager= $request->input('manager','');
+
+        if($manager != self::MANAGER){
+            echo "侬不可编辑哟";
+            exit;
+        }
+
         $res    = UserModel::userAddDo($param);
         if($res){
             return redirect('userAdd')->with('message', 'SUCCESS');
@@ -92,7 +115,7 @@ class ManagerController extends Controller {
      **/
     public  function basketAdd(){
 
-        $assign["tagsArr"]  = BasketModel::getTagsArr();
+        $assign["tagsArr"]  = BasketModel::getBasketTagsArr();
 
         return view('manager.addBasket', $assign);
     }
@@ -103,9 +126,16 @@ class ManagerController extends Controller {
     public function basketAddDo(Request $request ){
 
         $param  = $request->all();
+
+        $manager= $request->input('manager','');
+        if($manager != self::MANAGER){
+            echo "侬不可编辑哟";
+            exit;
+        }
+
         $res    = BasketModel::basketAddDo($param);
         if($res){
-            return redirect('basketAdd')->with('message', 'SUCCESS');
+            return redirect('basketAdd')->with('message', '添加成功');
         }else{
             //TODO: FAIL
             echo "<pre>";
@@ -130,7 +160,7 @@ class ManagerController extends Controller {
         $file   = $request->file('imgs');
         $images = $_FILES;
         $savePath   = "";
-        $tagsArr    = BasketModel::getTagsArr();
+        $tagsArr    = BasketModel::getBasketTagsArr();
         if($tags && in_array($tags, $tagsArr)){
             $savePath= "baskets";
         }

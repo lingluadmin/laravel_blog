@@ -210,8 +210,14 @@ class ComposerStaticInite2948423b74a61d689b71794636361ef
     );
 
     public static $classMap = array (
-        'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
-        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
+        'BlogConfigSeeder' => __DIR__ . '/../..' . '/database/seeds/BlogConfigSeeder.php',
+        'CreateArticleTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_07_070808_create_article_table.php',
+        'CreateBasketballTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_07_070728_create_basketball_table.php',
+        'CreateBasketuserTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_07_070734_create_basketuser_table.php',
+        'CreateBlogsTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_07_070631_create_blogs_table.php',
+        'CreateImgsTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_07_070745_create_imgs_table.php',
+        'CreateTagsTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_07_070755_create_tags_table.php',
+        'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_07_070622_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/File/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/File/Iterator/Facade.php',

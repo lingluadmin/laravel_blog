@@ -13,17 +13,23 @@ class BaseModel{
         BASKET_RANKS_3  = "QJS2017BD",    // 2017秋季赛白队
         BASKET_RANKS_4  = "QJS2017LD",    // 2017秋季赛蓝队
 
+        ## 标签
         TAGS_XJS2017    = "XJS2017",    //夏季赛2017
         TAGS_XJLS2017   = "XJLS2017",   //夏季联赛2017
         TAGS_QJS2017    = "QJS2017",    //秋季赛2017
+        TAGS_BASKET     = "BASKET",     //篮球
+        TAGS_BLOG       = "BLOG",       //博客
+        TAGS_ARTICLE    = "ARTICLE",    //文章
 
-        STATUS_ALL      = "ALL",        //状态-全部
-        STATUS_ON       = 1,            //状态-开
-        STATUS_OFF      = 9,            //状态-关
-
+        ## 标签分组
         GROUPS_ALL      = "ALL",        //标签分组-全部可用
         GROUPS_BASKET   = "BASKET",     //标签分组-篮球
         GROUPS_BLOG     = "BLOG",       //标签分组-博客
+
+        ## 状态
+        STATUS_ALL      = "ALL",        //状态-全部
+        STATUS_ON       = 1,            //状态-开
+        STATUS_OFF      = 9,            //状态-关
 
         END     = true;
 
@@ -45,7 +51,7 @@ class BaseModel{
      * @desc    篮球赛TAGS
      *
      **/
-    public static function getTagsArr(){
+    public static function getBasketTagsArr(){
 
         return [
             "XJS2017"   => "2017PAPA篮球-夏季赛",
