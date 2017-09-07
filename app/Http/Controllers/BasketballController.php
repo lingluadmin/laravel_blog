@@ -78,6 +78,21 @@ class BasketballController extends Controller {
     }
 
     /**
+     * @desc    PAPA篮球费用
+     *
+     */
+    public function basketMeet(){
+
+        $article= BasketModel::getArticleList();
+        $bGril  = BasketModel::getBasketGril();
+        $assign["article"]  = $article;
+        $assign["bGril"]    = $bGril;
+
+        return view('basketball.bmeet', $assign);
+
+    }
+
+    /**
      * @desc    个人风采照
      *
      **/

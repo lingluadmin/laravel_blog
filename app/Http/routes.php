@@ -34,7 +34,8 @@ Route::get('basketPerson',  'BasketballController@basketPerson');       //个人
 Route::get('basketPhoto',   'BasketballController@basketPhoto');        //篮球照片墙
 Route::get('basketGirl',  	'BasketballController@basketGirl');        	//篮球宝贝
 Route::get('basketFee',  	'BasketballController@basketFee');        	//篮球费用
-Route::get('basketNotice',  'BasketballController@basketNotice');        	//篮球赛程
+Route::get('basketNotice',  'BasketballController@basketNotice');       //篮球赛程
+Route::get('basketMeet',    'BasketballController@basketMeet');         //PAPA篮球-年会
 
 
 
