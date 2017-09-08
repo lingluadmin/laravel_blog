@@ -225,15 +225,18 @@
                 <a href=""><span class="am-icon-weixin  am-icon-fw blog-icon"></span></a>
             </p>
         </div>
-        <div class="blog-sidebar-widget blog-bor">
-            <h2 class="blog-title"><span>PAPA篮球</span></h2>
-            <ul class="am-list">
-                <li><a href="llbasketL" >2017夏季赛</a></li>
-                <li><a href="llbasketL"	>2017夏季联赛</a></li>
-                <li><a href="basketPerson"	>2017风采照</a></li>
-                <li><a href="basketPhoto"  	>2017照片墙</a></li>
-            </ul>
-        </div>
+		<div class="blog-sidebar-widget blog-bor">
+			<h2 class="blog-title"><span>PAPA篮球</span></h2>
+			<ul class="am-list">
+				<li><a href="llbasketL"     >2017夏季赛</a></li>
+				<li><a href="llbasketL"	    >2017夏季联赛</a></li>
+				<li><a href="llbasketL"	    >2017风采照</a></li>
+				<li><a href="llbasketL"  	>2017照片墙</a></li>
+				<li><a href="basketFee"  	>PAPA篮球费用</a></li>
+				<li><a href="basketNotice"  >PAPA篮球赛程</a></li>
+				<li><a href="basketMeet"    >PAPA篮球年会</a></li>
+			</ul>
+		</div>
     </div>
 </div>
 <!-- content end -->

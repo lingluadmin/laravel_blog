@@ -19,7 +19,7 @@
 <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
 
-        <li><a href="llblogL"	>FIGHT博客</a></li>
+        <li><a href="llbasketL"	>FIGHT博客</a></li>
         <li><a href="llbasketL" >PAPA篮球</a></li>
         {{--
 		<li class="am-dropdown am-active" data-am-dropdown>
@@ -48,7 +48,7 @@
         @foreach($bList as $vo)
             <article class="am-g blog-entry-article">
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                    <a href="llbasketD?id={{$vo['id']}}" ><img src="{{$vo['images']}}" alt="" class="am-u-sm-12"></a>
+                    <a href="llbasketD?id={{$vo['id']}}" ><img src="{{$vo['picture']}}" alt="" class="am-u-sm-12"></a>
                 </div>
 
                 <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
@@ -87,12 +87,11 @@
             <ul class="am-list">
                 <li><a href="llbasketL"     >2017夏季赛</a></li>
                 <li><a href="llbasketL"	    >2017夏季联赛</a></li>
-                <li><a href="basketPerson"	>2017风采照</a></li>
-                <li><a href="basketPhoto"  	>2017照片墙</a></li>
+                <li><a href="llbasketL"	    >2017风采照</a></li>
+                <li><a href="llbasketL"  	>2017照片墙</a></li>
                 <li><a href="basketFee"  	>PAPA篮球费用</a></li>
-                <li><a href="basketXJS2017" >2017夏季赛程</a></li>
-                <li><a href="basketXJLS2017">2017夏季联赛程</a></li>
-                <li><a href="basketQJS2017" >2017秋季赛程</a></li>
+                <li><a href="basketNotice"  >PAPA篮球赛程</a></li>
+                <li><a href="basketMeet"    >PAPA篮球年会</a></li>
             </ul>
         </div>
     </div>

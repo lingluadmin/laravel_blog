@@ -14,7 +14,7 @@
 <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
 
-        <li><a href="llblogL"	>FIGHT博客</a></li>
+        <li><a href="llbasketL"	>FIGHT博客</a></li>
         <li class="am-active"	><a href="llbasketL" >PAPA篮球</a></li>
         <li><a href="lltime"	>时光轴</a></li>
     </ul>
@@ -35,7 +35,7 @@
 			   <h1 class="am-article-title blog-text-center">PAPA篮球-赛程</h1>
 			   <p class="am-article-meta blog-text-center">
 				   <span><a href="llbasketL" class="blog-color">BASKETBALL</a></span>-
-				   <span><a href="llblogL"	 >FIGHTZERO</a></span>-
+				   <span><a href="llbasketL"	 >FIGHTZERO</a></span>-
 				   <span><a href="#">{{ date('Y/m/d', time()) }}</a></span>
 			   </p>
 		   </div>
@@ -217,10 +217,13 @@
 		<div class="blog-sidebar-widget blog-bor">
 			<h2 class="blog-title"><span>PAPA篮球</span></h2>
 			<ul class="am-list">
-				<li><a href="llbasketL" >2017夏季赛</a></li>
-				<li><a href="llbasketL"	>2017夏季联赛</a></li>
-				<li><a href="basketPerson"	>2017风采照</a></li>
-				<li><a href="basketPhoto"  	>2017照片墙</a></li>
+				<li><a href="llbasketL"     >2017夏季赛</a></li>
+				<li><a href="llbasketL"	    >2017夏季联赛</a></li>
+				<li><a href="llbasketL"	    >2017风采照</a></li>
+				<li><a href="llbasketL"  	>2017照片墙</a></li>
+				<li><a href="basketFee"  	>PAPA篮球费用</a></li>
+				<li><a href="basketNotice"  >PAPA篮球赛程</a></li>
+				<li><a href="basketMeet"    >PAPA篮球年会</a></li>
 			</ul>
 		</div>
 	</div>
