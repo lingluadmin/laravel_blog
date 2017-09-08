@@ -2,14 +2,7 @@
 @section('title','PAPA篮球费用')
 
 @section('content')
-{{--
-<header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
-	<div class="am-u-sm-8 am-u-sm-centered">
-		<!--<img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/> -->
-		<h2 class="am-hide-sm-only">FIGHTZERO | PAPA篮球 | LLPER_BLOG</h2>
-	</div>
-</header>
---}}
+
 <br>
 <!-- nav start -->
 <nav class="am-g am-g-fixed blog-fixed blog-nav">
@@ -106,7 +99,6 @@
 						{{ $basketFeeTwoDesc or "--*--" }}
 					</dt>
 					<dd class="am-accordion-bd am-collapse am-in">
-						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
 						<div class="am-accordion-content">
 							<table class="am-table am-table-bordered">
 								<thead>
@@ -146,7 +138,6 @@
 						{{ $basketFeeThreeDesc or "--*--" }}
 					</dt>
 					<dd class="am-accordion-bd am-collapse am-in">
-						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
 						<div class="am-accordion-content">
 							<table class="am-table am-table-bordered">
 								<thead>

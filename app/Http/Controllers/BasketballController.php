@@ -10,10 +10,6 @@ use Illuminate\Http\Request;
 class BasketballController extends Controller {
 
     const 
-        BASKET_RANKS_1  = 1,    // 2017夏季赛一队
-        BASKET_RANKS_2  = 2,    // 2017夏季赛二队
-        BASKET_RANKS_3  = 3,    // 2017秋季赛白队
-        BASKET_RANKS_4  = 4,    // 2017秋季赛蓝队
 
         END     = true;
 

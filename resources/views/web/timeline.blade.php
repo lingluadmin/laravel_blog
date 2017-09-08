@@ -8,7 +8,7 @@
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div class="am-u-sm-8 am-u-sm-centered">
         <!--<img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/> -->
-        <h2 class="am-hide-sm-only">FIGHT_ZERO | PAPA-篮球 | @LU-BLOG</h2>
+        <h2 class="am-hide-sm-only">FIGHT_ZERO | PAPA篮球 | @LU-BLOG</h2>
     </div>
 </header>
 <hr>
@@ -21,26 +21,11 @@
 
         <li><a href="llbasketL"	>FIGHT博客</a></li>
         <li><a href="llbasketL" >PAPA篮球</a></li>
-        {{--
-		<li class="am-dropdown am-active" data-am-dropdown>
-            <a class="am-dropdown-toggle " data-am-dropdown-toggle href="llbasketL">
-                PAPA篮球<span class="am-icon-caret-down"></span>
-            </a>
-			<ul class="am-dropdown-content">
-				<li><a href="llbasketL?tags=XJS2017"    >夏季赛</a></li>
-				<li><a href="llbasketL?tags=XJLS2017"   >夏季联赛</a></li>
-				<li><a href="basketPerson"  >风采照</a></li>
-				<li><a href="basketPhoto"   >照片墙</a></li>
-			</ul>
-        </li>
-
-        <li><a href="personCollect"	>个人收藏</a></li>
-        --}}
-        <li class="am-active"><a href="lltime"		>时光轴</a></li>
+        <li class="am-active"><a href="lltime" >时光轴</a></li>
     </ul>
     <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
         <div class="am-form-group">
-            <input type="text" class="am-form-field am-input-sm" placeholder="哈哈哈哈~~~">
+            <input type="text" class="am-form-field am-input-sm" placeholder="哈哈哈哈~~~" readonly>
         </div>
     </form>
 </div>
