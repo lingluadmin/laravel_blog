@@ -210,4 +210,40 @@ class ManagerController extends Controller {
 
     //TODO: PAPA篮球---END
 
+
+    /**
+     * @desc    时光轴添加
+     **/
+    public  function timelineAdd(){
+
+        $assign["tagsArr"]  = BasketModel::getTagsList();
+
+        return view('manager.addTimeline', $assign);
+    }
+
+    /**
+     * @desc 执行添加
+     **/
+    public function timelineAddDo(Request $request ){
+
+        $param  = $request->all();
+
+        $manager= $request->input('manager','');
+        if($manager != self::MANAGER){
+            echo "侬不可编辑哟";
+            exit;
+        }
+
+        $res    = UserModel::timelineAddDo($param);
+        if($res){
+            return redirect('timelineAdd')->with('message', '添加成功');
+        }else{
+            //TODO: FAIL
+            echo "<pre>";
+            print_r($param);
+            exit;
+        }
+    }
+
+
 }

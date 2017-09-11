@@ -4,13 +4,6 @@
 
 @section('content')
 
-
-<header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
-    <div class="am-u-sm-8 am-u-sm-centered">
-        <!--<img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/> -->
-        <h2 class="am-hide-sm-only">FIGHT_ZERO | PAPA篮球 | @LU-BLOG</h2>
-    </div>
-</header>
 <hr>
 <!-- nav start -->
 <nav class="am-g am-g-fixed blog-fixed blog-nav">
@@ -34,158 +27,81 @@
 
 <!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
-    <div class="am-u-sm-12">
+    <div class="am-u-md-8 am-u-sm-12">
         <h1 class="blog-text-center">-- 时光轴  --</h1>
+
+        @foreach( $resData as $key=>$val )
         <div class="timeline-year">
-            <h1>2017</h1>
+            <h1>{{ $val["yearName"] or "-*-" }}</h1>
             <hr>
-            <ul>
-                <h3>08月</h3>
-                <hr>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/08/05</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季联赛-G1</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/08/12</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季联赛-G2</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/08/19</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季联赛-G3</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/08/26</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季联赛-G4</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-            </ul>
-            <br>
-            <ul>
-                <br>
-                <h3>07月</h3>
-                <hr>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/07/01</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-G6</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/07/08</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-技巧赛</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/07/15</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-G7</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/07/22</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-全明星</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/07/29</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-友谊赛</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-            </ul>
-            <br>
-            <ul>
-                <br>
-                <br>
-                <h3>6月</h3>
-                <hr>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/06/03</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-G2</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/06/10</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-G3</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/06/17</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-G4</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/06/24</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-G5</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-            </ul>
-             <br>
-            <ul>
-                <br>
-                <h3>5月</h3>
-                <hr>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/05/13</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-预热塞</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-                <li>
-                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/05/20</span>
-                    <span class="am-u-sm-8 am-u-md-6"><a href="#">2017-18 PAPA篮球-夏季赛-G1</a></span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">BASKET</span>
-                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                </li>
-            </ul>
-        </div>
-        <div class="timeline-year">
-            <br>
-            <h1>2016</h1>
-            <hr>
-               <ul>
-                    <h3>10月</h3>
-                    <hr>
+            @foreach( $val["yearData"] as $key1=>$val1 )
+                <ul>
+                    <h3>{{ $val1["monthName"] or "-*-" }}</h3>
+                    <hr />
+                    @foreach( $val1["monthData"] as $key2=>$val2 )
                     <li>
-                        <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/10/01</span>
-                        <span class="am-u-sm-8 am-u-md-6"><a href="#">国庆节-回家掰玉米</a></span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">DAILY</span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
+                        <span class="am-u-sm-4 am-u-md-2 timeline-span">{{ $val2["publish_at"] or '-*-' }}</span>
+                        <span class="am-u-sm-8 am-u-md-6"><a href="#">{{ $val2["title"]     or '--' }}</a></span>
+                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{{ $val2["tags"]  or '--' }}</span>
+                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">{{ $val2["author"] or 'FIGHTZERO' }}</span>
                     </li>
-                    <li>
-                        <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/13</span>
-                        <span class="am-u-sm-8 am-u-md-6"><a href="#">店客来公司~老板跑咯</a></span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">DAILY</span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                    </li>
-                    <li>
-                        <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/10/27</span>
-                        <span class="am-u-sm-8 am-u-md-6"><a href="#">入职星果时代信息技术有限公司</a></span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">WORK</span>
-                        <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
-                    </li>
+                    <br/>
+                    @endforeach
                 </ul>
                 <br>
+            @endforeach
         </div>
 
-
+         @endforeach
         <hr>
+
+
+        <p class="am-article-lead">
+            美文展示：
+        </p>
+        <blockquote>
+            <p>{{ $article["content"] }}</p>
+            <footer>
+                <cite>{{ $article["author"] or "FIGHTZERO" }}</cite>
+            </footer>
+        </blockquote>
+        <p class="am-article-lead am-text-center">
+            ——END——
+        </p>
     </div>
 
+
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>FIGHTING</span></h2>
+            <img src="{{ $bGril['url'] }}" alt="about me" class="blog-entry-img" >
+            <p>{{ $bGril["title"] }}</p>
+            <p>{{ $bGril["intro"] }}</p>
+        </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>联系我哟</span></h2>
+            <p>
+                <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+                <a href=""><span class="am-icon-github  am-icon-fw blog-icon"></span></a>
+                <a href=""><span class="am-icon-weibo   am-icon-fw blog-icon"></span></a>
+                <a href=""><span class="am-icon-reddit  am-icon-fw blog-icon"></span></a>
+                <a href=""><span class="am-icon-weixin  am-icon-fw blog-icon"></span></a>
+            </p>
+        </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-title"><span>PAPA篮球</span></h2>
+            <ul class="am-list">
+                <li><a href="llbasketL"     >2017夏季赛</a></li>
+                <li><a href="llbasketL"	    >2017夏季联赛</a></li>
+                <li><a href="llbasketL"	    >2017风采照</a></li>
+                <li><a href="llbasketL"  	>2017照片墙</a></li>
+                <li><a href="basketFee"  	>PAPA篮球费用</a></li>
+                <li><a href="basketNotice"  >PAPA篮球赛程</a></li>
+                <li><a href="basketMeet"    >PAPA篮球年会</a></li>
+            </ul>
+        </div>
+    </div>
 
 </div>
 <!-- content end -->

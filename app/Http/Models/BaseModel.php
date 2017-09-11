@@ -14,12 +14,15 @@ class BaseModel{
         BASKET_RANKS_4  = "QJS2017ED",    // 2017秋季赛蓝队
 
         ## 标签
-        TAGS_XJS2017    = "XJS2017",    //夏季赛2017
-        TAGS_XJLS2017   = "XJLS2017",   //夏季联赛2017
-        TAGS_QJS2017    = "QJS2017",    //秋季赛2017
-        TAGS_BASKET     = "BASKET",     //篮球
-        TAGS_BLOG       = "BLOG",       //博客
-        TAGS_ARTICLE    = "ARTICLE",    //文章
+        TAGS_XJS2017    = "XJS2017",    //标签-夏季赛2017
+        TAGS_XJLS2017   = "XJLS2017",   //标签-夏季联赛2017
+        TAGS_QJS2017    = "QJS2017",    //标签-标签-秋季赛2017
+        TAGS_BASKET     = "BASKET",     //标签-篮球
+        TAGS_BLOG       = "BLOG",       //标签-博客
+        TAGS_ARTICLE    = "ARTICLE",    //标签-文章
+        TAGS_MRMY       = "MRMY",       //标签-名人名言
+        TAGS_MYSELF     = "MYSELF",     //标签-日常生活
+        TAGS_ALL        = "ALL",        //标签-全部
 
         ## 标签分组
         GROUPS_ALL      = "ALL",        //标签分组-全部可用
@@ -79,7 +82,6 @@ class BaseModel{
 
         return $result;
     }
-
 
     /**
      * @desc    根据分组获取标签列表

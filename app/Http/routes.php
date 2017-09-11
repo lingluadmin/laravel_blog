@@ -40,20 +40,31 @@ Route::get('basketMeet',    'BasketballController@basketMeet');         //PAPA�
 
 
 # TODO: 管理
+# 文章
+Route::get('articleAdd',    'ManagerController@articleAdd');            //添加
+Route::post('articleAddDo', 'ManagerController@articleAddDo');          //执行添加
+# 博客
 Route::get('articleAdd',    'ManagerController@articleAdd');            //添加
 Route::post('articleAddDo', 'ManagerController@articleAddDo');          //执行添加
 
+#图片
 Route::get('imgAdd',    	'ManagerController@imgAdd');            	//添加
 Route::post('imgAddDo',    	'ManagerController@imgAddDo');            	//执行添加
 Route::post('imgAddAjax',   'ManagerController@imgAddAjax');            //执行添加
 
+#篮球
 Route::get('basketAdd',    	'ManagerController@basketAdd');            	//添加
 Route::post('basketAddDo',  'ManagerController@basketAddDo');           //执行添加
 
-Route::get('basketAdd',    	'ManagerController@basketAdd');            	//添加
-Route::post('basketAddDo',  'ManagerController@basketAddDo');           //执行添加
+#用户
+Route::get('userAdd',    	'ManagerController@userAdd');            	//添加
+Route::post('userAddDo',    'ManagerController@userAddDo');             //执行添加
+
+#时光轴
+Route::get('timelineAdd',   'ManagerController@timelineAdd');           //添加
+Route::post('timelineAddDo','ManagerController@timelineAddDo');         //执行添加
 
 Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+	'auth'      => 'Auth\AuthController',
+	'password'  => 'Auth\PasswordController',
 ]);
