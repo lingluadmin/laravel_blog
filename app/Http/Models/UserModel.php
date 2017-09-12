@@ -12,17 +12,17 @@ class UserModel  extends BaseModel
      **/
     public static function userAddDo( $param=[] ){
 
-        $paramData["phone"]     = !empty($param["phone"])   ? $param["phone"]   : "";
-        $paramData["name"]      = !empty($param["name"])    ? $param["name"]    : "";
-        $paramData["nickname"]  = !empty($param["nickname"])? $param["nickname"]: "";
-        $paramData["shortname"] = !empty($param["shortname"])?$param["shortname"]:"";
-        $paramData["jersey_no"] = !empty($param["jersey_no"])?$param["jersey_no"]:"";
-        $paramData["intro"]     = !empty($param["intro"])   ? $param["intro"]   : "";
-        $paramData["remark"]    = !empty($param["remark"])  ? $param["remark"]  : "";
-        $paramData["sort"]      = !empty($param["sort"])    ? $param["sort"]    : "";
-        $paramData["position"]  = !empty($param["position"])? $param["position"]: "";
-        $paramData["ranks"]     = !empty($param["ranks"])   ? $param["ranks"]   : "";
-        $paramData["tags"]      = !empty($param["tags"])    ? $param["tags"]    : "";
+        $paramData["phone"]     = !empty($param["phone"])       ? $param["phone"]       : "";
+        $paramData["name"]      = !empty($param["name"])        ? $param["name"]        : "";
+        $paramData["nickname"]  = !empty($param["nickname"])    ? $param["nickname"]    : "";
+        $paramData["shortname"] = !empty($param["shortname"])   ? $param["shortname"]   : "";
+        $paramData["jersey_no"] = !empty($param["jersey_no"])   ? $param["jersey_no"]   : "";
+        $paramData["intro"]     = !empty($param["intro"])       ? $param["intro"]       : "";
+        $paramData["remark"]    = !empty($param["remark"])      ? $param["remark"]      : "";
+        $paramData["sort"]      = !empty($param["sort"])        ? $param["sort"]        : "";
+        $paramData["position"]  = !empty($param["position"])    ? $param["position"]    : "";
+        $paramData["ranks"]     = !empty($param["ranks"])       ? $param["ranks"]       : "";
+        $paramData["tags"]      = !empty($param["tags"])        ? $param["tags"]        : "";
 
         $res    = \DB::table("user")->insert( $paramData );
 
@@ -91,13 +91,13 @@ class UserModel  extends BaseModel
      **/
     public static function timelineAddDo( $param=[] ){
 
-        $paramData["title"]     = !empty($param["title"])   ? $param["title"]   : "";
-        $paramData["intro"]     = !empty($param["intro"])   ? $param["intro"]   : "谢谢支持~~~";
-        $paramData["tags"]      = !empty($param["tags"])    ? $param["tags"]    : self::TAGS_MYSELF;
-        $paramData["status"]    = !empty($param["status"])  ? $param["status"]  : "";
-        $paramData["jumpurl"]   = !empty($param["jumpurl"]) ? $param["jumpurl"] : "";
-        $paramData["author"]    = !empty($param["author"])  ? $param["author"]  : "FIGHTZERO";
-        $paramData["remark"]    = !empty($param["remark"])  ? $param["remark"]  : self::TAGS_MYSELF;
+        $paramData["title"]     = !empty($param["title"])       ? $param["title"]       : "";
+        $paramData["intro"]     = !empty($param["intro"])       ? $param["intro"]       : "谢谢支持~~~";
+        $paramData["tags"]      = !empty($param["tags"])        ? $param["tags"]        : self::TAGS_MYSELF;
+        $paramData["status"]    = !empty($param["status"])      ? $param["status"]      : "";
+        $paramData["jumpurl"]   = !empty($param["jumpurl"])     ? $param["jumpurl"]     : "";
+        $paramData["author"]    = !empty($param["author"])      ? $param["author"]      : "FIGHTZERO";
+        $paramData["remark"]    = !empty($param["remark"])      ? $param["remark"]      : self::TAGS_MYSELF;
         $paramData["publish_at"]= !empty($param["publish_at"])  ? $param["publish_at"]  : date("Y-m-d");
 
         $res    = \DB::table("timeline")->insert( $paramData );

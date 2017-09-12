@@ -7,15 +7,36 @@ namespace App\Http\Models;
 
 use App\Tools\ToolArray;
 
-class BlogModel{
+class BlogModel  extends BaseModel
+{
 
 
     /**
      * @desc    写入数据
      **/
-    public static function blogAddDo( $paramData=[] ){
+    public static function blogAddDo( $param=[] ){
 
-        $res    = \DB::table("article")->insert( $paramData );
+        $paramData["title"]     = !empty($param["title"])       ? $param["title"]       : "";
+        $paramData["keywords"]  = !empty($param["keywords"])    ? $param["keywords"]    : self::TAGS_BLOG;
+        $paramData["intro"]     = !empty($param["intro"])       ? $param["intro"]       : "谢谢支持PAPA篮球~~~";
+        $paramData["picture"]   = !empty($param["picture"])     ? $param["picture"]     : "";
+        $paramData["description"]=!empty($param["description"]) ? $param["description"] : "";
+
+        #文章添加
+        $paramData["content"]   = !empty($param["content"])     ? $param["content"]     : "";
+        $paramData["source"]    = !empty($param["source"])      ? $param["source"]      : "";
+        $paramData["source_link"]=!empty($param["source_link"]) ? $param["source_link"] : "";
+
+        $paramData["tags"]      = !empty($param["tags"])        ? $param["tags"]        : self::TAGS_BLOG;
+        $paramData["status"]    = !empty($param["status"])      ? $param["status"]      : "";
+        $paramData["sort_num"]  = !empty($param["sort_num"])    ? $param["sort_num"]    : "";
+        $paramData["is_top"]    = !empty($param["is_top"])      ? $param["is_top"]      : "";
+
+        $paramData["author"]    = !empty($param["author"])      ? $param["author"]      : "FIGHTZERO";
+        $paramData["mypoint"]   = !empty($param["mypoint"])     ? $param["mypoint"]     : "奋斗吧，骚年~";
+        $paramData["publish_at"]= !empty($param["publish_at"])  ? $param["publish_at"]  : date("Y-m-d");
+
+        $res    = \DB::table("blog")->insert( $paramData );
 
         return  $res;
 
@@ -27,7 +48,7 @@ class BlogModel{
      **/
     public static function blogEditDo( $id, $paramData=[] ){
 
-        $res    = \DB::table("article")->where("id", $id)->update( $paramData );
+        $res    = \DB::table("blog")->where("id", $id)->update( $paramData );
 
         return  $res;
 
@@ -38,7 +59,7 @@ class BlogModel{
      **/
     public static function blogDelDo( $id ){
 
-        $res    = \DB::table("article")->where("id", $id)->delete();
+        $res    = \DB::table("blog")->where("id", $id)->delete();
 
         return  $res;
 
@@ -53,24 +74,24 @@ class BlogModel{
 
         if($tags == "ALL" || empty($tags)){
 
-            $cnum   = \DB::table("article")->count();
+            $cnum   = \DB::table("blog")->count();
             $maxPage= ceil($cnum/$size);
             $page   = $page >= $maxPage ? $maxPage : $page;
             $offset = self::getLimitStart( $page, $size );
 
-            $result = \DB::table("article")
+            $result = \DB::table("blog")
                 ->orderBy("id", "desc")
                 ->skip($offset)
                 ->take($size)
                 ->get();
         }else{
 
-            $cnum   = \DB::table("article")->where("tags", $tags)->count();
+            $cnum   = \DB::table("blog")->where("tags", $tags)->count();
             $maxPage= ceil($cnum/$size);
             $page   = $page >= $maxPage ? $maxPage : $page;
             $offset = self::getLimitStart( $page, $size );
 
-            $result = \DB::table("article")
+            $result = \DB::table("blog")
                 ->where("tags", $tags)
                 ->orderBy("id", "desc")
                 ->skip($offset)
@@ -90,7 +111,7 @@ class BlogModel{
      **/
     public static function getBlogDetail( $id="" ){
 
-        $result = \DB::table("article")
+        $result = \DB::table("blog")
             ->where("id", $id)
             ->first();
 
@@ -98,21 +119,6 @@ class BlogModel{
 
         return $result;
     }
-
-
-    /**
-     * @desc    返回查询开始值
-     * @param   $page
-     * @param   $size
-     * @return  mixed
-     *
-     **/
-    public static function getLimitStart($page,$size)
-    {
-        return ( max(0, $page -1) ) * $size;
-    }
-
-
 
 }
 

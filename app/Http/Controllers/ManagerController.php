@@ -5,6 +5,7 @@
  **/
 namespace App\Http\Controllers;
 
+use App\Http\Models\ArticleModel;
 use App\Http\Models\BasketModel;
 use App\Http\Models\BlogModel;
 use App\Http\Models\ImgsModel;
@@ -14,7 +15,7 @@ use Illuminate\Http\Request;
 class ManagerController extends Controller {
 
     const
-        MANAGER = "LING",
+        MANAGER = "LING#",
 
         END     = true;
 
@@ -25,7 +26,8 @@ class ManagerController extends Controller {
 	public function articleAdd()
     {
         $assign['content']  = "";
-        return view('manager.article', $assign);
+        $assign["tagsArr"]  = BasketModel::getTagsList();
+        return view('manager.addArticle', $assign);
 	}
 
     /**
@@ -38,19 +40,26 @@ class ManagerController extends Controller {
             echo "侬不可编辑哟";
             exit;
         }
-        $paramData["content"] = !empty($param["content"]) ? $param["content"]  : "";
-        $res    = BlogModel::blogAddDo($paramData);
+
+        $res    = ArticleModel::articleAddDo($param);
         var_dump($res);
+        if($res){
+            return redirect('articleAdd')->with('message', 'SUCCESS');
+        }else{
+            //TODO: FAIL
+            echo "<pre>";
+            print_r($param);
+            exit;
+        }
         #return view('manager.article', $assign);
 
     }
 
     //TODO: FIGHT—BLOG
     public  function blogAdd(){
+        $assign["tagsArr"]  = BasketModel::getTagsList();
 
-        $assign["tagsArr"]  = BasketModel::getBasketTagsArr();
-
-        return view('manager.addBasket', $assign);
+        return view('manager.addBlog', $assign);
     }
 
     /**
@@ -80,10 +89,10 @@ class ManagerController extends Controller {
 
     //TODO: PAPA篮球---START
     public  function userAdd(){
-
-        $assign["tagsArr"]  = BasketModel::getBasketTagsArr();
-
-        return view('manager.addUser', $assign);
+        $assign["tagsArr"]  = BasketModel::getTagsList();
+        echo __METHOD__." : ".__LINE__;
+        exit;
+        #return view('manager.addUser', $assign);
     }
 
     /**
@@ -150,6 +159,7 @@ class ManagerController extends Controller {
     public function imgAdd(){
 
         $assign['tagsList'] = BasketModel::getTagsList();
+
         return view('manager.addImg', $assign); 
     }
 

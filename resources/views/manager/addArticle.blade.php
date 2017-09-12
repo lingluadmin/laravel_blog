@@ -19,14 +19,14 @@
 <!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
     <div class="am-u-md-8 am-u-sm-12">
-        <form class="am-form am-form-horizontal" action="basketAddDo" method="post">
+        <form class="am-form am-form-horizontal" action="articleAddDo" method="post">
             <fieldset>
-                <legend>添加比赛</legend>
+                <legend>添加文章</legend>
                 <div class="am-form-group">
                     <label for="doc-select-1">标签</label>
                     <select id="doc-select-1" name="tags">
-                        @foreach($tagsArr as $kk=>$tagname)
-                            <option value="{{ $kk }}">{{ $tagname }}</option>
+                        @foreach($tagsArr as $kk=>$tagsItem)
+                            <option value="{{ $tagsItem['tags'] }}">{{ $tagsItem["tags"] }}</option>
                         @endforeach
                     </select>
                     <span class="am-form-caret"></span>
@@ -48,31 +48,7 @@
                     <label for="doc-description">描述</label>
                     <input type="text" class="" name="description"  placeholder="">
                 </div>
-                <div class="am-form-group am-form-icon">
-                    <label for="doc-ta-1">日期</label>
-                    <i class="am-icon-calendar"></i>
-                    <input type="text" class="am-form-field" placeholder="日期" data-am-datepicker readonly name="publish_at" />
-                </div>
-                <div class="am-form-group">
-                    <label for="doc-fee_intro">费用</label>
-                    <input type="text" class="" name="fee_intro" placeholder="水费：--，水果：--">
-                </div>
-                <div class="am-form-group">
-                    <label for="doc-score">比分</label>
-                    <input type="text" class="" name="score"    placeholder="一队- ** - ** 二队">
-                </div>
 
-                <div class="am-form-group am-form-file">
-                    <label for="doc-ipt-file">图片</label>
-                    <div>
-                        <button type="button" class="am-btn am-btn-default am-btn-sm">
-                            <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
-                    </div>
-                    <input type="file" id="doc-ipt-file" name="imgs">
-                </div>
-
-                <!-- 文章添加 -->
-                {{--
                 <div class="am-form-group">
                     <label for="doc-ta-1">文章</label>
                     <textarea class="" rows="5" id="doc-ta-1" name="content"></textarea>
@@ -129,7 +105,22 @@
                         </label>
                     </div>
                 </div>
-                --}}
+
+                <div class="am-form-group am-form-icon">
+                    <label for="doc-ta-1">日期</label>
+                    <i class="am-icon-calendar"></i>
+                    <input type="text" class="am-form-field" placeholder="日期" data-am-datepicker readonly name="publish_at" />
+                </div>
+
+                <div class="am-form-group am-form-file">
+                    <label for="doc-ipt-file">图片</label>
+                    <div>
+                        <button type="button" class="am-btn am-btn-default am-btn-sm">
+                            <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+                    </div>
+                    <input type="file" id="doc-ipt-file" name="imgs">
+                </div>
+
                 <div class="am-form-group">
                     <label for="doc-manager">管理</label>
                     <input type="text" class="" name="manager" placeholder="">
@@ -142,11 +133,11 @@
     <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
 
         <div class="blog-sidebar-widget blog-bor">
-            <h2 class="blog-title"><span>篮球比赛</span></h2>
+            <h2 class="blog-title"><span>添加文章</span></h2>
             <ul class="am-list">
                 <li><a href="timelineAdd"   >添加时光</a></li>
                 <li><a href="articleAdd"    >添加文章</a></li>
-                <li><a href="basketAdd"	    >篮球比赛</a></li>
+                <li><a href="basketAdd"	    >添加篮球</a></li>
                 <li><a href="userAdd"	    >添加用户</a></li>
                 <li><a href="blogAdd"  	    >添加博客</a></li>
             </ul>

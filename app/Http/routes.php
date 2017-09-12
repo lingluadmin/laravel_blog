@@ -26,10 +26,10 @@ Route::get('llblogD',      	'BlogController@blogDetail');              	//博客
 //TODO: PAPA篮球
 Route::get('llbasketL',  	'BasketballController@llbasketList');      	//PAPA篮球-列表
 Route::get('llbasketD',  	'BasketballController@llbasketDetail');    	//PAPA篮球-详情
-Route::get('xjs2017L',      'BasketballController@xjs2017List');        //2017夏季赛-列表
-Route::get('xjs2017D',      'BasketballController@xjs2017Detail');      //2017夏季赛-详情
-Route::get('xjls2017L',     'BasketballController@xjls2017List');       //2017夏季联赛-列表
-Route::get('xjls2017D',     'BasketballController@xjls2017Detail');     //2017夏季联赛-详情
+//Route::get('xjs2017L',      'BasketballController@xjs2017List');      //2017夏季赛-列表
+//Route::get('xjs2017D',      'BasketballController@xjs2017Detail');    //2017夏季赛-详情
+//Route::get('xjls2017L',     'BasketballController@xjls2017List');     //2017夏季联赛-列表
+//Route::get('xjls2017D',     'BasketballController@xjls2017Detail');   //2017夏季联赛-详情
 Route::get('basketPerson',  'BasketballController@basketPerson');       //个人风采照
 Route::get('basketPhoto',   'BasketballController@basketPhoto');        //篮球照片墙
 Route::get('basketGirl',  	'BasketballController@basketGirl');        	//篮球宝贝
@@ -44,8 +44,8 @@ Route::get('basketMeet',    'BasketballController@basketMeet');         //PAPA�
 Route::get('articleAdd',    'ManagerController@articleAdd');            //添加
 Route::post('articleAddDo', 'ManagerController@articleAddDo');          //执行添加
 # 博客
-Route::get('articleAdd',    'ManagerController@articleAdd');            //添加
-Route::post('articleAddDo', 'ManagerController@articleAddDo');          //执行添加
+Route::get('blogAdd',       'ManagerController@blogAdd');               //添加
+Route::post('blogAddDo',    'ManagerController@blogAddDo');             //执行添加
 
 #图片
 Route::get('imgAdd',    	'ManagerController@imgAdd');            	//添加

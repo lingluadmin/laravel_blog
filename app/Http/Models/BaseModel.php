@@ -154,6 +154,18 @@ class BaseModel{
     }
 
 
+    /**
+     * @desc    返回查询开始值
+     * @param   $page
+     * @param   $size
+     * @return  mixed
+     *
+     **/
+    public static function getLimitStart($page,$size)
+    {
+        return ( max(0, $page -1) ) * $size;
+    }
+
 
 }
 
