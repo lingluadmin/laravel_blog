@@ -308,6 +308,12 @@ class BasketModel  extends BaseModel
                 "fruit"     => "",
                 "remark"    => "18元一包水",
             ],
+            [
+                "name"      => "QJS-G2",
+                "water"     => "30元",
+                "fruit"     => "26元",
+                "remark"    => "-3元",
+            ],
         ];
         $article    = self::getArticleList();
         $bGril      = self::getBasketGril();

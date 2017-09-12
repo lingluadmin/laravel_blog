@@ -1,6 +1,6 @@
 @extends('common.layout')
 
-@section('title','时光轴')
+@section('title','图片添加')
 
 @section('content')
 

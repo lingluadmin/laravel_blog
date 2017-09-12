@@ -1,16 +1,17 @@
 @extends('common.layout')
 
-@section('title','时光轴')
+@section('title','个人博客')
 
 @section('content')
 
-
+{{--
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div class="am-u-sm-8 am-u-sm-centered">
         <!--<img width="200" src="http://s.amazeui.org/media/i/brand/amazeui-b.png" alt="Amaze UI Logo"/> -->
         <h2 class="am-hide-sm-only">FIGHT_ZERO | PAPA-篮球 | @LU-BLOG</h2>
     </div>
 </header>
+--}}
 <hr>
 <!-- nav start -->
 <nav class="am-g am-g-fixed blog-fixed blog-nav">
@@ -97,18 +98,6 @@
             </p>
         </div>
         --}}
-        <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
-            <h2 class="blog-title"><span>标签集</span></h2>
-            <div class="am-u-sm-12 blog-clear-padding">
-                <a href="llblogL"       class="blog-tag">FIGHTING</a>
-                <a href="llblogL"       class="blog-tag">个人博客</a>
-                <a href="xjs2017L"      class="blog-tag">夏季赛 </a>
-                <a href="xjls2017L"     class="blog-tag">夏季联赛</a>
-                <a href="basketPerson"  class="blog-tag">风采照 </a>
-                <a href="basketPhoto"   class="blog-tag">照片墙 </a>
-                <a href="basketGirl"    class="blog-tag">篮球宝贝</a>
-            </div>
-        </div>
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-title"><span>PAPA篮球</span></h2>
             <ul class="am-list">

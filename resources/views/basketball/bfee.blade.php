@@ -1,5 +1,5 @@
 @extends('common.layout')
-@section('title','PAPA篮球费用')
+@section('title','PAPA篮球-费用')
 
 @section('content')
 

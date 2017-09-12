@@ -1,6 +1,6 @@
 @extends('common.layout')
 
-@section('title','PAPA篮球')
+@section('title','文章添加')
 
 @section('content')
 

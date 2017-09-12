@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>FIGHT_ZERO | PAPA篮球赛 | @LU-BLOG </title>
+    <title> @yield('title') - FIGHTZERO </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description"  content="">
