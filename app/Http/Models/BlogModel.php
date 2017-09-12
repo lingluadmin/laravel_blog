@@ -36,7 +36,7 @@ class BlogModel  extends BaseModel
         $paramData["mypoint"]   = !empty($param["mypoint"])     ? $param["mypoint"]     : "奋斗吧，骚年~";
         $paramData["publish_at"]= !empty($param["publish_at"])  ? $param["publish_at"]  : date("Y-m-d");
 
-        $res    = \DB::table("blog")->insert( $paramData );
+        $res    = \DB::table("blogs")->insert( $paramData );
 
         return  $res;
 
@@ -48,7 +48,7 @@ class BlogModel  extends BaseModel
      **/
     public static function blogEditDo( $id, $paramData=[] ){
 
-        $res    = \DB::table("blog")->where("id", $id)->update( $paramData );
+        $res    = \DB::table("blogs")->where("id", $id)->update( $paramData );
 
         return  $res;
 
@@ -59,7 +59,7 @@ class BlogModel  extends BaseModel
      **/
     public static function blogDelDo( $id ){
 
-        $res    = \DB::table("blog")->where("id", $id)->delete();
+        $res    = \DB::table("blogs")->where("id", $id)->delete();
 
         return  $res;
 
@@ -74,24 +74,24 @@ class BlogModel  extends BaseModel
 
         if($tags == "ALL" || empty($tags)){
 
-            $cnum   = \DB::table("blog")->count();
+            $cnum   = \DB::table("blogs")->count();
             $maxPage= ceil($cnum/$size);
             $page   = $page >= $maxPage ? $maxPage : $page;
             $offset = self::getLimitStart( $page, $size );
 
-            $result = \DB::table("blog")
+            $result = \DB::table("blogs")
                 ->orderBy("id", "desc")
                 ->skip($offset)
                 ->take($size)
                 ->get();
         }else{
 
-            $cnum   = \DB::table("blog")->where("tags", $tags)->count();
+            $cnum   = \DB::table("blogs")->where("tags", $tags)->count();
             $maxPage= ceil($cnum/$size);
             $page   = $page >= $maxPage ? $maxPage : $page;
             $offset = self::getLimitStart( $page, $size );
 
-            $result = \DB::table("blog")
+            $result = \DB::table("blogs")
                 ->where("tags", $tags)
                 ->orderBy("id", "desc")
                 ->skip($offset)
@@ -111,7 +111,7 @@ class BlogModel  extends BaseModel
      **/
     public static function getBlogDetail( $id="" ){
 
-        $result = \DB::table("blog")
+        $result = \DB::table("blogs")
             ->where("id", $id)
             ->first();
 

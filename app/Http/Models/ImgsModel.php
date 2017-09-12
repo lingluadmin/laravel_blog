@@ -6,7 +6,8 @@ use App\Tools\ToolArray;
 use Storage;
 use App\Tools\OssUpload;
 
-class ImgsModel{
+class ImgsModel extends BaseModel
+{
 
 
     /**
