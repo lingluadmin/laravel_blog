@@ -3,7 +3,10 @@
 @section('title','图片添加')
 
 @section('content')
-
+<!-- include libraries(jQuery, bootstrap) -->
+<link   href="assets/css/bootstrap.css" rel="stylesheet">
+<!-- include summernote css/js-->
+<link   href="assets/css/summernote.css" rel="stylesheet">
 <!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
     <div class="am-u-sm-12">
@@ -28,6 +31,9 @@
     </div>
 </div>
 <!-- content end -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/summernote.js"></script>
 <script>
     //调用富文本编辑
     $(document).ready(function() {

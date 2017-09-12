@@ -21,13 +21,6 @@
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
 
-    <!-- include libraries(jQuery, bootstrap) -->
-    <link   href="assets/css/bootstrap.css" rel="stylesheet">
-
-
-    <!-- include summernote css/js-->
-    <link   href="assets/css/summernote.css" rel="stylesheet">
-
 
     <!--[if (gte IE 9)|!(IE)]><!-->
     <script src="assets/js/jquery.min.js"></script>
@@ -44,9 +37,6 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.7/summernote.js"></script>
     -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/summernote.js"></script>
 </head>
 
 <body id="blog">

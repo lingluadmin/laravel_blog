@@ -312,7 +312,7 @@ class BasketModel  extends BaseModel
                 "name"      => "QJS-G2",
                 "water"     => "30元",
                 "fruit"     => "26元",
-                "remark"    => "-3元",
+                "remark"    => "余额：-3元",
             ],
         ];
         $article    = self::getArticleList();
