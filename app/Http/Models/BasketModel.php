@@ -82,7 +82,9 @@ class BasketModel  extends BaseModel
                 ->get();
         }
         $result = ToolArray::objectToArray($result);
-
+        foreach($result as &$val ){
+            $val["picture"] = $val["picture"]?$val["picture"]:"baskets/default_basket.jpg";
+        }
         return $result;
     }
 
@@ -191,7 +193,7 @@ class BasketModel  extends BaseModel
             }
         }
 
-        $bDetail["images"]  = $bDetail["images"] ? $bDetail["images"] :"uploads/default_basket.jpg";
+        $bDetail["picture"]  = $bDetail["picture"] ? $bDetail["picture"] :"uploads/default_basket.jpg";
 
 
         $article    = ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
