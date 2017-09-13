@@ -4,6 +4,8 @@
  *
  **/
 namespace App\Http\Controllers;
+use App\Http\Models\ArticleModel;
+use App\Http\Models\BasketModel;
 use App\Http\Models\BlogModel;
 use Illuminate\Http\Request;
 
@@ -40,8 +42,8 @@ class BlogController extends Controller {
         }
 
         #$assign["bList"]    = $res;
-        $article= BlogModel::getArticleList();
-        $bGril  = BlogModel::getBasketGril();
+        $article= ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
+        $bGril  = BasketModel::getBasketGril();
 
         $assign["bList"]    = $res;
         $assign["article"]  = $article;

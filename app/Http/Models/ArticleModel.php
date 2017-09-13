@@ -116,9 +116,24 @@ class ArticleModel extends BaseModel
         return $result;
     }
 
+    /**
+     * @desc    随机获取一条数据
+     **/
+    public static function getArticleRand( $tags = self::TAGS_MRMY )
+    {
+        $sql    = "select * from blog_article where `tags` = '{$tags}' ORDER BY RAND() LIMIT 1";
 
+        $result = \DB::select($sql);
 
-   /**
+        $result = ToolArray::objectToArray($result);
+
+        $resData["content"] = !empty($result[0]["content"]) ? $result[0]["content"]: "";
+        $resData["author"]  = !empty($result[0]["author"])  ? $result[0]["author"] : "FIGHTZERO";
+
+        return $resData;
+    }
+
+    /**
     * @desc   唯美哲理句子：人生需要沉淀，宁静才能致远
     * 网址：   https://www.5article.com/topic/171300.html
     *

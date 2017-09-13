@@ -53,126 +53,50 @@
 				比赛费用：
 			</p>
             <section data-am-widget="accordion" class="am-accordion am-accordion-default" data-am-accordion='{ "multiple": true }'>
-      			<dl class="am-accordion-item am-active">
-			        <dt class="am-accordion-title">
-						{{ $basketFeeOneDesc or "--*--" }}
-			        </dt>
-	        		<dd class="am-accordion-bd am-collapse am-in">
-		          		<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
-		          		<div class="am-accordion-content">
-		            		<table class="am-table am-table-bordered">
-					    		<thead>
-							        <tr>
-							            <th>场次</th>
-							            <th>水费</th>
-							            <th>水果</th>
-							            <th>备注</th>
-							        </tr>
-							    </thead>
-							    <tbody>
-							    	@if (!empty($basketFeeOne))
-								    	@foreach($basketFeeOne as $oneFee)
-								        <tr>
-								            <td>{{$oneFee["name"]  	or "--"}}</td>
-								            <td>{{$oneFee["water"] 	or "--"}}</td>
-								            <td>{{$oneFee["fruit"]	or "--"}}</td>
-								            <td>{{$oneFee["remark"] or "--"}}</td>
-								        </tr>
-								        @endforeach
-							        @else
-								        <tr>
-								            <td>--</td>
-								            <td>--</td>
-								            <td>--</td>
-								            <td>--</td>
-								        </tr>
-							        @endif
-							    </tbody>
-							</table>
-
-		          		</div>
-	        		</dd>
-      			</dl>
-
-				<dl class="am-accordion-item am-active">
-					<dt class="am-accordion-title">
-						{{ $basketFeeTwoDesc or "--*--" }}
-					</dt>
-					<dd class="am-accordion-bd am-collapse am-in">
-						<div class="am-accordion-content">
-							<table class="am-table am-table-bordered">
-								<thead>
-								<tr>
-									<th>场次</th>
-									<th>水费</th>
-									<th>水果</th>
-									<th>备注</th>
-								</tr>
-								</thead>
-								<tbody>
-								@if (!empty($basketFeeTwo))
-									@foreach($basketFeeTwo as $twoFee)
+				@if (!empty($basketData))
+					@foreach($basketData as $feeItem)
+					<dl class="am-accordion-item am-active">
+						<dt class="am-accordion-title">
+							{{ $feeItem["name"] or "--*--" }}
+						</dt>
+						<dd class="am-accordion-bd am-collapse am-in">
+							<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+							<div class="am-accordion-content">
+								<table class="am-table am-table-bordered">
+									<thead>
 										<tr>
-											<td>{{$twoFee["name"]  	or "--"}}</td>
-											<td>{{$twoFee["water"] 	or "--"}}</td>
-											<td>{{$twoFee["fruit"]	or "--"}}</td>
-											<td>{{$twoFee["remark"] or "--"}}</td>
+											<th>场次</th>
+											<th>水费</th>
+											<th>水果</th>
+											<th>备注</th>
 										</tr>
-									@endforeach
-								@else
-									<tr>
-										<td>--</td>
-										<td>--</td>
-										<td>--</td>
-										<td>--</td>
-									</tr>
-								@endif
-								</tbody>
-							</table>
+									</thead>
+									<tbody>
+										@if (!empty($feeItem["data"]))
+											@foreach($feeItem["data"] as $dataItem)
+											<tr>
+												<td>{{ $dataItem["name"]  	or "--" }}</td>
+												<td>{{ $dataItem["water"] 	or "--" }}</td>
+												<td>{{ $dataItem["fruit"]	or "--" }}</td>
+												<td>{{ $dataItem["remark"] 	or "--" }}</td>
+											</tr>
+											@endforeach
+										@else
+											<tr>
+												<td>--</td>
+												<td>--</td>
+												<td>--</td>
+												<td>--</td>
+											</tr>
+										@endif
+									</tbody>
+								</table>
 
-						</div>
-					</dd>
-				</dl>
-				<dl class="am-accordion-item am-active">
-					<dt class="am-accordion-title">
-						{{ $basketFeeThreeDesc or "--*--" }}
-					</dt>
-					<dd class="am-accordion-bd am-collapse am-in">
-						<div class="am-accordion-content">
-							<table class="am-table am-table-bordered">
-								<thead>
-								<tr>
-									<th>场次</th>
-									<th>水费</th>
-									<th>水果</th>
-									<th>备注</th>
-								</tr>
-								</thead>
-								<tbody>
-								@if (!empty($basketFeeThree))
-									@foreach($basketFeeThree as $threeFee)
-										<tr>
-											<td>{{$threeFee["name"]  	or "--"}}</td>
-											<td>{{$threeFee["water"] 	or "--"}}</td>
-											<td>{{$threeFee["fruit"]	or "--"}}</td>
-											<td>{{$threeFee["remark"] 	or "--"}}</td>
-										</tr>
-									@endforeach
-								@else
-									<tr>
-										<td>--</td>
-										<td>--</td>
-										<td>--</td>
-										<td>--</td>
-									</tr>
-								@endif
-								</tbody>
-							</table>
-
-						</div>
-					</dd>
-				</dl>
-
+							</div>
+						</dd>
+					</dl>
+					@endforeach
+				@endif
   			</section>
 			<hr>
 			<p class="am-article-lead">

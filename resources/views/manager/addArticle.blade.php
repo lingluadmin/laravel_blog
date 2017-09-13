@@ -87,10 +87,10 @@
                     <label class="am-form-label">状态</label>
                     <div>
                         <label class="am-radio-inline">
-                            <input type="radio" name="status" value="100">未发布
+                            <input type="radio" name="status" value="0">未发布
                         </label>
                         <label class="am-radio-inline">
-                            <input type="radio" name="status" value="200" checked>已发布
+                            <input type="radio" name="status" value="1" checked>已发布
                         </label>
                     </div>
                 </div>

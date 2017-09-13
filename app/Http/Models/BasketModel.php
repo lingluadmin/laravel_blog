@@ -2,6 +2,7 @@
 
 namespace App\Http\Models;
 
+use App\Tools\BasketData;
 use App\Tools\ToolArray;
 
 class BasketModel  extends BaseModel
@@ -104,10 +105,11 @@ class BasketModel  extends BaseModel
     /**
      * @desc    比赛球员
      **/
-    public static function getBasketUser( $bid="" ){
+    public static function getBasketUser( $bid="" ,$status=self::STATUS_ON ){
 
         $result = \DB::table("basketuser")
             ->where("bid", $bid)
+            ->where("status", $status)
             ->get();
 
         $result = ToolArray::objectToArray($result);
@@ -126,6 +128,31 @@ class BasketModel  extends BaseModel
         $result = ToolArray::objectToArray($result);
 
         return $result;
+    }
+
+    /**
+     * @desc    篮球宝贝
+     **/
+    public static function getBasketGril(){
+
+        $urlArr     = [
+            "assets/img/f14.jpg",
+            "assets/img/f14.jpg",
+            "assets/img/f14.jpg",
+            "assets/img/f14.jpg",
+            "assets/img/f14.jpg",
+        ];
+
+        $titleArr   = [];
+
+        $introArr   = ArticleModel::getArticleRand(ArticleModel::TAGS_MRMY);
+
+        return [
+            "url"   => $urlArr[rand(0, 4)],
+            "title" => "PAPA篮球",
+            "intro" => $introArr["content"],
+        ];
+
     }
 
 
@@ -167,7 +194,7 @@ class BasketModel  extends BaseModel
         $bDetail["images"]  = $bDetail["images"] ? $bDetail["images"] :"uploads/default_basket.jpg";
 
 
-        $article    = self::getArticleList();
+        $article    = ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
         $bGril      = self::getBasketGril();
 
         return [
@@ -198,137 +225,40 @@ class BasketModel  extends BaseModel
         $basketFeeOneDesc   = "第一次收费：18人缴费，人均：10元，共计：180元";
         $basketFeeTwoDesc   = "第二次收费：24人缴费，人均：10元，共计：240元";
         $basketFeeThreeDesc = "第三次收费：24人缴费，人均：20元，共计：480元";
-        $basketFeeFourDesc  = "第四次收费：24人缴费，人均：20元，共计：480元";
-        $basketFeeOne       = [
-            [
-                "name"      => "XJS-预热塞",
-                "water"     => "",
-                "fruit"     => "",
-                "remark"    => "个人赞助",
-            ],
-            [
-                "name"      => "XJS-球衣",
-                "water"     => "",
-                "fruit"     => "",
-                "remark"    => "90元球衣运费",
-            ],
-            [
-                "name"      => "XJS-G1",
-                "water"     => "18元",
-                "fruit"     => "",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-G2",
-                "water"     => "19元",
-                "fruit"     => "",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-G2",
-                "water"     => "19元",
-                "fruit"     => "25元",
-                "remark"    => "余额：9元",
-            ],
+        $basketFeeFourDesc  = "第四次收费：--人缴费，人均：10元，共计：--元";
 
+        $basketFeeArr       = BasketData::getBasketFee();
+        $basketFeeOne       = $basketFeeArr["basketFeeOne"];
+        $basketFeeTwo       = $basketFeeArr["basketFeeTwo"];
+        $basketFeeThree     = $basketFeeArr["basketFeeThree"];
+        $basketFeeFour      = $basketFeeArr["basketFeeFour"];
+
+        $basketData      = [
+            [
+                "name"  => $basketFeeOneDesc,
+                "data"  => $basketFeeOne,
+            ],
+            [
+                "name"  => $basketFeeTwoDesc,
+                "data"  => $basketFeeTwo,
+            ],
+            [
+                "name"  => $basketFeeThreeDesc,
+                "data"  => $basketFeeThree,
+            ],
+            [
+                "name"  => $basketFeeFourDesc,
+                "data"  => $basketFeeFour,
+            ],
         ];
 
-        $basketFeeTwo       = [
-            [
-                "name"      => "XJS-G4",
-                "water"     => "36元",
-                "fruit"     => "36元",
-                "remark"    => "三包水",
-            ],
-            [
-                "name"      => "XJS-G5",
-                "water"     => "20元",
-                "fruit"     => "30元",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-G6",
-                "water"     => "30元",
-                "fruit"     => "26元",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-技巧赛",
-                "water"     => "18元",
-                "fruit"     => "12元",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-G7",
-                "water"     => "50元",
-                "fruit"     => "25元",
-                "remark"    => "三包水",
-            ],
-            [
-                "name"      => "XJS-全明星",
-                "water"     => "30元",
-                "fruit"     => "23元",
-                "remark"    => "余额：-87元",
-            ],
-
-        ];
-        $basketFeeThree     = [
-            [
-                "name"      => "XJS-友谊赛",
-                "water"     => "30元",
-                "fruit"     => "35元",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJLS-G1",
-                "water"     => "15元",
-                "fruit"     => "34元",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJLS-G2",
-                "water"     => "30元",
-                "fruit"     => "35元",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJLS-G3",
-                "water"     => "30元",
-                "fruit"     => "50元",
-                "remark"    => "60斤大西瓜",
-            ],
-            [
-                "name"      => "XJLS-G4",
-                "water"     => "30元",
-                "fruit"     => "15元",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "QJS-G1",
-                "water"     => "36元",
-                "fruit"     => "",
-                "remark"    => "18元一包水",
-            ],
-            [
-                "name"      => "QJS-G2",
-                "water"     => "30元",
-                "fruit"     => "26元",
-                "remark"    => "余额：-3元",
-            ],
-        ];
-        $article    = self::getArticleList();
+        $article    = ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
         $bGril      = self::getBasketGril();
 
         return [
-            "basketFeeOneDesc"  => $basketFeeOneDesc,
-            "basketFeeTwoDesc"  => $basketFeeTwoDesc,
-            "basketFeeThreeDesc"=> $basketFeeThreeDesc,
-            "basketFeeOne"      => $basketFeeOne,
-            "basketFeeTwo"      => $basketFeeTwo,
-            "basketFeeThree"    => $basketFeeThree,
-            "article"           => $article,
-            "bGril"             => $bGril,
-
+            "basketData"    => $basketData,
+            "article"       => $article,
+            "bGril"         => $bGril,
         ];
 
 
@@ -352,151 +282,77 @@ class BasketModel  extends BaseModel
         $basketOneDesc  = "2017PAPA篮球夏季赛，比赛大比分：一队 4 - 3 二队";
         $basketTwoDesc  = "2017PAPA篮球夏季联赛";
         $basketThreeDesc= "2017PAPA篮球秋季赛，比赛大比分：一队 1 - 0 二队";
-        $basketOne      = [
-            [
-                "name"      => "XJS-预热塞",
-                "date"      => "2017年05月13日",
-                "score"     => "一队 40 - 47 二队",
-                "remark"    => "-*-",
-            ],
-            [
-                "name"      => "XJS-G1",
-                "date"      => "2017年05月20日",
-                "score"     => "一队 74 - 71 二队",
-                "remark"    => "-*-",
-            ],
-            [
-                "name"      => "XJS-G2",
-                "date"      => "2017年06月03日",
-                "score"     => "一队 72 - 70 二队",
-                "remark"    => "-*-",
-            ],
-            [
-                "name"      => "XJS-G3",
-                "date"      => "2017年06月10日",
-                "score"     => "一队 66 - 77 二队",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-G4",
-                "date"      => "2017年06月17日",
-                "score"     => "一队 85 - 93 二队",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-G5",
-                "date"      => "2017年06月24日",
-                "score"     => "一队 73 - 71 二队",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-G6",
-                "date"      => "2017年07月01日",
-                "score"     => "一队 79 - 84 二队",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-技巧赛",
-                "date"      => "2017年07月08日",
-                "score"     => "最强快攻-WL，三分王-WZ",
-                "remark"    => "得分王-ZZR",
-            ],
-            [
-                "name"      => "XJS-G7",
-                "date"      => "2017年07月15日",
-                "score"     => "一队 84 - 81 二队",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-全明星",
-                "date"      => "2017年07月22日",
-                "score"     => "一队 126-126 二队",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJS-友谊赛",
-                "date"      => "2017年07月29日",
-                "score"     => "一队 109- 98 二队",
-                "remark"    => "",
-            ],
 
+        $basketArr      = BasketData::getBasketNotice();
+        $basketOne      = $basketArr["basketOne"];
+        $basketTwo      = $basketArr["basketTwo"];
+        $basketThree    = $basketArr["basketThree"];
+
+
+        $basketData      = [
+            [
+                "name"  => $basketOneDesc,
+                "data"  => $basketOne,
+            ],
+            [
+                "name"  => $basketTwoDesc,
+                "data"  => $basketTwo,
+            ],
+            [
+                "name"  => $basketThreeDesc,
+                "data"  => $basketThree,
+            ],
         ];
 
-        $basketTwo       = [
-            [
-                "name"      => "XJLS-G1",
-                "date"     => "2017年08月05日",
-                "score"     => "一队 101- 85 二队",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "XJLS-G2",
-                "date"      => "2017年08月12日",
-                "score"     => "一队 52- 47 二队",
-                "remark"    => "下雨打上半场",
-            ],
-            [
-                "name"      => "XJLS-G3",
-                "date"      => "2017年08月19日",
-                "score"     => "",
-                "remark"    => "G2下半场，G3半场",
-            ],
-            [
-                "name"      => "XJLS-G4",
-                "date"      => "2017年08月26日",
-                "score"     => "一队 82 - 74 二队",
-                "remark"    => "",
-            ],
-
-        ];
-        $basketThree     = [
-            [
-                "name"      => "QJS-G1",
-                "date"      => "2017年09月02日",
-                "score"     => "一队 95 - 81 二队",
-                "remark"    => "5人 VS 13人",
-            ],
-            [
-                "name"      => "QJS-G2",
-                "date"      => "2017年09月09日",
-                "score"     => "一队 75 - 81 二队",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "QJS-G3",
-                "date"      => "2017年09月16日",
-                "score"     => "",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "QJS-G4",
-                "date"      => "2017年09月23日",
-                "score"     => "",
-                "remark"    => "",
-            ],
-            [
-                "name"      => "QJS-大比分",
-                "date"      => "----",
-                "score"     => "一队 1 - 1 二队",
-                "remark"    => "秋季赛大比分",
-            ],
-        ];
-        $article    = self::getArticleList();
+        $article    = ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
         $bGril      = self::getBasketGril();
 
         #dd($basketOne);
         return [
-            "basketOneDesc"     => $basketOneDesc,
-            "basketTwoDesc"     => $basketTwoDesc,
-            "basketThreeDesc"   => $basketThreeDesc,
-            "basketOne"         => $basketOne,
-            "basketTwo"         => $basketTwo,
-            "basketThree"       => $basketThree,
-            "article"           => $article,
-            "bGril"             => $bGril,
+            "basketData"    => $basketData,
+            "article"       => $article,
+            "bGril"         => $bGril,
 
         ];
 
+
+    }
+
+
+    /**
+     * @desc    比赛队员
+     * 1、获取比赛
+     * 2、获取队员
+     * 3、写入数据
+     **/
+    public static function basketUserAdd(){
+        $bData  = self::getBasketList();
+        $uData  = self::getUserList();
+
+
+        foreach ($bData as $kk=>$vv){
+            $inData = [];
+            $bid    = $vv["id"];
+            $res    = self::getBasketUser( $bid );
+            if(! $res ){
+                foreach ($uData as $ukk=>$uvv){
+                    $buinfo["uid"]      = $uvv["id"];
+                    $buinfo["bid"]      = $bid;
+                    $buinfo["ranks"]    = $uvv["ranks"];
+                    $buinfo["remark"]   = "";
+                    $inData[]  = $buinfo;
+                }
+                if($inData){
+                    \DB::table("basketuser")->insert($inData);
+                }
+
+                echo __METHOD__." : ".__LINE__. " : " .$bid . " : ".json_encode($inData);
+                echo "<hr>";
+            }else{
+                echo __METHOD__." : ".__LINE__. " : " . $bid . " -已存在 ";
+                echo "<hr>";
+            }
+        }
 
     }
 

@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Models\ArticleModel;
+use App\Http\Models\BasketModel;
 use App\Http\Models\UserModel;
 use App\Tools\ToolArray;
 
@@ -35,6 +37,13 @@ class HomeController extends Controller {
 	public function index()
     {
         echo "Home-----";
+
+        #$res    = ArticleModel::getArticleRand( "MRMY" );
+        echo "<pre>";
+
+        #BasketModel::basketUserAdd();
+        #var_dump($res);
+
 		# return view('home');
 	}
 
@@ -66,8 +75,8 @@ class HomeController extends Controller {
         $resData    = UserModel::getTimelineList();
         $resData    = self::timelineFormat($resData);
         #dd($resData);
-        $article    = UserModel::getArticleList();
-        $bGril      = UserModel::getBasketGril();
+        $article    = ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
+        $bGril      = BasketModel::getBasketGril();
 
         $assign["article"]  = $article;
         $assign["bGril"]    = $bGril;
