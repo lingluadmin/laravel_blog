@@ -4,16 +4,13 @@
  *
  **/
 namespace App\Http\Controllers;
+use App\Http\Models\ArticleModel;
 use App\Http\Models\BasketModel;
 use Illuminate\Http\Request;
 
 class BasketballController extends Controller {
 
     const 
-        BASKET_RANKS_1  = 1,    // 2017夏季赛一队
-        BASKET_RANKS_2  = 2,    // 2017夏季赛二队
-        BASKET_RANKS_3  = 3,    // 2017秋季赛白队
-        BASKET_RANKS_4  = 4,    // 2017秋季赛蓝队
 
         END     = true;
 
@@ -26,13 +23,13 @@ class BasketballController extends Controller {
 
         $res    = BasketModel::getBasketList($tags);
 
-        $article= BasketModel::getArticleList();
+        $article= ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
         $bGril  = BasketModel::getBasketGril();
 
         $assign["bList"]    = $res;
         $assign["article"]  = $article;
         $assign["bGril"]    = $bGril;
-
+        #dd($assign);
         return view('basketball.blist', $assign);
 
     }
@@ -83,7 +80,7 @@ class BasketballController extends Controller {
      */
     public function basketMeet(){
 
-        $article= BasketModel::getArticleList();
+        $article= ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
         $bGril  = BasketModel::getBasketGril();
         $assign["article"]  = $article;
         $assign["bGril"]    = $bGril;

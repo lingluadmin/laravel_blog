@@ -24,16 +24,16 @@
                 首页布局 <span class="am-icon-caret-down"></span>
             </a>
             <ul class="am-dropdown-content">
-                <li><a href="lw-index.html"         />1. blog-index-standard</a></li>
-                <li><a href="lw-index-nosidebar.html">2. blog-index-nosidebar</a></li>
-                <li><a href="lw-index-center.html"  />3. blog-index-layout</a></li>
-                <li><a href="lw-index-noslider.html"/>4. blog-index-noslider</a></li>
+                <li><a href="lw-index.html"             >1. blog-index-standard</a></li>
+                <li><a href="lw-index-nosidebar.html"   >2. blog-index-nosidebar</a></li>
+                <li><a href="lw-index-center.html"      >3. blog-index-layout</a></li>
+                <li><a href="lw-index-noslider.html"    >4. blog-index-noslider</a></li>
             </ul>
         </li>
-        <li><a href="llblog"        />FIGHT博客</a></li>
-        <li><a href="llbasketbal"   />PAPA篮球</a></li>
-        <li><a href="basketPhoto"   />照片墙</a></li>
-        <li class="am-active"><a href="lw-timeline.html"  />时光轴</a></li>
+        <li><a href="llblog"        >FIGHT博客</a></li>
+        <li><a href="llbasketbal"   >PAPA篮球</a></li>
+        <li><a href="basketPhoto"   >照片墙</a></li>
+        <li class="am-active"><a href="lw-timeline.html"  >时光轴</a></li>
     </ul>
     <form class="am-topbar-form am-topbar-right am-form-inline" role="search">
         <div class="am-form-group">
@@ -179,7 +179,7 @@
                         <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>
                     </li>
                     <li>
-                        <span class="am-u-sm-4 am-u-md-2 timeline-span">2015/10/13</span>
+                        <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/10/13</span>
                         <span class="am-u-sm-8 am-u-md-6"><a href="#">店客来公司~老板跑咯</a></span>
                         <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">DAILY</span>
                         <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">FIGHT_ZERO</span>

@@ -2,17 +2,143 @@
 
 namespace App\Http\Models;
 
+use App\Tools\ToolArray;
+
 class ArticleModel extends BaseModel
 {
 
+    /**
+     * @desc    写入数据
+     **/
+    public static function articleAddDo( $param=[] ){
+
+        $paramData["title"]     = !empty($param["title"])       ? $param["title"]       : "";
+        $paramData["keywords"]  = !empty($param["keywords"])    ? $param["keywords"]    : self::TAGS_ARTICLE;
+        $paramData["intro"]     = !empty($param["intro"])       ? $param["intro"]       : "谢谢支持PAPA篮球~~~";
+        $paramData["picture"]   = !empty($param["picture"])     ? $param["picture"]     : "";
+        $paramData["description"]=!empty($param["description"]) ? $param["description"] : "";
+
+        #文章添加
+        $paramData["content"]   = !empty($param["content"])     ? $param["content"]     : "";
+        $paramData["source"]    = !empty($param["source"])      ? $param["source"]      : "";
+        $paramData["source_link"]=!empty($param["source_link"]) ? $param["source_link"] : "";
+
+        $paramData["tags"]      = !empty($param["tags"])        ? $param["tags"]        : self::TAGS_ARTICLE;
+        $paramData["status"]    = !empty($param["status"])      ? $param["status"]      : "";
+        $paramData["sort_num"]  = !empty($param["sort_num"])    ? $param["sort_num"]    : "";
+        $paramData["is_top"]    = !empty($param["is_top"])      ? $param["is_top"]      : "";
+
+        $paramData["author"]    = !empty($param["author"])      ? $param["author"]      : "FIGHTZERO";
+        $paramData["mypoint"]   = !empty($param["mypoint"])     ? $param["mypoint"]     : "奋斗吧，骚年~";
+        $paramData["publish_at"]= !empty($param["publish_at"])  ? $param["publish_at"]  : date("Y-m-d");
+
+        $res    = \DB::table("article")->insert( $paramData );
+
+        return  $res;
+
+    }
 
 
-   /**
+    /**
+     * @desc    更新数据
+     **/
+    public static function articleEditDo( $id, $paramData=[] ){
+
+        $res    = \DB::table("article")->where("id", $id)->update( $paramData );
+
+        return  $res;
+
+    }
+
+    /**
+     * @desc    删除数据
+     **/
+    public static function articleDelDo( $id ){
+
+        $res    = \DB::table("article")->where("id", $id)->delete();
+
+        return  $res;
+
+    }
+
+    /**
+     * @desc    获取列表
+     **/
+    public static function getArticleRecord( $tags = "",$page=1, $size=10 ){
+
+        #$offset = self::getLimitStart( $page, $size );
+
+        if($tags == "ALL" || empty($tags)){
+
+            $cnum   = \DB::table("article")->count();
+            $maxPage= ceil($cnum/$size);
+            $page   = $page >= $maxPage ? $maxPage : $page;
+            $offset = self::getLimitStart( $page, $size );
+
+            $result = \DB::table("article")
+                ->orderBy("id", "desc")
+                ->skip($offset)
+                ->take($size)
+                ->get();
+        }else{
+
+            $cnum   = \DB::table("article")->where("tags", $tags)->count();
+            $maxPage= ceil($cnum/$size);
+            $page   = $page >= $maxPage ? $maxPage : $page;
+            $offset = self::getLimitStart( $page, $size );
+
+            $result = \DB::table("article")
+                ->where("tags", $tags)
+                ->orderBy("id", "desc")
+                ->skip($offset)
+                ->take($size)
+                ->get();
+        }
+
+        $result = ToolArray::objectToArray($result);
+
+        return $result;
+    }
+
+
+    /**
+     * @desc    获取详情
+     *
+     **/
+    public static function getArticleDetail( $id="" ){
+
+        $result = \DB::table("article")
+            ->where("id", $id)
+            ->first();
+
+        $result = ToolArray::objectToArray($result);
+
+        return $result;
+    }
+
+    /**
+     * @desc    随机获取一条数据
+     **/
+    public static function getArticleRand( $tags = self::TAGS_MRMY )
+    {
+        $sql    = "select * from blog_article where `tags` = '{$tags}' ORDER BY RAND() LIMIT 1";
+
+        $result = \DB::select($sql);
+
+        $result = ToolArray::objectToArray($result);
+
+        $resData["content"] = !empty($result[0]["content"]) ? $result[0]["content"]: "";
+        $resData["author"]  = !empty($result[0]["author"])  ? $result[0]["author"] : "FIGHTZERO";
+
+        return $resData;
+    }
+
+    /**
     * @desc   唯美哲理句子：人生需要沉淀，宁静才能致远
     * 网址：   https://www.5article.com/topic/171300.html
     *
     **/
-   public static function getZLArticle()
+   public static function getArticleZhili()
    {
        return [
            "生活有进有退输什么也不能输了心情。心情好，什么都好，心情不好，一切都乱了。不要因为世界虚伪，你也变得虚伪了。别让自己活得太累。应该学着想开、看淡，学着深藏。别让自己活得太累。适时放松自己，寻找宣泄，给疲惫的心灵解解压。给时间一点时间一切都会过去。",

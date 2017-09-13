@@ -5,6 +5,7 @@
  **/
 namespace App\Http\Controllers;
 
+use App\Http\Models\ArticleModel;
 use App\Http\Models\BasketModel;
 use App\Http\Models\BlogModel;
 use App\Http\Models\ImgsModel;
@@ -14,7 +15,7 @@ use Illuminate\Http\Request;
 class ManagerController extends Controller {
 
     const
-        MANAGER = "LING",
+        MANAGER = "LING#",
 
         END     = true;
 
@@ -25,7 +26,8 @@ class ManagerController extends Controller {
 	public function articleAdd()
     {
         $assign['content']  = "";
-        return view('manager.article', $assign);
+        $assign["tagsArr"]  = BasketModel::getTagsList();
+        return view('manager.addArticle', $assign);
 	}
 
     /**
@@ -38,19 +40,26 @@ class ManagerController extends Controller {
             echo "侬不可编辑哟";
             exit;
         }
-        $paramData["content"] = !empty($param["content"]) ? $param["content"]  : "";
-        $res    = BlogModel::blogAddDo($paramData);
+
+        $res    = ArticleModel::articleAddDo($param);
         var_dump($res);
+        if($res){
+            return redirect('articleAdd')->with('message', 'SUCCESS');
+        }else{
+            //TODO: FAIL
+            echo "<pre>";
+            print_r($param);
+            exit;
+        }
         #return view('manager.article', $assign);
 
     }
 
     //TODO: FIGHT—BLOG
     public  function blogAdd(){
+        $assign["tagsArr"]  = BasketModel::getTagsList();
 
-        $assign["tagsArr"]  = BasketModel::getBasketTagsArr();
-
-        return view('manager.addBasket', $assign);
+        return view('manager.addBlog', $assign);
     }
 
     /**
@@ -80,10 +89,10 @@ class ManagerController extends Controller {
 
     //TODO: PAPA篮球---START
     public  function userAdd(){
-
-        $assign["tagsArr"]  = BasketModel::getBasketTagsArr();
-
-        return view('manager.addUser', $assign);
+        $assign["tagsArr"]  = BasketModel::getTagsList();
+        echo __METHOD__." : ".__LINE__;
+        exit;
+        #return view('manager.addUser', $assign);
     }
 
     /**
@@ -150,6 +159,7 @@ class ManagerController extends Controller {
     public function imgAdd(){
 
         $assign['tagsList'] = BasketModel::getTagsList();
+
         return view('manager.addImg', $assign); 
     }
 
@@ -209,5 +219,41 @@ class ManagerController extends Controller {
     }
 
     //TODO: PAPA篮球---END
+
+
+    /**
+     * @desc    时光轴添加
+     **/
+    public  function timelineAdd(){
+
+        $assign["tagsArr"]  = BasketModel::getTagsList();
+
+        return view('manager.addTimeline', $assign);
+    }
+
+    /**
+     * @desc 执行添加
+     **/
+    public function timelineAddDo(Request $request ){
+
+        $param  = $request->all();
+
+        $manager= $request->input('manager','');
+        if($manager != self::MANAGER){
+            echo "侬不可编辑哟";
+            exit;
+        }
+
+        $res    = UserModel::timelineAddDo($param);
+        if($res){
+            return redirect('timelineAdd')->with('message', '添加成功');
+        }else{
+            //TODO: FAIL
+            echo "<pre>";
+            print_r($param);
+            exit;
+        }
+    }
+
 
 }

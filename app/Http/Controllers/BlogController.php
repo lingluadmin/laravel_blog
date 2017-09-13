@@ -4,6 +4,8 @@
  *
  **/
 namespace App\Http\Controllers;
+use App\Http\Models\ArticleModel;
+use App\Http\Models\BasketModel;
 use App\Http\Models\BlogModel;
 use Illuminate\Http\Request;
 
@@ -35,12 +37,22 @@ class BlogController extends Controller {
         $tags   = $request->input('tags', "ALL");
 
         $res    = BlogModel::getBlogList($tags, $page, $size);
+        foreach ($res as &$val){
+            $val["picture"] = $val["picture"] ? $val["picture"]  : "";
+        }
+
+        #$assign["bList"]    = $res;
+        $article= ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
+        $bGril  = BasketModel::getBasketGril();
 
         $assign["bList"]    = $res;
+        $assign["article"]  = $article;
+        $assign["bGril"]    = $bGril;
+
         $assign["page"]     = $page;
         $assign["tags"]     = $tags;
-        #dd($assign);
-		return view('blog.list', $assign);
+        dd($assign);
+		return view('blog.blist', $assign);
     }
 
 
@@ -52,7 +64,7 @@ class BlogController extends Controller {
         $id     = $request->input('id', 1);
         $res     = BlogModel::getBlogDetail($id);
         $assign["bDetail"]  = $res;
-        return view('blog.detail', $assign);
+        return view('blog.bdetail', $assign);
     }
 
 

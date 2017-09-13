@@ -53,129 +53,50 @@
 				PAPA篮球-赛程：
 			</p>
             <section data-am-widget="accordion" class="am-accordion am-accordion-default" data-am-accordion='{ "multiple": true }'>
-      			<dl class="am-accordion-item am-active">
-			        <dt class="am-accordion-title">
-						{{ $basketOneDesc or "--*--"  }}
-			        </dt>
-	        		<dd class="am-accordion-bd am-collapse am-in">
-		          		<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
-		          		<div class="am-accordion-content">
-		            		<table class="am-table am-table-bordered">
-					    		<thead>
-							        <tr>
-							            <th>比赛</th>
-							            <th>日期</th>
-							            <th>比分</th>
-							            <th>备注</th>
-							        </tr>
-							    </thead>
-							    <tbody>
-							    	@if (!empty($basketOne))
-								    	@foreach($basketOne as $oneData)
-								        <tr>
-								            <td>{{ $oneData["name"]  	or "-*-" }}</td>
-								            <td>{{ $oneData["date"] 	or "-*-" }}</td>
-								            <td>{{ $oneData["score"]	or "-*-" }}</td>
-								            <td>{{ $oneData["remark"]	or "-*-" }}</td>
-								        </tr>
-								        @endforeach
-							        @else
-								        <tr>
-								            <td>--</td>
-								            <td>--</td>
-								            <td>--</td>
-								            <td>--</td>
-								        </tr>
-							        @endif
-							    </tbody>
-							</table>
-
-		          		</div>
-	        		</dd>
-      			</dl>
-
-				<dl class="am-accordion-item am-active">
-					<dt class="am-accordion-title">
-						{{ $basketTwoDesc or "--*--" }}
-					</dt>
-					<dd class="am-accordion-bd am-collapse am-in">
-						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
-						<div class="am-accordion-content">
-							<table class="am-table am-table-bordered">
-								<thead>
-								<tr>
-									<th>比赛</th>
-									<th>日期</th>
-									<th>比分</th>
-									<th>备注</th>
-								</tr>
-								</thead>
-								<tbody>
-								@if (!empty($basketTwo))
-									@foreach($basketTwo as $twoData)
+				@if (!empty($basketData))
+					@foreach($basketData as $bItem)
+					<dl class="am-accordion-item am-active">
+						<dt class="am-accordion-title">
+							{{ $bItem["name"] or "--*--"  }}
+						</dt>
+						<dd class="am-accordion-bd am-collapse am-in">
+							<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
+							<div class="am-accordion-content">
+								<table class="am-table am-table-bordered">
+									<thead>
 										<tr>
-											<td>{{ $twoData["name"]  	or "-*-" }}</td>
-											<td>{{ $twoData["date"] 	or "-*-" }}</td>
-											<td>{{ $twoData["score"]	or "-*-" }}</td>
-											<td>{{ $twoData["remark"]	or "-*-" }}</td>
+											<th>比赛</th>
+											<th>日期</th>
+											<th>比分</th>
+											<th>备注</th>
 										</tr>
-									@endforeach
-								@else
-									<tr>
-										<td>--</td>
-										<td>--</td>
-										<td>--</td>
-										<td>--</td>
-									</tr>
-								@endif
-								</tbody>
-							</table>
+									</thead>
+									<tbody>
+										@if (!empty($bItem["data"]))
+											@foreach($bItem["data"] as $dataItem)
+											<tr>
+												<td>{{ $dataItem["name"]  	or "-*-" }}</td>
+												<td>{{ $dataItem["date"] 	or "-*-" }}</td>
+												<td>{{ $dataItem["score"]	or "-*-" }}</td>
+												<td>{{ $dataItem["remark"]	or "-*-" }}</td>
+											</tr>
+											@endforeach
+										@else
+											<tr>
+												<td>--</td>
+												<td>--</td>
+												<td>--</td>
+												<td>--</td>
+											</tr>
+										@endif
+									</tbody>
+								</table>
 
-						</div>
-					</dd>
-				</dl>
-
-				<dl class="am-accordion-item am-active">
-					<dt class="am-accordion-title">
-						{{ $basketThreeDesc or "--*--" }}
-					</dt>
-					<dd class="am-accordion-bd am-collapse am-in">
-						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
-						<div class="am-accordion-content">
-							<table class="am-table am-table-bordered">
-								<thead>
-								<tr>
-									<th>比赛</th>
-									<th>日期</th>
-									<th>比分</th>
-									<th>备注</th>
-								</tr>
-								</thead>
-								<tbody>
-								@if (!empty($basketThree))
-									@foreach($basketThree as $threeData)
-										<tr>
-											<td>{{$threeData["name"]  	or "--"}}</td>
-											<td>{{$threeData["date"] 	or "--"}}</td>
-											<td>{{$threeData["score"]	or "--"}}</td>
-											<td>{{$threeData["remark"] 	or "--"}}</td>
-										</tr>
-									@endforeach
-								@else
-									<tr>
-										<td>--</td>
-										<td>--</td>
-										<td>--</td>
-										<td>--</td>
-									</tr>
-								@endif
-								</tbody>
-							</table>
-
-						</div>
-					</dd>
-				</dl>
-
+							</div>
+						</dd>
+					</dl>
+					@endforeach
+				@endif
   			</section>
 
         	<hr>

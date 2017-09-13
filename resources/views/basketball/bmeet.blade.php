@@ -1,5 +1,5 @@
 @extends('common.layout')
-@section('title','PAPA篮球年会')
+@section('title','PAPA篮球-年会')
 
 @section('content')
 
@@ -42,7 +42,7 @@
         <div class="am-article-bd">
 
 			<p class="am-article-lead">
-				PAPA篮球-2017年会：
+				PAPA篮球-2017拓展年会：
 			</p>
             <section data-am-widget="accordion" class="am-accordion am-accordion-default" data-am-accordion='{ "multiple": true }'>
 				<dl class="am-accordion-item am-active">
@@ -70,6 +70,9 @@
 									</tr>
 									<tr>
 										<td>游戏场地</td><td>生命科学园</td>
+									</tr>
+									<tr>
+										<td>年会晚餐</td><td>求推荐呀</td>
 									</tr>
 									<tr>
 										<td>费用人均</td><td>100元左右</td>
@@ -109,7 +112,7 @@
 								</tr>
 								<tr>
 									<td>队伍二</td>
-									<td>坑哥</td>
+									<td>大哥</td>
 									<td></td>
 									<td></td>
 									<td></td>
@@ -117,7 +120,7 @@
 								</tr>
 								<tr>
 									<td>队伍三</td>
-									<td>大哥</td>
+									<td>坑哥</td>
 									<td></td>
 									<td></td>
 									<td></td>
@@ -140,7 +143,7 @@
 
       			<dl class="am-accordion-item am-active">
 			        <dt class="am-accordion-title">
-						年会奖励：
+						年会奖品：
 			        </dt>
 	        		<dd class="am-accordion-bd am-collapse am-in">
 		          		<div class="am-accordion-content">
@@ -181,7 +184,6 @@
 						年会游戏：
 					</dt>
 					<dd class="am-accordion-bd am-collapse am-in">
-						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
 						<div class="am-accordion-content">
 							<table class="am-table am-table-bordered">
 								<thead>
@@ -195,7 +197,7 @@
 								<tbody>
 								<tr>
 									<td>1</td>
-									<td>奔跑吧，气球</td>
+									<td>奔跑吧，篮球</td>
 									<td>3人/队</td>
 									<td>--</td>
 								</tr>
@@ -280,27 +282,193 @@
 				</dl>
 				<dl class="am-accordion-item am-active">
 					<dt class="am-accordion-title">
-						年会惩罚：
+						年会奖惩：
 					</dt>
 					<dd class="am-accordion-bd am-collapse am-in">
-						<!-- 规避 Collapase 处理有 padding 的折叠内容计算计算有误问题， 加一个容器 -->
 						<div class="am-accordion-content">
 							<table class="am-table am-table-bordered">
 								<thead>
+								<tr><th colspan="4">游戏奖励：第一名-5积分，第二名-3积分，第三名-2积分，第四名-1积分</th></tr>
+								<tr><th colspan="4">积分作用：积分兑换吃的，喝的东西； 谢绝自备东西，发现接受惩罚</th></tr>
+								<tr><th colspan="4">积分获取：个人才艺-5积分，团体才艺-15积分，超3人表演叫做团体才艺</th></tr>
+								<tr><th colspan="4">积分物品：脉动-4瓶、农夫-4瓶、矿泉-4瓶、面包-2个、火腿肠-1包</th></tr>
+								<tr><th colspan="4">积分物品：锅巴-2包、辣条-4个、月饼-4个、水果-10、 等等啦....</th></tr>
+								<tr class="am-danger"><th colspan="4">游戏赢得人给输的人抽取惩罚哟~</th></tr>
+								<tr class="am-danger"><th colspan="4">天旋地转：闭眼睛，左转三圈，右转三圈，再睁开眼睛，走回自己的座位</th></tr>
+								<tr class="am-danger"><th colspan="4">苦笑不得：先大笑5秒，又大哭5秒，反复2-3次，最后摆个卖个萌姿势（随便摆姿势）</th></tr>
+								<tr class="am-danger"><th colspan="4">模仿惩罚：模仿一位自己熟悉的明星、歌星或动物的动作、歌声或说话方式</th></tr>
+								<tr class="am-danger"><th colspan="4">体能训练：俯卧撑	- 5个一组、或者	深蹲 10个一组</th></tr>
+								<tr class="am-danger"><th colspan="4">友爱互助：公主抱、拥抱、背人</th></tr>
 								<tr>
-									<th>场次</th>
-									<th>水费</th>
-									<th>水果</th>
-									<th>备注</th>
+									<th>奖惩等级</th>
+									<th>奖惩内容</th>
+									<th>奖惩人数</th>
+									<th>奖惩备注</th>
 								</tr>
 								</thead>
 								<tbody>
 								<tr>
-									<td>--</td>
-									<td>--</td>
-									<td>--</td>
+									<td>9级惩罚-1</td>
+									<td>大喊我是猪，我是猪，我是猪</td>
+									<td>全队</td>
 									<td>--</td>
 								</tr>
+								<tr>
+									<td>8级惩罚-1</td>
+									<td>绕场地跑一圈，边跑边喊，我再也不尿床了-喊3遍哟</td>
+									<td>全队</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>7级惩罚-4</td>
+									<td>体能训练-2组</td>
+									<td>全队</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>6级惩罚-1</td>
+									<td>友爱互助-公主抱</td>
+									<td>4人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>6级惩罚-1</td>
+									<td>友爱互助-拥抱</td>
+									<td>4人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>6级惩罚-1</td>
+									<td>友爱互助-背人</td>
+									<td>4人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>6级惩罚-1</td>
+									<td>天旋地转</td>
+									<td>4人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>5级惩罚-1</td>
+									<td>替罪羊</td>
+									<td colspan="2">【主公技】选择场中任何人替你接受惩罚</td>
+								</tr>
+								<tr>
+									<td>5级惩罚-1</td>
+									<td>反击卡</td>
+									<td colspan="2">【主公技】把惩罚反击给第一名</td>
+								</tr>
+								<tr>
+									<td>5级惩罚-1</td>
+									<td>免惩卡</td>
+									<td colspan="2">【主公技】免于惩罚</td>
+								</tr>
+								<tr>
+									<td>5级惩罚-1</td>
+									<td>补刀卡</td>
+									<td colspan="2">【主公技】再补一刀，惩罚加倍哟</td>
+								</tr>
+								<tr>
+									<td>4级惩罚-1</td>
+									<td>友爱互助-公主抱</td>
+									<td>2人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>4级惩罚-1</td>
+									<td>友爱互助-拥抱</td>
+									<td>2人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>4级惩罚-1</td>
+									<td>模仿惩罚</td>
+									<td>2人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>4级惩罚-1</td>
+									<td>天旋地转</td>
+									<td>4人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>3级惩罚-1</td>
+									<td>天旋地转</td>
+									<td>3人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>3级惩罚-1</td>
+									<td>苦笑不得</td>
+									<td>3人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>3级惩罚-1</td>
+									<td>体能训练-2组</td>
+									<td>3人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>3级惩罚-1</td>
+									<td>模仿惩罚</td>
+									<td>2人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>2级惩罚-1</td>
+									<td>天旋地转</td>
+									<td>2人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>2级惩罚-1</td>
+									<td>苦笑不得</td>
+									<td>2人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>2级惩罚-1</td>
+									<td>体能训练-2组</td>
+									<td>2人</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>2级惩罚-1</td>
+									<td>体能训练-2组</td>
+									<td>2人</td>
+									<td>--</td>
+								</tr>
+
+								<tr>
+									<td>1级惩罚-1</td>
+									<td>燃烧吧，小宇宙</td>
+									<td>全体</td>
+									<td>--</td>
+								</tr>
+								<tr>
+									<td>1级惩罚-1</td>
+									<td>我好寂寞啊</td>
+									<td>全体</td>
+									<td>--</td>
+								</tr>
+
+								<tr>
+									<td>1级惩罚-1</td>
+									<td>我是超人,我要回家了</td>
+									<td>全体</td>
+									<td>--</td>
+								</tr>
+
+								<tr>
+									<td>1级惩罚-1</td>
+									<td>我代替月亮惩罚你</td>
+									<td>全体</td>
+									<td>--</td>
+								</tr>
+
 								</tbody>
 							</table>
 
@@ -311,11 +479,38 @@
   			</section>
 			<hr>
 			<p class="am-article-lead">
-				第一次聚餐：日期：2017年07月06日 参加人数：17人，总额：1160元，人均：68元
+				游戏说明：10个游戏哟
 			</p>
-			<p class="am-article-lead">
-				第二次聚餐：日期：2017年08月26日 参加人数：08人，总额：572元，	人均：80元
-			</p>
+
+			<section data-am-widget="accordion" class="am-accordion am-accordion-default" data-am-accordion='{ "multiple": true }'>
+				<dl class="am-accordion-item am-active">
+					<dt class="am-accordion-title">
+						游戏1：奔跑吧，篮球
+					</dt>
+					<dd class="am-accordion-bd am-collapse am-in">
+						<div class="am-accordion-content">
+							十样物品：队伍获得物品最多最快的获胜， 最少一队接受惩罚<br/>
+							物品：1、篮球*2、2、篮球袋*2、3、矿泉水*3、4、背包*3
+						</div>
+					</dd>
+				</dl>
+				<dl class="am-accordion-item am-active">
+					<dt class="am-accordion-title">
+						游戏2：五毛一块
+					</dt>
+					<dd class="am-accordion-bd am-collapse am-in">
+						<div class="am-accordion-content">
+							每组6人以上(越多越好，最好有男有女)<br/>
+							游戏规则：   <br/>
+							在游戏中,男士是一块钱,女士则是五毛钱.游戏开始前,大家全部坐好. <br/>
+							主持人宣布游戏开始,并喊出一个钱数(钱数不能大与每组人总钱数), <br/>
+							裁判一旦喊出钱数,游戏中的人就要在最短的时间内组成那个数的小团队并站起来, <br/>
+							比如说喊出的是5块5,那就需要五男一女、三男五女之类的小团队.
+						</div>
+					</dd>
+				</dl>
+			</section>
+
 			<p class="am-article-lead">
 				美文展示：
 			</p>

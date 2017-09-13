@@ -2,10 +2,12 @@
 
 namespace App\Http\Models;
 
+use App\Tools\ToolArray;
 use Storage;
 use App\Tools\OssUpload;
 
-class ImgsModel{
+class ImgsModel extends BaseModel
+{
 
 
     /**
@@ -103,6 +105,7 @@ class ImgsModel{
                 ->where("tags", $tags)
                 ->get();
         }
+
         $result = ToolArray::objectToArray($result);
 
         return $result;
