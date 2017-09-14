@@ -356,6 +356,20 @@ class BasketModel  extends BaseModel
 
     }
 
+    /**
+     * @desc
+     **/
+    public static function imagesAlbum( $images ){
+
+        $resData    = [];
+        if($images){
+            $resData    = explode(",", $images);
+        }
+
+        return $resData;
+
+    }
+
 }
 
 ?>

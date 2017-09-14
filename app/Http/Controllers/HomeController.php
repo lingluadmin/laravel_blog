@@ -37,12 +37,17 @@ class HomeController extends Controller {
 	public function index()
     {
         echo "Home-----";
-
+        # 获取名人名言
         #$res    = ArticleModel::getArticleRand( "MRMY" );
         echo "<pre>";
-
+        # 新增比赛球员
         #BasketModel::basketUserAdd();
         #var_dump($res);
+        # 获取相册
+        $images = "123.jpg,333.jpg";
+        $res    = BasketModel::imagesAlbum($images);
+
+        dd($res);
 
 		# return view('home');
 	}

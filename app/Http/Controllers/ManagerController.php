@@ -57,6 +57,7 @@ class ManagerController extends Controller {
 
     //TODO: FIGHT—BLOG
     public  function blogAdd(){
+
         $assign["tagsArr"]  = BasketModel::getTagsList();
 
         return view('manager.addBlog', $assign);
@@ -73,6 +74,23 @@ class ManagerController extends Controller {
             echo "侬不可编辑哟";
             exit;
         }
+        $filename   = "";
+        $file       = $request->file('imgs');
+        $images     = $_FILES;
+        if( isset($images["imgs"]["tmp_name"]) && $images["imgs"]["tmp_name"]){
+            // 文件是否上传成功
+            $filename   = ImgsModel::upLocal($file);
+            if($filename && $filename !="FAIL"){
+                $res    = ImgsModel::upOss($images,$filename);
+                if($res){
+                    \Log::info(__METHOD__.' : '.__LINE__." SUCCESS ");
+                    #echo $filename;
+                }
+            }
+        }
+
+
+        $param["picture"]  = $filename ? $filename : "";
 
         $res    = BlogModel::blogAddDo($param);
         if($res){

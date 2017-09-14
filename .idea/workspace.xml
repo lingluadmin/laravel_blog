@@ -4,17 +4,11 @@
     <list default="true" id="3efb1165-e365-4378-a1e4-861cd746bc80" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BasketballController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BasketballController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/ArticleModel.php" afterPath="$PROJECT_DIR$/app/Http/Models/ArticleModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/BaseModel.php" afterPath="$PROJECT_DIR$/app/Http/Models/BaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Models/BasketModel.php" afterPath="$PROJECT_DIR$/app/Http/Models/BasketModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/basketball/bfee.blade.php" afterPath="$PROJECT_DIR$/resources/views/basketball/bfee.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/basketball/bnotice.blade.php" afterPath="$PROJECT_DIR$/resources/views/basketball/bnotice.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/manager/addArticle.blade.php" afterPath="$PROJECT_DIR$/resources/views/manager/addArticle.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/manager/addBasket.blade.php" afterPath="$PROJECT_DIR$/resources/views/manager/addBasket.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/manager/addTimeline.blade.php" afterPath="$PROJECT_DIR$/resources/views/manager/addTimeline.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/common/layout.blade.php" afterPath="$PROJECT_DIR$/resources/views/common/layout.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/manager/addBlog.blade.php" afterPath="$PROJECT_DIR$/resources/views/manager/addBlog.blade.php" />
     </list>
     <ignored path="laravel_blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,103 +32,73 @@
       <file leaf-file-name="addImg.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/manager/addImg.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state relative-caret-position="671">
+              <caret line="60" column="71" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addBlog.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addBlog.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/manager/addBlog.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="941">
+              <caret line="152" column="60" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
-              <caret line="38" column="73" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addBasket.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/manager/addBasket.blade.php">
+      <file leaf-file-name="ManagerController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ManagerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="117" column="66" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
+            <state relative-caret-position="420">
+              <caret line="70" column="95" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <file leaf-file-name="ImgsModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Models/ImgsModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            <state relative-caret-position="195">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Models/BlogModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="41" column="86" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Models/ArticleModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding>
-                <element signature="e#39#72#0#PHP" expanded="true" />
+                <marker date="1505272191000" expanded="true" signature="3772:3813" ph="select * fro... blog_article" />
+                <marker date="1505272191000" expanded="true" signature="3772:3823" ph="select * fro... blog_article" />
+                <marker date="1505272191000" expanded="true" signature="3772:3847" ph="select * fro... blog_article" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addArticle.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/manager/addArticle.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="896">
-              <caret line="90" column="73" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasketModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Models/BasketModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
-              <caret line="91" column="66" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
-              <folding>
-                <element signature="e#35#60#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Models/BaseModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="42" column="62" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addTimeline.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/manager/addTimeline.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="64" column="102" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/manager/article.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="69" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Models/UserModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="73" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -171,12 +135,9 @@
         <option value="$PROJECT_DIR$/resources/views/web/timeline.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Models/UserModel.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/blist.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/bmeet.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/blog/list.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/common/layout.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/manager/addBlog.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/manager/addImg.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Models/BlogModel.php" />
         <option value="$PROJECT_DIR$/resources/views/blog/blist.blade.php" />
@@ -188,12 +149,15 @@
         <option value="$PROJECT_DIR$/resources/views/basketball/bfee.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/basketball/bnotice.blade.php" />
         <option value="$PROJECT_DIR$/app/Tools/BasketData.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Models/BasketModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Models/BaseModel.php" />
         <option value="$PROJECT_DIR$/resources/views/manager/addTimeline.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/manager/addArticle.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/manager/addBasket.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Models/BasketModel.php" />
+        <option value="$PROJECT_DIR$/resources/views/common/layout.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ManagerController.php" />
+        <option value="$PROJECT_DIR$/resources/views/manager/addBlog.blade.php" />
       </list>
     </option>
   </component>
@@ -210,7 +174,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2085" />
+    <option name="x" value="1765" />
     <option name="y" value="23" />
     <option name="width" value="1525" />
     <option name="height" value="1310" />
@@ -296,6 +260,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel_blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -503,15 +489,15 @@
       <workItem from="1504777947291" duration="4099000" />
       <workItem from="1504837674719" duration="5560000" />
       <workItem from="1505182425288" duration="12090000" />
-      <workItem from="1505268048712" duration="12743000" />
+      <workItem from="1505268048712" duration="17981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127567000" />
+    <option name="totallyTimeSpent" value="132805000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2085" y="23" width="1525" height="1310" extended-state="0" />
+    <frame x="1765" y="23" width="1525" height="1310" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -663,21 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/common/layout.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="47" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Models/ImgsModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/blog/blist.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="746">
@@ -760,31 +731,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Models/ArticleModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="131" column="24" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding>
-            <marker date="1505272191000" expanded="true" signature="3772:3813" ph="select * fro... blog_article" />
-            <marker date="1505272191000" expanded="true" signature="3772:3823" ph="select * fro... blog_article" />
-            <marker date="1505272191000" expanded="true" signature="3772:3847" ph="select * fro... blog_article" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,26 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Models/BlogModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="111" column="27" selection-start-line="111" selection-start-column="27" selection-end-line="111" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ManagerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1324">
-          <caret line="99" column="67" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -854,16 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BasketballController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="44" column="119" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="e#67#100#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/basketball/bfee.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="764">
@@ -872,70 +797,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding>
-            <element signature="e#39#72#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Models/UserModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="36" column="73" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Models/BasketModel.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/manager/article.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1365">
-          <caret line="91" column="66" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
-          <folding>
-            <element signature="e#35#60#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Models/BaseModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="42" column="62" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/manager/addArticle.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="90" column="73" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/manager/addBasket.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="117" column="66" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/manager/addBlog.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="73" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/manager/addImg.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="330">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -948,10 +821,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/manager/article.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Models/BaseModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="69" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="523">
+          <caret line="42" column="62" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/manager/addBasket.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="117" column="66" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding>
+            <element signature="e#39#72#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Models/BasketModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="881">
+          <caret line="361" column="51" selection-start-line="361" selection-start-column="50" selection-end-line="361" selection-end-column="50" />
+          <folding>
+            <element signature="e#35#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BasketballController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="52" column="60" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+          <folding>
+            <element signature="e#67#100#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/manager/addArticle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="17" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/common/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Models/ArticleModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <marker date="1505272191000" expanded="true" signature="3772:3813" ph="select * fro... blog_article" />
+            <marker date="1505272191000" expanded="true" signature="3772:3823" ph="select * fro... blog_article" />
+            <marker date="1505272191000" expanded="true" signature="3772:3847" ph="select * fro... blog_article" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Models/ImgsModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Models/BlogModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="41" column="86" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ManagerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="70" column="95" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/manager/addImg.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="60" column="71" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/manager/addBlog.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="941">
+          <caret line="152" column="60" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
           <folding />
         </state>
       </provider>
