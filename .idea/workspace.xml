@@ -406,6 +406,7 @@
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
@@ -473,6 +474,13 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+<<<<<<< HEAD
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+=======
+>>>>>>> 7e6210e82407cdc7726b623306aa8d78a954bb64
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3efb1165-e365-4378-a1e4-861cd746bc80" name="Default" comment="" />
@@ -497,8 +505,17 @@
     <option name="totallyTimeSpent" value="132805000" />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="1765" y="23" width="1525" height="1310" extended-state="0" />
+=======
+<<<<<<< HEAD
+    <frame x="387" y="137" width="1517" height="998" extended-state="0" />
+    <editor active="false" />
+=======
+    <frame x="2085" y="23" width="1525" height="1310" extended-state="0" />
+>>>>>>> 7ea35af226c506f79f15949b54a1cc4d4f188ea4
     <editor active="true" />
+>>>>>>> 7e6210e82407cdc7726b623306aa8d78a954bb64
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21443021" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
