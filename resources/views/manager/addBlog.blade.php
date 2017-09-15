@@ -22,7 +22,7 @@
     <div class="am-g am-g-fixed blog-fixed blog-content">
 
         <div class="am-u-md-8 am-u-sm-12">
-            <form class="am-form am-g" action="blogAddDo" method="post" enctype="multipart/form-data">
+            <form class="am-form am-g" action="blogAddDo" method="post" enctype="multipart/form-data" id="blogFrom">
                 <fieldset>
                     <legend>写博客</legend>
                     <div class="am-form-group">
@@ -150,8 +150,15 @@
                 });
             }
 
-            var sHTML = $('#summernote').summernote('code');
-            $("#contentCode").val(sHTML);
+            // 表单提交验证
+            $("#blogFrom").bind('submit',function(){
+
+                var sHTML = $('#summernote').summernote('code');
+                $("#contentCode").val(sHTML);
+
+            });
+
+
         });
     </script>
 @endsection
