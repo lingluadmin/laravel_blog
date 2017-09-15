@@ -53,7 +53,7 @@ class BasketData{
                "name"      => "XJS-G4",
                "water"     => "36元",
                "fruit"     => "36元",
-               "remark"    => "三包水",
+               "remark"    => "陈总-买水20元",
            ],
            [
                "name"      => "XJS-G5",
@@ -267,7 +267,7 @@ class BasketData{
            ],
            [
                "name"      => "QJS-G3",
-               "date"      => "2017年09月16日",
+               "date"      => "2017年09月17日",
                "score"     => "",
                "remark"    => "",
            ],

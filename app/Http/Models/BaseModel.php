@@ -10,8 +10,8 @@ class BaseModel{
     const
         BASKET_RANKS_1  = "XJS2017YD",    // 2017夏季赛一队
         BASKET_RANKS_2  = "XJS2017ED",    // 2017夏季赛二队
-        BASKET_RANKS_3  = "QJS2017YD",    // 2017秋季赛白队
-        BASKET_RANKS_4  = "QJS2017ED",    // 2017秋季赛蓝队
+        BASKET_RANKS_3  = "QJS2017BD",    // 2017秋季赛白队
+        BASKET_RANKS_4  = "QJS2017LD",    // 2017秋季赛蓝队
 
         ## 标签
         TAGS_XJS2017    = "XJS2017",    //标签-夏季赛2017

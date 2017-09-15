@@ -19,7 +19,7 @@ class BasketballController extends Controller {
      **/
     public function llbasketList( Request $request ){
 
-        $tags   = $request->input('tags', "ALL");
+        $tags   = $request->input('tags', BasketModel::TAGS_XJS2017);
 
         $res    = BasketModel::getBasketList($tags);
 

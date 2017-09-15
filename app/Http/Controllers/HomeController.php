@@ -41,13 +41,13 @@ class HomeController extends Controller {
         #$res    = ArticleModel::getArticleRand( "MRMY" );
         echo "<pre>";
         # 新增比赛球员
-        #BasketModel::basketUserAdd();
+        BasketModel::basketUserAdd();
         #var_dump($res);
         # 获取相册
-        $images = "123.jpg,333.jpg";
-        $res    = BasketModel::imagesAlbum($images);
+        #$images = "123.jpg,333.jpg";
+        #$res    = BasketModel::imagesAlbum($images);
 
-        dd($res);
+        #dd($res);
 
 		# return view('home');
 	}

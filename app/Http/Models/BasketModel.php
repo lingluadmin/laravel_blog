@@ -328,7 +328,8 @@ class BasketModel  extends BaseModel
      * 3、写入数据
      **/
     public static function basketUserAdd(){
-        $bData  = self::getBasketList();
+        $tags   = self::TAGS_QJS2017;
+        $bData  = self::getBasketList($tags);
         $uData  = self::getUserList();
 
 

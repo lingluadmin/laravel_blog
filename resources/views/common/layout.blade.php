@@ -20,11 +20,17 @@
     <link rel="apple-touch-icon-precomposed"href="assets/img/app-icon72x72@2x.png">
     <link rel="stylesheet" href="assets/css/amazeui.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
-
+    {{--
     <!-- include libraries(jQuery, bootstrap) -->
     <link   href="assets/css/bootstrap.css" rel="stylesheet">
     <!-- include summernote css/js-->
     <link   href="assets/css/summernote.css" rel="stylesheet">
+
+    --}}
+    <link  href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+
+
 
     <!--[if (gte IE 9)|!(IE)]><!-->
     <script src="assets/js/jquery.min.js"></script>
