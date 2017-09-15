@@ -18,7 +18,7 @@ class BlogModel  extends BaseModel
 
         $paramData["title"]     = !empty($param["title"])       ? $param["title"]       : "";
         $paramData["keywords"]  = !empty($param["keywords"])    ? $param["keywords"]    : self::TAGS_BLOG;
-        $paramData["intro"]     = !empty($param["intro"])       ? $param["intro"]       : "谢谢支持PAPA篮球~~~";
+        $paramData["intro"]     = !empty($param["intro"])       ? $param["intro"]       : "FIGHTING~~~";
         $paramData["picture"]   = !empty($param["picture"])     ? $param["picture"]     : "";
         $paramData["description"]=!empty($param["description"]) ? $param["description"] : "";
 

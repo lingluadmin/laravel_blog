@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+<link rel="stylesheet" href="assets/bower_dl/css/editormd.css" />
+<script src="assets/bower_dl/examples/js/jquery.min.js"></script>
+
+	<script src="assets/bower_dl/lib/marked.min.js"></script>
+	<script src="assets/bower_dl/lib/prettify.min.js"></script>
+	<script src="assets/bower_dl/lib/raphael.min.js"></script>
+	<script src="assets/bower_dl/lib/underscore.min.js"></script>
+	<script src="assets/bower_dl/lib/sequence-diagram.min.js"></script>
+	<script src="assets/bower_dl/lib/flowchart.min.js"></script>
+	<script src="assets/bower_dl/lib/jquery.flowchart.min.js"></script>
+
+<script src="assets/bower_dl/editormd.js"></script>
+</head>
 <body>
-    <textarea style="display: none" id="text-input" oninput="this.editor.update()"
-			  rows="6" cols="60">{{ $bDetail["content"]  or null }}</textarea>
-	<div id="preview"> </div>
-	<script src="assets/bower_dl//markdown.js"></script>
-	<script>
-		function Editor(input, preview) {
-			this.update = function () {
-				preview.innerHTML = markdown.toHTML(input.value);
-			};
-			input.editor = this;
-			this.update();
-		}
-		var $ = function (id) { return document.getElementById(id); };
-		new Editor($("text-input"), $("preview"));
-	</script>
+	<div id="test-editormd">
+		<textarea id="content" name="content" class="form-control" rows="14">{{ $bDetail["content"] }} </textarea>
+	</div>
+
 </body>
+
+<script>
+	$(function() {
+		var mTxt	= $("#content").val();
+		//var testEditor = editormd("test-editormd", {
+		//	path : 'assets/bower_dl/lib/'
+		//});
+
+
+		var testEditor =  editormd.markdownToHTML("test-editormd", {
+			htmlDecode      : "style, script, iframe",	// you can filter tags decode
+			emoji           : true,
+			taskList        : true,
+			tex             : true,  // 默认不解析
+			flowChart       : true,  // 默认不解析
+			sequenceDiagram : true,  // 默认不解析
+		});
+
+	});
+</script>
+
 </html>

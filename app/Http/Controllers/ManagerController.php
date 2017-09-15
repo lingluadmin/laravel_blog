@@ -56,10 +56,16 @@ class ManagerController extends Controller {
     }
 
     //TODO: FIGHT—BLOG
-    public  function blogAdd(){
+    public  function blogAdd(Request $request){
+
+        //BLOG-type common-普通 、markdown-
+        $type   = $request->input("type","markdown");
 
         $assign["tagsArr"]  = BasketModel::getTagsList();
 
+        if($type == "markdown"){
+            return view('manager.addBlogMarkdown', $assign);
+        }
         return view('manager.addBlog', $assign);
     }
 
@@ -70,27 +76,33 @@ class ManagerController extends Controller {
 
         $param  = $request->all();
         $manager= $request->input('manager','');
+        //BLOG-type common-普通 、markdown-
+        $type   = $request->input("type","markdown");
+
         if($manager != self::MANAGER){
             echo "侬不可编辑哟";
+            echo "<pre>";
+            print_r($param);
             exit;
         }
-        $filename   = "";
-        $file       = $request->file('imgs');
-        $images     = $_FILES;
-        if( isset($images["imgs"]["tmp_name"]) && $images["imgs"]["tmp_name"]){
-            // 文件是否上传成功
-            $filename   = ImgsModel::upLocal($file);
-            if($filename && $filename !="FAIL"){
-                $res    = ImgsModel::upOss($images,$filename);
-                if($res){
-                    \Log::info(__METHOD__.' : '.__LINE__." SUCCESS ");
-                    #echo $filename;
+        if($type == "common"){
+            $filename   = "";
+            $file       = $request->file('imgs');
+            $images     = $_FILES;
+            if( isset($images["imgs"]["tmp_name"]) && $images["imgs"]["tmp_name"]){
+                // 文件是否上传成功
+                $filename   = ImgsModel::upLocal($file);
+                if($filename && $filename !="FAIL"){
+                    $res    = ImgsModel::upOss($images,$filename);
+                    if($res){
+                        \Log::info(__METHOD__.' : '.__LINE__." SUCCESS ");
+                        #echo $filename;
+                    }
                 }
             }
+
+            $param["picture"]  = $filename ? $filename : "";
         }
-
-
-        $param["picture"]  = $filename ? $filename : "";
 
         $res    = BlogModel::blogAddDo($param);
         if($res){

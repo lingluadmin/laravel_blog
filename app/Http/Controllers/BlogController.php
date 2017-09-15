@@ -62,9 +62,12 @@ class BlogController extends Controller {
     public function blogDetail( Request $request ){
 
         $id     = $request->input('id', 1);
-        $res     = BlogModel::getBlogDetail($id);
+        $res    = BlogModel::getBlogDetail($id);
+
         $assign["bDetail"]  = $res;
+
         return view('blog.bdetail', $assign);
+
     }
 
 
