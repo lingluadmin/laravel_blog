@@ -268,7 +268,7 @@ class BasketData{
            [
                "name"      => "QJS-G3",
                "date"      => "2017年09月17日",
-               "score"     => "",
+               "score"     => "一队 89 - 112 二队",
                "remark"    => "",
            ],
            [
@@ -280,7 +280,7 @@ class BasketData{
            [
                "name"      => "QJS-大比分",
                "date"      => "----",
-               "score"     => "一队 1 - 1 二队",
+               "score"     => "一队 1 - 2 二队",
                "remark"    => "秋季赛大比分",
            ],
        ];
