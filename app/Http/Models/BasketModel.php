@@ -227,7 +227,7 @@ class BasketModel  extends BaseModel
         $basketFeeOneDesc   = "第一次收费：18人缴费，人均：10元，共计：180元";
         $basketFeeTwoDesc   = "第二次收费：24人缴费，人均：10元，共计：240元";
         $basketFeeThreeDesc = "第三次收费：24人缴费，人均：20元，共计：480元";
-        $basketFeeFourDesc  = "第四次收费：23人缴费，人均：10元，共计：230元";
+        $basketFeeFourDesc  = "第四次收费：26人缴费，人均：10元，共计：260元";
 
         $basketFeeArr       = BasketData::getBasketFee();
         $basketFeeOne       = $basketFeeArr["basketFeeOne"];

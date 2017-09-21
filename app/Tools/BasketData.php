@@ -132,6 +132,12 @@ class BasketData{
            ],
        ];
        $basketFeeFour       = [
+	   [
+               "name"      => "QJS-G3",
+               "water"     => "30元",
+               "fruit"     => "个人赞助",
+               "remark"    => "周日比赛",
+           ],
 
        ];
 
