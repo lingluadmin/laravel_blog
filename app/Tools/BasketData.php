@@ -132,12 +132,19 @@ class BasketData{
            ],
        ];
        $basketFeeFour       = [
-	   [
+    	   [
                "name"      => "QJS-G3",
                "water"     => "30元",
                "fruit"     => "个人赞助",
                "remark"    => "周日比赛",
            ],
+	       [
+               "name"      => "QJS-G4",
+               "water"     => "30元",
+               "fruit"     => "30元",
+               "remark"    => "",
+           ],
+
 
        ];
 
@@ -280,13 +287,13 @@ class BasketData{
            [
                "name"      => "QJS-G4",
                "date"      => "2017年09月23日",
-               "score"     => "",
+               "score"     => "一队 91 - 85 二队",
                "remark"    => "",
            ],
            [
                "name"      => "QJS-大比分",
                "date"      => "----",
-               "score"     => "一队 1 - 2 二队",
+               "score"     => "一队 2 - 2 二队",
                "remark"    => "秋季赛大比分",
            ],
        ];
