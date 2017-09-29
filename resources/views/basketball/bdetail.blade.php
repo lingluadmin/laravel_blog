@@ -63,14 +63,32 @@
         </div>        
         <div class="am-article-bd">
         	{{--<img src="assets/basket/2017XJS-YRS.jpg" alt="" class="blog-entry-img blog-article-margin"> --}}
-
-			<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
-				<ul class="am-slides">
-					<li><img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
-					<li><img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
-				</ul>
-			</div>
-
+			@if( !empty($imageArr) )
+				<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+					<ul class="am-slides">
+						@foreach( $imageArr as $imgVal )
+							<li><img src="{{ $imgVal }}" /></li>
+						@endforeach
+					</ul>
+				</div>
+			@else
+				<div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+					<ul class="am-slides">
+						<li><img src="http://s.amazeui.org/media/i/demos/bing-1.jpg" /></li>
+						<li><img src="http://s.amazeui.org/media/i/demos/bing-2.jpg" /></li>
+					</ul>
+				</div>
+			@endif
+			@if( !empty($videoArr) )
+				<p class="am-article-lead">
+					比赛视频网址：
+				</p>
+				<blockquote>
+					@foreach( $videoArr as $vv )
+						<p>{{ $vv }}</p>
+					@endforeach
+				</blockquote>
+			@endif
 			<p class="am-article-lead">
 				参赛球员：
 			</p>

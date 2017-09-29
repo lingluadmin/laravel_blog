@@ -195,6 +195,13 @@ class BasketModel  extends BaseModel
 
         $bDetail["picture"]  = $bDetail["picture"] ? $bDetail["picture"] :"uploads/default_basket.jpg";
 
+        $imageArr   = $videoArr = [];
+        if( !empty($bDetail["images"]) ){
+            $imageArr   = explode(",", $bDetail["images"]);
+        }
+        if( !empty($bDetail["videos"]) ){
+            $videoArr   = explode(",", $bDetail["videos"]);
+        }
 
         $article    = ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
         $bGril      = self::getBasketGril();
@@ -207,6 +214,8 @@ class BasketModel  extends BaseModel
             "ranksTwoUser"  => $ranksTwoUser,
             "article"       => $article,
             "bGril"         => $bGril,
+            "imageArr"      => $imageArr,
+            "videoArr"      => $videoArr,
 
         ];
 
