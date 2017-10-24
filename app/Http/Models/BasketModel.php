@@ -198,6 +198,9 @@ class BasketModel  extends BaseModel
         $imageArr   = $videoArr = [];
         if( !empty($bDetail["images"]) ){
             $imageArr   = explode(",", $bDetail["images"]);
+            foreach ($imageArr as &$ival){
+                $ival   = "baskets/".$ival;
+            }
         }
         if( !empty($bDetail["videos"]) ){
             $videoArr   = explode(",", $bDetail["videos"]);
@@ -292,7 +295,7 @@ class BasketModel  extends BaseModel
 
         $basketOneDesc  = "2017PAPA篮球夏季赛，比赛大比分：一队 4 - 3 二队";
         $basketTwoDesc  = "2017PAPA篮球夏季联赛";
-        $basketThreeDesc= "2017PAPA篮球秋季赛，比赛大比分：一队 1 - 0 二队";
+        $basketThreeDesc= "2017PAPA篮球秋季赛，比赛大比分：一队 2 - 3 二队";
 
         $basketArr      = BasketData::getBasketNotice();
         $basketOne      = $basketArr["basketOne"];

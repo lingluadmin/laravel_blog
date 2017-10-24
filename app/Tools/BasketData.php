@@ -144,6 +144,18 @@ class BasketData{
                "fruit"     => "30元",
                "remark"    => "",
            ],
+           [
+               "name"      => "QJS-友谊赛",
+               "water"     => "15元",
+               "fruit"     => "",
+               "remark"    => "",
+           ],
+           [
+               "name"      => "QJS-G5",
+               "water"     => "15元",
+               "fruit"     => "",
+               "remark"    => "",
+           ],
 
 
        ];
@@ -291,9 +303,27 @@ class BasketData{
                "remark"    => "",
            ],
            [
+               "name"      => "QJS-友谊赛",
+               "date"      => "2017年10月14日",
+               "score"     => "一队 -- - -- 二队",
+               "remark"    => "",
+           ],
+           [
+               "name"      => "QJS-G5",
+               "date"      => "2017年10月21日",
+               "score"     => "一队 85 -105 二队",
+               "remark"    => "天王山之战",
+           ],
+           [
+               "name"      => "QJS-G6",
+               "date"      => "2017年10月28日",
+               "score"     => "一队 -- - -- 二队",
+               "remark"    => "",
+           ],
+           [
                "name"      => "QJS-大比分",
                "date"      => "----",
-               "score"     => "一队 2 - 2 二队",
+               "score"     => "一队 2 - 3 二队",
                "remark"    => "秋季赛大比分",
            ],
        ];

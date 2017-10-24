@@ -56,9 +56,10 @@
                     <span class="blog-color">{{ $vo["title"] or '个人博客' }}</span>
                     <span>{{ $vo['author'] or 'FIGHT_ZERO' }}&nbsp;</span>
                     <span>{{ date("Y/m/d", strtotime($vo["publish_at"])) }}</span>
-                    <h4>{{ $vo['intro'] or null }}</h4>
+                    {{-- <h4>{{ $vo['intro'] or null }}</h4> --}}
+                    <hr/>
                     <p>
-                        {{$vo["description"] or null }}
+                        {{$vo["intro"] or null }}
                     </p>
                 </div>
             </article>
