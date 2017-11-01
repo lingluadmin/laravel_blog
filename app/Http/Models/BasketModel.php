@@ -193,7 +193,7 @@ class BasketModel  extends BaseModel
             }
         }
 
-        $bDetail["picture"]  = $bDetail["picture"] ? $bDetail["picture"] :"uploads/default_basket.jpg";
+        $bDetail["picture"]  = !empty($bDetail["picture"]) ? $bDetail["picture"] : "uploads/default_basket.jpg";
 
         $imageArr   = $videoArr = [];
         if( !empty($bDetail["images"]) ){
@@ -382,6 +382,15 @@ class BasketModel  extends BaseModel
         }
 
         return $resData;
+
+    }
+
+
+    /**
+     * @desc    争霸赛
+     **/
+    public static function getBasketZbs(){
+
 
     }
 

@@ -36,6 +36,7 @@ Route::get('basketGirl',  	'BasketballController@basketGirl');        	//篮球�
 Route::get('basketFee',  	'BasketballController@basketFee');        	//篮球费用
 Route::get('basketNotice',  'BasketballController@basketNotice');       //篮球赛程
 Route::get('basketMeet',    'BasketballController@basketMeet');         //PAPA篮球-年会
+Route::get('basketZbs',     'BasketballController@basketZbs');          //PAPA篮球-争霸赛
 
 
 

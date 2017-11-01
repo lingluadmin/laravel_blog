@@ -116,4 +116,21 @@ class BasketballController extends Controller {
     }
 
 
+    /**
+     * @desc    争霸赛
+     *
+     **/
+    public function basketZbs(){
+        $article= ArticleModel::getArticleRand(ArticleModel::TAGS_MYSELF);
+        $bGril  = BasketModel::getBasketGril();
+        $assign["article"]  = $article;
+        $assign["bGril"]    = $bGril;
+        // 队伍
+        // 赛程
+        //
+        $assign = BasketModel::getBasketZbs();
+        return view('basketball.bzbs', $assign);
+    }
+
+
 }

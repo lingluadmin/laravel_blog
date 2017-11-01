@@ -156,7 +156,12 @@ class BasketData{
                "fruit"     => "",
                "remark"    => "",
            ],
-
+           [
+               "name"      => "QJS-G6",
+               "water"     => "35元",
+               "fruit"     => "",
+               "remark"    => "余额：102元",
+           ]
 
        ];
 
@@ -317,14 +322,14 @@ class BasketData{
            [
                "name"      => "QJS-G6",
                "date"      => "2017年10月28日",
-               "score"     => "一队 -- - -- 二队",
+               "score"     => "一队 71 - 88 二队",
                "remark"    => "",
            ],
            [
                "name"      => "QJS-大比分",
                "date"      => "----",
-               "score"     => "一队 2 - 3 二队",
-               "remark"    => "秋季赛大比分",
+               "score"     => "一队 2 - 4 二队",
+               "remark"    => "蓝队获得胜利",
            ],
        ];
 
