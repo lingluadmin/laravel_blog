@@ -68,8 +68,7 @@
 									<td>队伍一</td>
 									<td>兴子</td>
 									<td>凌路</td>
-									<td>老司机</td>
-									<td>兴桦</td>
+									<td>老司机、兴桦</td>
 								</tr>
 								<tr class="am-danger">
 									<td colspan="4"></td>
@@ -78,8 +77,7 @@
 									<td>队伍二</td>
 									<td>王岩</td>
 									<td>阳仔</td>
-									<td>小睿</td>
-									<td>张强</td>
+									<td>小睿、张强</td>
 								</tr>
 								<tr class="am-danger">
 									<td colspan="4"></td>
@@ -88,8 +86,7 @@
 									<td>队伍三</td>
 									<td>腿哥</td>
 									<td>俊杰</td>
-									<td>王政</td>
-									<td>德利</td>
+									<td>王政、德利</td>
 								</tr>
 								<tr class="am-danger">
 									<td colspan="4"></td>
@@ -98,8 +95,7 @@
 									<td>队伍四</td>
 									<td>坑哥</td>
 									<td>老太</td>
-									<td>赵峰</td>
-									<td>大哥</td>
+									<td>赵峰、大哥</td>
 								</tr>
 								</tbody>
 							</table>
