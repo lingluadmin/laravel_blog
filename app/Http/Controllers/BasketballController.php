@@ -128,7 +128,7 @@ class BasketballController extends Controller {
         // 队伍
         // 赛程
         //
-        $assign = BasketModel::getBasketZbs();
+        #$assign = BasketModel::getBasketZbs();
         return view('basketball.bzbs', $assign);
     }
 
