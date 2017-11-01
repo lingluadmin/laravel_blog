@@ -60,7 +60,6 @@
 									<th>队员</th>
 									<th>队员</th>
 									<th>队员</th>
-									<th>队员</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -72,7 +71,9 @@
 									<td>老司机</td>
 									<td>兴桦</td>
 								</tr>
-								<tr class="am-danger"></tr>
+								<tr class="am-danger">
+									<td colspan="4"></td>
+								</tr>
 								<tr>
 									<td>队伍二</td>
 									<td>王岩</td>
@@ -80,7 +81,9 @@
 									<td>小睿</td>
 									<td>张强</td>
 								</tr>
-								<tr class="am-danger"></tr>
+								<tr class="am-danger">
+									<td colspan="4"></td>
+								</tr>
 								<tr>
 									<td>队伍三</td>
 									<td>腿哥</td>
@@ -88,7 +91,9 @@
 									<td>王政</td>
 									<td>德利</td>
 								</tr>
-								<tr class="am-danger"></tr>
+								<tr class="am-danger">
+									<td colspan="4"></td>
+								</tr>
 								<tr>
 									<td>队伍四</td>
 									<td>坑哥</td>
@@ -138,7 +143,11 @@
 										<td>二队</td>
 										<td>3</td>
 									</tr>
-									<tr class="am-danger"></tr>
+
+									<tr class="am-danger">
+										<td colspan="4"></td>
+									</tr>
+
 									<tr>
 										<td>2017年11月11日</td>
 										<td>二队</td>
@@ -158,43 +167,47 @@
 										<td>3</td>
 									</tr>
 
-									<tr class="am-danger"></tr>
+									<tr class="am-danger">
+										<td colspan="4"></td>
+									</tr>
 
 									<tr>
-										<td>2017年11月11日</td>
+										<td>2017年11月18日</td>
 										<td>三队</td>
 										<td>二队</td>
 										<td>1</td>
 									</tr>
 									<tr>
-										<td>2017年11月11日</td>
+										<td>2017年11月18日</td>
 										<td>一队</td>
 										<td>四队</td>
 										<td>2</td>
 									</tr>
 									<tr>
-										<td>2017年11月11日</td>
+										<td>2017年11月18日</td>
 										<td>三队</td>
 										<td>四队</td>
 										<td>3</td>
 									</tr>
 
-									<tr class="am-danger"></tr>
+									<tr class="am-danger">
+										<td colspan="4"></td>
+									</tr>
 
 									<tr>
-										<td>2017年11月11日</td>
+										<td>2017年11月25日</td>
 										<td>四队</td>
 										<td>三队</td>
 										<td>1</td>
 									</tr>
 									<tr>
-										<td>2017年11月11日</td>
+										<td>2017年11月25日</td>
 										<td>二队</td>
 										<td>一队</td>
 										<td>2</td>
 									</tr>
 									<tr>
-										<td>2017年11月11日</td>
+										<td>2017年11月25日</td>
 										<td>四队</td>
 										<td>一队</td>
 										<td>3</td>
