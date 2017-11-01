@@ -59,7 +59,6 @@
 									<th>队长</th>
 									<th>队员</th>
 									<th>队员</th>
-									<th>队员</th>
 								</tr>
 								</thead>
 								<tbody>
